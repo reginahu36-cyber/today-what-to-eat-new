@@ -1,0 +1,1424 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>今天吃什麼｜新專案</title>
+<style>
+:root{--peach:#f58a69;--peach2:#ffd5c3;--cream:#fff8f1;--ink:#49342d;--muted:#9b8278;--line:#f2dfd5;--green:#56876b}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:ui-rounded,"Noto Sans TC",system-ui,sans-serif}.emoji-pattern{position:fixed;inset:0;z-index:-1;pointer-events:none;display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:100px;overflow:hidden;opacity:.10;font-size:27px;text-align:center;align-items:center;user-select:none}.emoji-pattern span{transform:rotate(-12deg)}.shell{max-width:980px;margin:auto;min-height:100vh;padding-bottom:86px}.top{padding:22px 20px 24px;background:linear-gradient(130deg,var(--peach),var(--cream));border-radius:0 0 30px 30px;color:var(--ink);position:relative;overflow:hidden}.top:after{content:var(--hero-emoji,"🍊");font-size:90px;position:absolute;right:15px;bottom:-10px;opacity:.22}.topline{display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;letter-spacing:1px}.logo{background:#ffffff30;border:1px solid #ffffff50;padding:8px 12px;border-radius:99px}.top h1{font-size:30px;line-height:1.2;margin:17px 0 7px;letter-spacing:.5px}.top p{margin:0;font-size:14px;opacity:.94}.top .date{font-size:12px;background:#ffffff30;padding:6px 10px;border-radius:99px;display:inline-block;margin-top:14px}.content{padding:16px}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:20px 2px 12px}.sectionhead h2{font-size:18px;margin:0}.tiny{font-size:12px;color:var(--muted)}.chips{display:flex;gap:8px;overflow:auto;padding:0 0 4px}.chip{border:1px solid var(--line);background:#fff;color:var(--muted);padding:9px 14px;border-radius:99px;white-space:nowrap;font-weight:650}.chip.active{background:var(--ink);color:white;border-color:var(--ink)}.feature{display:grid;grid-template-columns:1fr 1fr;gap:11px}.featurecard{border-radius:22px;padding:16px;min-height:130px;position:relative;overflow:hidden;border:1px solid #f1ded3}.featurecard h3{margin:12px 0 5px;font-size:16px}.featurecard p{margin:0;font-size:12px;color:#8e7167}.featurecard .emoji{font-size:28px}.featurecard button{margin-top:12px;border:0;border-radius:99px;padding:8px 12px;font-weight:750;background:#fff;color:var(--ink)}.coral{background:#ffe3d7}.yellow{background:#fff0c9}.mint{background:#e4f1e6}.lav{background:#eee6f8}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.btn{border:0;border-radius:13px;padding:11px 14px;background:var(--peach);color:white;font-weight:750;box-shadow:0 4px 10px #f58a692c}.btn.light{background:white;color:var(--ink);border:1px solid var(--line);box-shadow:none}.btn.dark{background:var(--ink)}.restaurant{background:white;border:1px solid var(--line);border-radius:20px;padding:13px;display:flex;gap:12px;margin:10px 0;align-items:center;box-shadow:0 5px 16px #633c2408}.foodpic{width:76px;height:76px;border-radius:17px;display:grid;place-items:center;font-size:35px;flex-shrink:0;background:linear-gradient(135deg,#ffe6d9,#fff3df)}.info{flex:1;min-width:0}.info h3{margin:0 0 5px;font-size:16px}.info p{margin:3px 0;color:var(--muted);font-size:12px}.badge{display:inline-block;background:#e7f3e8;color:#477b59;border-radius:99px;padding:4px 8px;font-size:11px;font-weight:750;margin-right:4px}.badge.gray{background:#f6ece6;color:#9a7669}.price{font-weight:800;color:#b45d43;white-space:nowrap}.heart{border:0;background:#fff1eb;border-radius:12px;width:37px;height:37px;font-size:18px;color:#d76d51}.nav{position:fixed;bottom:0;left:0;right:0;background:#fffdfbfa;backdrop-filter:blur(15px);border-top:1px solid var(--line);display:flex;justify-content:center;padding:8px max(8px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom));z-index:5}.nav button{flex:1;max-width:180px;background:transparent;border:0;color:#a58e84;font-weight:650;padding:8px 2px;font-size:12px}.nav button span{display:block;font-size:21px;margin-bottom:3px}.nav button.active{color:#d96f51}.nav button.active span{filter:drop-shadow(0 3px 2px #f5c5b3)}.modal{position:fixed;inset:0;background:#3d282455;display:none;align-items:flex-end;justify-content:center;z-index:10}.modal.show{display:flex}.sheet{background:#fffaf6;width:100%;max-width:620px;border-radius:26px 26px 0 0;padding:20px 18px 28px;max-height:86vh;overflow:auto}.sheethead{display:flex;justify-content:space-between;align-items:center}.sheet h2{margin:4px 0 14px}.x{border:0;background:#f5e7df;border-radius:50%;width:36px;height:36px;font-size:20px}.field{margin:11px 0}.field label{font-size:12px;font-weight:750;display:block;margin-bottom:6px;color:#846b61}.field input,.field select,.field textarea{width:100%;border:1px solid var(--line);background:#fff;border-radius:12px;padding:12px;color:var(--ink);font:inherit}.field textarea{min-height:70px}.empty{padding:26px;text-align:center;color:var(--muted)}.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;border-radius:99px;padding:10px 16px;font-size:13px;display:none;z-index:20;white-space:nowrap}.toast.show{display:block}.hide{display:none!important}.type-tags{display:flex;flex-wrap:wrap;gap:8px}.type-tag{border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:999px;padding:9px 13px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}.type-tag.active{background:var(--ink);border-color:var(--ink);color:#fff}.diary-card{align-items:flex-start!important}.diary-card .foodpic{width:62px;height:62px;font-size:29px}.diary-main{flex:1;min-width:0}.diary-date{font-size:12px;color:var(--muted);margin-bottom:5px}.diary-meal{background:#fff3ec;border-radius:12px;padding:9px 11px;margin:9px 0;font-weight:750;font-size:14px}.diary-meta{font-size:12px;color:#8e7167;line-height:1.7;overflow-wrap:anywhere}.diary-actions{display:flex;flex-direction:column;gap:6px}@media(max-width:460px){.diary-card{gap:9px;padding:10px}.diary-card .foodpic{width:48px;height:48px;font-size:24px}.diary-actions .btn{padding:8px;font-size:12px}}
+@media(min-width:650px){.top{margin-top:18px;border-radius:30px}.content{padding:20px 24px}.featurecard{min-height:150px}.foodpic{width:88px;height:88px}}
+
+.nav{gap:0;padding-left:4px;padding-right:4px}.nav button{min-width:0;font-size:11px;max-width:none}.nav button span{font-size:20px}
+.settings-grid{display:grid;grid-template-columns:1fr;gap:12px}.settings-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:15px;box-shadow:0 5px 16px #633c2408}.settings-card h3{margin:0 0 7px;font-size:16px}.settings-card p{margin:0 0 10px}.bubble-list{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}.bubble{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:8px 12px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}.bubble.selected{background:var(--peach);border-color:var(--peach);color:white}.setting-add{display:flex;gap:8px;margin-top:10px}.setting-add input{flex:1;min-width:0;border:1px solid var(--line);border-radius:12px;padding:10px;font:inherit}.feature.collapsed .featurecard:nth-child(n+3){display:none}.sort-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid var(--line)}.sort-row .sort-name{flex:1}.sort-row button{border:1px solid var(--line);border-radius:9px;background:#fff;padding:5px 9px}
+@media(max-width:380px){.nav button{font-size:10px}.nav button span{font-size:18px}.nav{padding-left:2px;padding-right:2px}}
+
+.v22-region-list{display:block}.v22-region-list.hide{display:none}.settings-card .chips{gap:7px}.settings-card .chip{font-size:12px;padding:8px 11px;cursor:pointer}
+
+.v45-category-filter{margin:6px 2px 14px}.v45-category-filter .sectionhead{margin:8px 0 10px}.v45-category-filter .chip{cursor:pointer;font:inherit;font-size:13px}.v45-category-filter .chip.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+</style><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#f58a69"></head><body><div class="emoji-pattern" id="emojiPattern" aria-hidden="true"></div><div class="shell">
+<header class="top"><div class="topline"><span>🍑 FOOD MOOD · 美食日常</span><button class="logo" onclick="openThemeChooser()">☼ <span id="themeName">暖暖橘</span>⌄</button></div><h1>今天吃什麼？<br>讓美味替你做決定。</h1><p id="dailyQuote">今天也要好好照顧自己的心。</p><span class="date" id="today">📅 今天的美食清單</span></header>
+<main class="content" id="app">
+<div class="sectionhead"><h2>快速入口</h2><span class="tiny">為你準備的小捷徑</span></div>
+<div class="feature">
+<div class="featurecard coral"><div class="emoji">🎲</div><h3>幫我決定！</h3><p>選擇困難交給今天的好運氣</p><button onclick="pick()">抽一間店 ↗</button></div>
+<div class="featurecard yellow"><div class="emoji">📌</div><h3>我的口袋名單</h3><p>收藏那些想再訪的好味道</p><button onclick="showPage('favorites')">看看收藏 ↗</button></div>
+
+<div class="featurecard lav"><div class="emoji">📍</div><h3>美食地圖</h3><p>依地區找回以前吃過的店</p><button onclick="showPage('map')">找吃過的店 ↗</button></div>
+
+<div class="featurecard" style="background:#e5efe8;border-color:#d2e2d6"><div class="emoji">⚙️</div><h3>設定</h3><p>管理首頁外觀與個人化選項</p><button onclick="showPage('settings')">前往設定 ↗</button></div>
+</div>
+<div style="text-align:center;margin:8px 0 16px"><button class="btn light" id="expandFeaturesBtn" onclick="toggleFeatureCards()">展開其他功能 ↓</button></div>
+<div id="v45CategoryFilter" class="v45-category-filter" style="display:none"><div class="sectionhead" style="margin-top:8px"><h2>今天想吃哪一種？</h2><span class="tiny">點選類型篩選店家</span></div><div id="v45CategoryChips" class="chips"></div></div>
+<div class="sectionhead"><h2 id="listTitle">✨ 你可能會想吃</h2><button class="btn light" onclick="openAdd()">＋ 新增店家</button></div>
+<div id="list"></div>
+</main>
+<nav class="nav"><button class="active" onclick="showPage('home',this)"><span>⌂</span>首頁</button><button onclick="showPage('favorites',this)"><span>♡</span>口袋名單</button><button onclick="showPage('map',this)"><span>⌕</span>美食地圖</button><button onclick="showPage('settings',this)"><span>⚙</span>設定</button></nav>
+</div>
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="sheet"><div class="sheethead"><span class="tiny">YOUR FOOD JOURNAL</span><button class="x" onclick="closeModal()">×</button></div><div id="sheetContent"></div></div></div><div class="toast" id="toast"></div>
+<script>
+const seed=[
+{id:'s1',name:'巷口日式食堂',type:'food',emoji:'🍱',price:135,area:'台中 · 西區',hours:'11:00–14:00、17:00–21:00',open:true,fav:true,desc:'定食、丼飯 · 一個人也適合',note:'想吃熱騰騰的日式定食'},
+{id:'s2',name:'小日子手作茶',type:'drink',emoji:'🧋',price:65,area:'台中 · 北區',hours:'10:00–21:30',open:true,fav:false,desc:'茶飲、奶蓋 · 可調整甜度',note:''},
+{id:'s3',name:'暖心咖哩研究所',type:'food',emoji:'🍛',price:150,area:'台中 · 南屯區',hours:'11:30–20:30',open:true,fav:true,desc:'日式咖哩、炸物 · 飽足感滿分',note:'想再試試起司咖哩'},
+{id:'s4',name:'午後雲朵甜點',type:'dessert',emoji:'🍰',price:120,area:'台中 · 西屯區',hours:'13:00–19:00',open:false,fav:false,desc:'戚風蛋糕、布丁 · 甜點療癒',note:''}
+];let stores=JSON.parse(localStorage.getItem('foodmood_demo')||'null')||seed,records=JSON.parse(localStorage.getItem('foodmood_records')||'[]'),type='all',page='home',onlyOpen=false;let customCategories=JSON.parse(localStorage.getItem('foodmood_categories')||'[]');
+document.getElementById('today').textContent='📅 '+new Date().toLocaleDateString('zh-TW',{month:'long',day:'numeric',weekday:'long'});
+const dailyQuotes=[
+'慢慢來也沒關係，你正在好好生活。',
+'今天的你，也值得被溫柔對待。',
+'不必每一天都很厲害，平安就很好。',
+'生活偶爾有點苦，記得替自己加一點甜。',
+'你不需要跟誰比較，只要走自己的步調。',
+'休息不是偷懶，是為了讓心重新充電。',
+'小小的快樂，也值得認真收藏。',
+'今天做得不多也沒關係，你已經很努力了。',
+'願你有勇氣面對生活，也有心情享受一頓飯。',
+'不用急著抵達，沿路的風景也很重要。',
+'把今天過好，就是送給明天最好的禮物。',
+'即使只是前進一小步，也是在往前走。',
+'偶爾停下來，才能聽見自己真正需要什麼。',
+'你值得好好吃飯，也值得好好愛自己。',
+'不順利的日子會過去，別忘了對自己好一點。',
+'幸福不一定很大，有時就是一餐合胃口的飯。',
+'不用事事完美，真實的你就已經很好。',
+'願今天有一件小事，讓你打從心底微笑。',
+'心累的時候就歇一歇，不必什麼都自己扛。',
+'把煩惱放小一點，把生活裡的可愛放大一點。',
+'你走過的每一步，都算數。',
+'今天也請記得：你不是只有努力，也需要快樂。',
+'慢慢長大、慢慢變好，都是很棒的事。',
+'生活沒有標準答案，找到適合自己的方式就好。',
+'願你吃得香、睡得好，心裡也有光。'
+];
+const dayIndex=Math.floor(new Date(new Date().getFullYear(),new Date().getMonth(),new Date().getDate()).getTime()/86400000)%dailyQuotes.length;
+document.getElementById('dailyQuote').textContent='“'+dailyQuotes[dayIndex]+'”';
+function persist(){localStorage.setItem('foodmood_demo',JSON.stringify(stores));localStorage.setItem('foodmood_records',JSON.stringify(records))}
+function toast(t){let x=document.getElementById('toast');x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),1900)}
+function render(){let arr=stores.filter(s=>(type==='all'||(Array.isArray(s.type)?s.type.includes(type):s.type===type))&&(page!=='favorites'||s.fav)&&(page!=='records')&&(!onlyOpen||s.open));let list=document.getElementById('list');document.getElementById('listTitle').textContent=page==='favorites'?'📌 我的口袋名單':page==='records'?'📖 最近的美食日記':page==='settings'?'⚙️ 個人化設定':onlyOpen?'🟢 目前營業中':'✨ 你可能會想吃';
+if(page==='records'){list.innerHTML=records.length?records.slice().reverse().map(r=>`<div class="restaurant"><div class="foodpic">${r.emoji}</div><div class="info"><h3>${esc(r.name)}</h3><p>${esc(r.date)} · ${esc(r.items||'未填品項')}</p><p>${esc(r.note||'')}</p></div><b class="price">NT$${r.price}</b></div>`).join(''):'<div class="empty">還沒有美食日記<br>吃完一餐，就來記錄今天的好味道吧 🍑</div>';return}
+if(page==='settings'){list.innerHTML=`<div class="restaurant" style="display:block"><h3>🎨 我的專屬首頁</h3><div class="field"><label>首頁標題</label><input id="customTitle" value="${esc(localStorage.getItem('foodmood_title')||'今天吃什麼？')}"></div><div class="field"><label>主題色</label><div style="display:flex;gap:10px;align-items:center"><input id="themeColor" type="color" value="${esc(localStorage.getItem('foodmood_color')||'#f58a69')}" style="width:62px;height:45px;padding:4px"><span class="tiny">按色塊選擇你喜歡的顏色</span></div></div><div class="field"><label>頁面背景色</label><div style="display:flex;gap:10px;align-items:center"><input id="backgroundColor" type="color" value="${esc(localStorage.getItem('foodmood_bg')||'#fff8f1')}" style="width:62px;height:45px;padding:4px"><span class="tiny">調整整個頁面的底色</span></div></div><div class="field"><label>背景裝飾 Emoji</label><input id="backgroundEmoji" maxlength="8" value="${esc(localStorage.getItem('foodmood_emoji')||'🍑')}" placeholder="例如 🍑 🌸 🍜 🐱"><p class="tiny">可輸入一個或多個 emoji，會以淡淡的圖案鋪在背景。</p></div><div class="field"><label>圖案濃淡</label><input id="emojiOpacity" type="range" min="3" max="22" value="${esc(localStorage.getItem('foodmood_opacity')||'10')}" oninput="document.getElementById('opacityLabel').textContent=this.value+'%'"><span class="tiny" id="opacityLabel">${esc(localStorage.getItem('foodmood_opacity')||'10')}%</span></div><div id="themePreview" style="border-radius:16px;padding:18px;background:${esc(localStorage.getItem('foodmood_bg')||'#fff8f1')};border:1px solid var(--line);margin:12px 0"><b style="color:${esc(localStorage.getItem('foodmood_color')||'#f58a69')}">預覽一下 ✨</b><p style="margin:6px 0 0">今天也要好好照顧自己的心。</p></div><button class="btn" onclick="saveSettings()">儲存設定</button><button class="btn light" onclick="resetAppearance()" style="margin-left:6px">恢復預設</button><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>資料管理</h3><p class="tiny">這是預覽資料，保存在目前瀏覽器。</p><button class="btn light" onclick="exportData()">匯出資料備份</button></div>`;wireThemePreview();return}
+list.innerHTML=arr.length?arr.map(s=>`<article class="restaurant"><div class="foodpic">${s.emoji}</div><div class="info"><h3>${esc(s.name)}</h3><p><span class="badge">${s.open?'營業中':'目前休息'}</span><span class="badge gray">${s.area}</span></p><p>${esc(s.desc)}</p><p>🕒 ${esc(s.hours)}</p></div><div style="text-align:right"><button class="heart" onclick="toggleFav('${s.id}')" aria-label="收藏">${s.fav?'♥':'♡'}</button><div class="price" style="margin-top:8px">約 $${s.price}</div><button class="btn light" style="padding:7px 9px;margin-top:8px;font-size:12px" onclick="detail('${s.id}')">查看</button></div></article>`).join(''):'<div class="empty">這裡還沒有店家，新增一間喜歡的店吧 🌷</div>'}
+renderCustomCategories()
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+document.querySelectorAll('[data-type]').forEach(b=>b.onclick=()=>{type=b.dataset.type;onlyOpen=false;document.querySelectorAll('[data-type]').forEach(x=>x.classList.toggle('active',x===b));page='home';render()});
+function showPage(p,el){page=p;onlyOpen=false;document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));if(el)el.classList.add('active');else document.querySelectorAll('.nav button')[p==='favorites'?1:p==='records'?2:p==='settings'?3:0].classList.add('active');render()}
+function filterOpen(){page='home';onlyOpen=true;render();document.getElementById('list').scrollIntoView({behavior:'smooth',block:'start'})}
+function toggleFav(id){let s=stores.find(x=>x.id===id);s.fav=!s.fav;persist();render();toast(s.fav?'已收進口袋名單 💗':'已移出口袋名單')}
+function renderCustomCategories(){let wrap=document.getElementById('categoryChips');if(!wrap)return;wrap.querySelectorAll('[data-custom="true"]').forEach(n=>n.remove());let addBtn=wrap.querySelector('button[onclick="openCategoryForm()"]');customCategories.forEach(c=>{let b=document.createElement('button');b.className='chip'+(type===c.id?' active':'');b.dataset.custom='true';b.textContent=c.emoji+' '+c.name;b.onclick=()=>{type=c.id;onlyOpen=false;wrap.querySelectorAll('.chip').forEach(x=>x.classList.remove('active'));b.classList.add('active');render()};wrap.insertBefore(b,addBtn)})}
+function openCategoryForm(){document.getElementById('sheetContent').innerHTML=`<h2>新增想吃的品項</h2><p class="tiny">例如：火鍋、早餐、宵夜、冰品。新增後會出現在「今天想吃哪一種？」分類列。</p><form onsubmit="addCategory(event)"><div class="field"><label>品項名稱</label><input id="catName" required maxlength="12" placeholder="例如：火鍋"></div><div class="field"><label>代表 Emoji</label><input id="catEmoji" maxlength="8" value="🍲" placeholder="🍲"></div><button class="btn" type="submit" style="width:100%">新增分類</button></form>`;openModal()}
+function addCategory(e){e.preventDefault();let name=document.getElementById('catName').value.trim(),emoji=document.getElementById('catEmoji').value.trim()||'🍽️';if(!name)return;if(customCategories.some(c=>c.name===name)||['正餐','飲料','甜點','全部'].includes(name)){toast('這個分類已經存在');return}let c={id:'custom_'+Date.now(),name,emoji};customCategories.push(c);localStorage.setItem('foodmood_categories',JSON.stringify(customCategories));type=c.id;closeModal();render();toast('已新增「'+name+'」分類 ✨')}
+function openAdd(){document.getElementById('sheetContent').innerHTML=`<h2>新增一家喜歡的店</h2><form novalidate onsubmit="addStore(event)"><div class="field"><label>店家名稱</label><input id="nName" required placeholder="例如：巷口拉麵店"></div><div class="field"><label>類型</label><select id="nType"><option value="food">正餐</option><option value="drink">飲料</option><option value="dessert">甜點</option>${customCategories.map(c=>`<option value="${c.id}">${esc(c.emoji)} ${esc(c.name)}</option>`).join("")}</select></div><div class="field"><label>縣市／店家範圍</label><select id="nRegion" required onchange="updateTownOptions('nRegion','nArea')"><option value="">請選擇縣市或全國性</option><option value="全國性">🌐 全國性（不限縣市）</option>${taiwanRegions.filter(r=>r!=='不限縣市').map(r=>`<option value="${r}">${r}</option>`).join('')}</select></div><div class="field"><label>鄉鎮市區</label><select id="nArea"><option value="">請先選擇縣市</option></select></div><div class="field"><label>大約價格（NT$）</label><input id="nPrice" type="number" min="0" value="120"></div><div class="field"><label>營業時間</label><input id="nHours" placeholder="例如：11:00–21:00"></div><div class="field"><label>備註</label><textarea id="nDesc" placeholder="必點品項、想再訪的原因…"></textarea></div><p class="tiny">新增後會先放入口袋名單；新增飲食日記後，自動移入美食地圖。</p><button class="btn" type="button" style="width:100%" onclick="submitNewStoreManually()">確認新增店家</button></form>`;openModal();updateTownOptions('nRegion','nArea')}
+function addStore(e){e.preventDefault();stores.push({id:'u'+Date.now(),name:document.getElementById('nName').value,type:document.getElementById('nType').value,emoji:document.getElementById('nType').value==='drink'?'🧋':document.getElementById('nType').value==='dessert'?'🍰':'🍜',price:+document.getElementById('nPrice').value||0,area:document.getElementById('nRegion').value==='全國性'?'全國性':(document.getElementById('nRegion').value+' · '+document.getElementById('nArea').value).trim(),hours:document.getElementById('nHours').value||'尚未填營業時間',open:true,fav:false,desc:document.getElementById('nDesc').value,note:''});persist();closeModal();type='all';document.querySelectorAll('[data-type]').forEach(b=>b.classList.toggle('active',b.dataset.type==='all'));showPage('home');toast('新店家加入成功 ✨')}
+function detail(id){let s=stores.find(x=>x.id===id);document.getElementById('sheetContent').innerHTML=`<div style="font-size:52px">${s.emoji}</div><h2>${esc(s.name)}</h2><p><span class="badge">${s.open?'營業中':'目前休息'}</span><span class="badge gray">${esc(s.area)}</span></p><p>${esc(s.desc)}</p><p>🕒 ${esc(s.hours)}</p><p class="price">平均消費 NT$${s.price}</p><div class="toolbar"><button class="btn" onclick="record('${s.id}')">＋ 記錄吃過</button><button class="btn light" onclick="toggleFav('${s.id}');closeModal()">♡ ${s.fav?'取消收藏':'加入口袋'}</button><button class="btn light" onclick="editStore('${s.id}')">編輯</button></div>`;openModal()}
+function record(id){let s=stores.find(x=>x.id===id);records.push({id:Date.now(),name:s.name,emoji:s.emoji,date:new Date().toLocaleDateString('zh-TW'),items:'',price:s.price,note:''});persist();closeModal();toast('已記下今天吃過的店 📝')}
+function editStore(id){let s=stores.find(x=>x.id===id);document.getElementById('sheetContent').innerHTML=`<h2>編輯店家</h2><form onsubmit="updateStore(event,'${s.id}')"><div class="field"><label>店家名稱</label><input id="eName" required value="${esc(s.name)}"></div><div class="field"><label>地區</label><input id="eArea" value="${esc(s.area)}"></div><div class="field"><label>價格</label><input id="ePrice" type="number" value="${s.price}"></div><div class="field"><label>營業時間</label><input id="eHours" value="${esc(s.hours)}"></div><div class="field"><label>備註</label><textarea id="eDesc">${esc(s.desc)}</textarea></div><label style="display:flex;gap:8px;align-items:center;margin:14px 0"><input id="eOpen" type="checkbox" ${s.open?'checked':''}> 目前營業中（示範開關）</label><button class="btn" style="width:100%">儲存修改</button></form>`}
+function updateStore(e,id){e.preventDefault();let s=stores.find(x=>x.id===id);Object.assign(s,{name:document.getElementById('eName').value,area:document.getElementById('eArea').value,price:+document.getElementById('ePrice').value||0,hours:document.getElementById('eHours').value,desc:document.getElementById('eDesc').value,open:document.getElementById('eOpen').checked});persist();closeModal();render();toast('店家資料已更新')}
+const taiwanRegions=['不限縣市','臺北市','新北市','桃園市','臺中市','臺南市','高雄市','基隆市','新竹市','嘉義市','新竹縣','苗栗縣','彰化縣','南投縣','雲林縣','嘉義縣','屏東縣','宜蘭縣','花蓮縣','臺東縣','澎湖縣','金門縣','連江縣'];
+const townships={
+'臺北市':'中正區,大同區,中山區,松山區,大安區,萬華區,信義區,士林區,北投區,內湖區,南港區,文山區',
+'新北市':'板橋區,三重區,中和區,永和區,新莊區,新店區,樹林區,鶯歌區,三峽區,淡水區,汐止區,瑞芳區,土城區,蘆洲區,五股區,泰山區,林口區,深坑區,石碇區,坪林區,三芝區,石門區,八里區,平溪區,雙溪區,貢寮區,金山區,萬里區,烏來區',
+'桃園市':'桃園區,中壢區,大溪區,楊梅區,蘆竹區,大園區,龜山區,八德區,龍潭區,平鎮區,新屋區,觀音區,復興區',
+'臺中市':'中區,東區,南區,西區,北區,西屯區,南屯區,北屯區,豐原區,東勢區,大甲區,清水區,沙鹿區,梧棲區,后里區,神岡區,潭子區,大雅區,新社區,石岡區,外埔區,大安區,烏日區,大肚區,龍井區,霧峰區,太平區,大里區,和平區',
+'臺南市':'新營區,鹽水區,白河區,柳營區,後壁區,東山區,麻豆區,下營區,六甲區,官田區,大內區,佳里區,學甲區,西港區,七股區,將軍區,北門區,新化區,善化區,新市區,安定區,山上區,玉井區,楠西區,南化區,左鎮區,仁德區,歸仁區,關廟區,龍崎區,永康區,東區,南區,北區,安南區,安平區,中西區',
+'高雄市':'新興區,前金區,苓雅區,鹽埕區,鼓山區,旗津區,前鎮區,三民區,楠梓區,小港區,左營區,仁武區,大社區,岡山區,路竹區,阿蓮區,田寮區,燕巢區,橋頭區,梓官區,彌陀區,永安區,湖內區,鳳山區,大寮區,林園區,鳥松區,大樹區,旗山區,美濃區,六龜區,內門區,杉林區,甲仙區,桃源區,那瑪夏區,茂林區,茄萣區',
+'基隆市':'仁愛區,信義區,中正區,中山區,安樂區,暖暖區,七堵區',
+'新竹市':'東區,北區,香山區','嘉義市':'東區,西區',
+'新竹縣':'竹北市,竹東鎮,新埔鎮,關西鎮,湖口鄉,新豐鄉,芎林鄉,橫山鄉,北埔鄉,寶山鄉,峨眉鄉,尖石鄉,五峰鄉',
+'苗栗縣':'苗栗市,頭份市,竹南鎮,後龍鎮,通霄鎮,苑裡鎮,卓蘭鎮,造橋鄉,西湖鄉,頭屋鄉,公館鄉,銅鑼鄉,三義鄉,大湖鄉,獅潭鄉,三灣鄉,南庄鄉,泰安鄉',
+'彰化縣':'彰化市,員林市,鹿港鎮,和美鎮,北斗鎮,溪湖鎮,田中鎮,二林鎮,線西鄉,伸港鄉,福興鄉,秀水鄉,花壇鄉,芬園鄉,大村鄉,埔鹽鄉,埔心鄉,永靖鄉,社頭鄉,二水鄉,田尾鄉,埤頭鄉,芳苑鄉,大城鄉,竹塘鄉,溪州鄉',
+'南投縣':'南投市,埔里鎮,草屯鎮,竹山鎮,集集鎮,名間鄉,鹿谷鄉,中寮鄉,魚池鄉,國姓鄉,水里鄉,信義鄉,仁愛鄉',
+'雲林縣':'斗六市,斗南鎮,虎尾鎮,西螺鎮,土庫鎮,北港鎮,古坑鄉,大埤鄉,莿桐鄉,林內鄉,二崙鄉,崙背鄉,麥寮鄉,東勢鄉,褒忠鄉,臺西鄉,元長鄉,四湖鄉,口湖鄉,水林鄉',
+'嘉義縣':'太保市,朴子市,布袋鎮,大林鎮,民雄鄉,溪口鄉,新港鄉,六腳鄉,東石鄉,義竹鄉,鹿草鄉,水上鄉,中埔鄉,竹崎鄉,梅山鄉,番路鄉,大埔鄉,阿里山鄉',
+'屏東縣':'屏東市,潮州鎮,東港鎮,恆春鎮,萬丹鄉,長治鄉,麟洛鄉,九如鄉,里港鄉,鹽埔鄉,高樹鄉,萬巒鄉,內埔鄉,竹田鄉,新埤鄉,枋寮鄉,新園鄉,崁頂鄉,林邊鄉,南州鄉,佳冬鄉,琉球鄉,車城鄉,滿州鄉,枋山鄉,三地門鄉,霧臺鄉,瑪家鄉,泰武鄉,來義鄉,春日鄉,獅子鄉,牡丹鄉',
+'宜蘭縣':'宜蘭市,羅東鎮,蘇澳鎮,頭城鎮,礁溪鄉,壯圍鄉,員山鄉,冬山鄉,五結鄉,三星鄉,大同鄉,南澳鄉',
+'花蓮縣':'花蓮市,鳳林鎮,玉里鎮,新城鄉,吉安鄉,壽豐鄉,光復鄉,豐濱鄉,瑞穗鄉,富里鄉,秀林鄉,萬榮鄉,卓溪鄉',
+'臺東縣':'臺東市,成功鎮,關山鎮,卑南鄉,鹿野鄉,池上鄉,東河鄉,長濱鄉,太麻里鄉,大武鄉,綠島鄉,海端鄉,延平鄉,金峰鄉,達仁鄉,蘭嶼鄉',
+'澎湖縣':'馬公市,湖西鄉,白沙鄉,西嶼鄉,望安鄉,七美鄉','金門縣':'金城鎮,金湖鎮,金沙鎮,金寧鄉,烈嶼鄉,烏坵鄉','連江縣':'南竿鄉,北竿鄉,莒光鄉,東引鄉'
+};
+function updateTownOptions(regionId,townId){let region=document.getElementById(regionId),town=document.getElementById(townId);if(!region||!town)return;let r=region.value;let opts=r==='全國性'?['全國性店家不需選鄉鎮市區']:r==='不限縣市'?['請先選擇縣市']:((townships[r]||'').split(',').filter(Boolean));town.innerHTML=(r==='全國性'?'<option value="">全國性（不限地區）</option>':'<option value="">不限鄉鎮市區</option>')+opts.filter(x=>!x.startsWith('請先')).map(x=>`<option value="${x}">${x}</option>`).join('');town.disabled=r==='全國性'||r==='不限縣市'||!r;}
+function pick(){let arr=stores.filter(s=>(type==='all'||(Array.isArray(s.type)?s.type.includes(type):s.type===type))&&(!onlyOpen||s.open));if(!arr.length){toast('目前沒有符合條件的店家');return}document.getElementById('sheetContent').innerHTML=`<h2>🎲 幫我挑一家店</h2><p class="tiny">選擇縣市後，可再選擇鄉鎮市區，縮小抽選範圍。</p><div class="field"><label>縣市</label><select id="pickRegion" onchange="updateTownOptions('pickRegion','pickTown')">${taiwanRegions.map(r=>`<option value="${r}">${r}</option>`).join('')}</select></div><div class="field"><label>鄉鎮市區（可選）</label><select id="pickTown"><option value="">不限鄉鎮市區</option></select></div><button class="btn" style="width:100%" onclick="runRegionalPick()">🎲 抽一家符合條件的店</button>`;openModal()}
+function runRegionalPick(){let region=document.getElementById('pickRegion').value,town=document.getElementById('pickTown').value;let norm=x=>String(x||'').replace(/臺/g,'台').replace(/市|縣/g,'');let arr=stores.filter(s=>{if(!(type==='all'||(Array.isArray(s.type)?s.type.includes(type):s.type===type)))return false;let area=norm(s.area);if(s.area==='全國性')return region==='不限縣市';if(region!=='不限縣市'&&!area.includes(norm(region)))return false;if(town&&!area.includes(norm(town)))return false;return true});if(!arr.length){toast('這個地區還沒有符合條件的店家');return}let s=arr[Math.floor(Math.random()*arr.length)];closeModal();detail(s.id)}
+function wireThemePreview(){['themeColor','backgroundColor'].forEach(id=>document.getElementById(id).addEventListener('input',()=>{let a=document.getElementById('themeColor').value,b=document.getElementById('backgroundColor').value;let p=document.getElementById('themePreview');p.style.background=b;p.querySelector('b').style.color=a}));document.getElementById('backgroundEmoji').addEventListener('input',()=>{let el=document.getElementById('emojiPattern');el.innerHTML='';let val=document.getElementById('backgroundEmoji').value||'🍑';for(let i=0;i<48;i++){let s=document.createElement('span');s.textContent=Array.from(val)[i%Array.from(val).length];el.appendChild(s)}})}
+function applyAppearance(){let tn=localStorage.getItem('foodmood_theme_name')||'暖暖橘';let themeLabel=document.getElementById('themeName');if(themeLabel)themeLabel.textContent=tn;let accent=localStorage.getItem('foodmood_color')||'#f58a69',bg=localStorage.getItem('foodmood_bg')||'#fff8f1',emoji=localStorage.getItem('foodmood_emoji')||'🍑',opacity=(+(localStorage.getItem('foodmood_opacity')||10))/100;document.documentElement.style.setProperty('--peach',accent);document.documentElement.style.setProperty('--cream',bg);document.documentElement.style.setProperty('--hero-emoji',JSON.stringify(emoji));let dark=(parseInt(bg.slice(1,3),16)*299+parseInt(bg.slice(3,5),16)*587+parseInt(bg.slice(5,7),16)*114)/1000<120;document.documentElement.style.setProperty('--ink',dark?'#f5f1fa':'#49342d');document.documentElement.style.setProperty('--muted',dark?'#c9c3d4':'#9b8278');let el=document.getElementById('emojiPattern');if(el){el.innerHTML='';let chars=Array.from(emoji||'🍑');for(let i=0;i<48;i++){let s=document.createElement('span');s.textContent=chars[i%chars.length];el.appendChild(s)}el.style.opacity=opacity}}
+function saveSettings(){localStorage.setItem('foodmood_title',document.getElementById('customTitle').value);localStorage.setItem('foodmood_color',document.getElementById('themeColor').value);localStorage.setItem('foodmood_bg',document.getElementById('backgroundColor').value);localStorage.setItem('foodmood_emoji',document.getElementById('backgroundEmoji').value||'🍑');localStorage.setItem('foodmood_opacity',document.getElementById('emojiOpacity').value);document.querySelector('.top h1').innerHTML=esc(document.getElementById('customTitle').value).replace('？','？<br>讓美味替你做決定。');applyAppearance();toast('已儲存你的專屬主題 ✨')}
+function resetAppearance(){['foodmood_title','foodmood_color','foodmood_bg','foodmood_emoji','foodmood_opacity','foodmood_theme_name'].forEach(k=>localStorage.removeItem(k));applyAppearance();render();toast('已恢復預設外觀')}
+
+function exportData(){let blob=new Blob([JSON.stringify({stores,records},null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='今天吃什麼-預覽備份.json';a.click();URL.revokeObjectURL(a.href)}
+const themePresets=[
+{name:'簡約黑白',accent:'#343434',bg:'#ffffff',emoji:'◻️'},
+{name:'暖暖橘',accent:'#f58a69',bg:'#fff8f1',emoji:'🍑'},
+{name:'抹茶森林',accent:'#6f9c7d',bg:'#f5faf3',emoji:'🍵'},
+{name:'莓果奶霜',accent:'#d87c9b',bg:'#fff6f8',emoji:'🍓'},
+{name:'海鹽藍',accent:'#6d9fc1',bg:'#f3f9fd',emoji:'🌊'},
+{name:'薰衣草紫',accent:'#9b88c7',bg:'#faf7ff',emoji:'💜'},
+{name:'檸檬奶油',accent:'#d5aa43',bg:'#fffbed',emoji:'🍋'},
+{name:'可可拿鐵',accent:'#98715b',bg:'#fbf5ef',emoji:'☕'},
+{name:'薄荷氣泡',accent:'#55a99b',bg:'#f1fbf8',emoji:'🌿'},
+{name:'櫻花粉',accent:'#d66f9a',bg:'#fff3f7',emoji:'🌸'},
+{name:'天空晨光',accent:'#568ac8',bg:'#f1f7ff',emoji:'☁️'},
+{name:'夜間星空',accent:'#b39ddb',bg:'#282735',emoji:'🌙'}
+];
+function openThemeChooser(){document.getElementById('sheetContent').innerHTML=`<h2>🎨 選擇你的專屬主題</h2><p class="tiny">切換主題只會改變顏色與背景裝飾，版面配置保持不變。</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">${themePresets.map(t=>`<button onclick="chooseTheme('${t.name}')" style="text-align:left;padding:13px;border-radius:16px;background:${t.bg};color:#49342d;border:2px solid ${localStorage.getItem('foodmood_theme_name')===t.name?'#49342d':'transparent'};box-shadow:none"><span style="display:block;font-size:25px;margin-bottom:8px">${t.emoji}</span><b>${t.name}</b><span style="display:flex;gap:5px;margin-top:9px"><i style="width:22px;height:9px;border-radius:99px;background:${t.accent}"></i><i style="width:22px;height:9px;border-radius:99px;background:${t.bg};border:1px solid #ddd"></i></span></button>`).join('')}</div><div class="field" style="margin-top:16px"><label>自訂主題名稱（選填）</label><input id="customThemeName" placeholder="例如：我的櫻花季"></div><button class="btn light" style="width:100%;margin-top:8px" onclick="randomTheme()">🎲 隨機搭配主題</button><label style="display:flex;gap:8px;align-items:center;margin:12px 0"><input id="dailyThemeToggle" type="checkbox" ${localStorage.getItem('foodmood_daily_theme')==='on'?'checked':''} onchange="localStorage.setItem('foodmood_daily_theme',this.checked?'on':'off');toast(this.checked?'已開啟每日換心情':'已關閉每日換心情')"> 每日換心情（預設關閉）</label><button class="btn light" style="width:100%" onclick="saveCustomThemeName()">套用自訂名稱</button>`;openModal()}
+function randomTheme(){let choices=themePresets.filter(t=>t.name!==(localStorage.getItem('foodmood_theme_name')||''));let t=choices[Math.floor(Math.random()*choices.length)];if(!t)return;chooseTheme(t.name);}
+function chooseTheme(name){let t=themePresets.find(x=>x.name===name);if(!t)return;localStorage.setItem('foodmood_color',t.accent);localStorage.setItem('foodmood_bg',t.bg);localStorage.setItem('foodmood_emoji',t.emoji);localStorage.setItem('foodmood_theme_name',t.name);localStorage.setItem('foodmood_opacity',localStorage.getItem('foodmood_opacity')||'10');applyAppearance();document.getElementById('themeName').textContent=t.name;closeModal();render();toast('已切換成「'+t.name+'」主題 ✨')}
+function saveCustomThemeName(){let n=document.getElementById('customThemeName').value.trim();if(!n){toast('請先輸入主題名稱');return}localStorage.setItem('foodmood_theme_name',n);document.getElementById('themeName').textContent=n;closeModal();toast('主題名稱已更新')}
+function openModal(){document.getElementById('modal').classList.add('show')}function closeModal(){document.getElementById('modal').classList.remove('show')}
+
+/* v8 requested workflow refinements; keep existing visual template */
+// Migrate legacy entries to branch-aware records and richer schedules/options.
+stores.forEach((s,i)=>{if(!s.branch)s.branch='';if(!s.weekdays)s.weekdays=['一','二','三','四','五','六','日'];if(!s.shifts)s.shifts=(s.hours&&s.hours!=='尚未填營業時間')?s.hours.split(/[、,，]/).map(x=>{let m=x.match(/(\d{1,2}:\d{2})\s*[–-]\s*(\d{1,2}:\d{2})/);return m?{start:m[1],end:m[2]}:null}).filter(Boolean):[];if(!s.options)s.options=s.type==='drink'?{甜度:'正常糖',冰塊:'正常冰'}:{}});
+function persist(){localStorage.setItem('foodmood_demo',JSON.stringify(stores));localStorage.setItem('foodmood_records',JSON.stringify(records))}
+function hoursText(s){return (s.shifts||[]).map(x=>x.start+'–'+x.end).join('、')||s.hours||'尚未填營業時間'}
+function daysText(s){let all=['一','二','三','四','五','六','日'];return all.every(d=>(s.weekdays||[]).includes(d))?'週一至週日營業':all.filter(d=>(s.weekdays||[]).includes(d)).map(d=>'週'+d).join('、')||'公休'}
+function render(){let list=document.getElementById('list');document.getElementById('listTitle').textContent=page==='favorites'?'📌 我的口袋名單':page==='records'?'📖 最近的美食日記':page==='settings'?'⚙️ 個人化設定':onlyOpen?'🟢 目前營業中':'✨ 你可能會想吃';
+if(page==='records'){list.innerHTML='<div class="toolbar"><button class="btn" onclick="openAdd()">＋ 新增一家喜歡的店</button></div>'+(records.length?records.slice().reverse().map(r=>`<div class="restaurant"><div class="foodpic">${esc(r.emoji||'🍽️')}</div><div class="info"><h3>${esc(r.name)}${r.branch?' · '+esc(r.branch):''}</h3><p>${esc(r.date||'')} · ${esc(r.items||'未填品項')}</p><p>${esc(r.optionsText||'')}${r.note?' · '+esc(r.note):''}</p></div><button class="btn light" onclick="deleteRecord(${r.id})">刪除</button></div>`).join(''):'<div class="empty">還沒有美食日記<br>吃完一餐，就來記錄今天的好味道吧 🍑</div>');return}
+if(page==='settings'){list.innerHTML=`<div class="restaurant" style="display:block"><h3>🎨 我的專屬首頁</h3><div class="field"><label>首頁標題</label><input id="customTitle" value="${esc(localStorage.getItem('foodmood_title')||'今天吃什麼？')}"></div><div class="field"><label>主題色</label><input id="themeColor" type="color" value="${esc(localStorage.getItem('foodmood_color')||'#f58a69')}" style="width:62px;height:45px;padding:4px"></div><div class="field"><label>頁面背景色</label><input id="backgroundColor" type="color" value="${esc(localStorage.getItem('foodmood_bg')||'#fff8f1')}" style="width:62px;height:45px;padding:4px"></div><div class="field"><label>背景裝飾 Emoji</label><input id="backgroundEmoji" value="${esc(localStorage.getItem('foodmood_emoji')||'🍑')}"></div><div class="field"><label>圖案濃淡</label><input id="emojiOpacity" type="range" min="3" max="22" value="${esc(localStorage.getItem('foodmood_opacity')||'10')}"></div><button class="btn" onclick="saveSettings()">儲存設定</button><button class="btn light" onclick="resetAppearance()">恢復預設</button><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>資料管理</h3><p class="tiny">資料保存在目前瀏覽器。</p><button class="btn light" onclick="exportData()">匯出資料備份</button></div>`;return}
+let arr=stores.filter(s=>(type==='all'||(Array.isArray(s.type)?s.type.includes(type):s.type===type))&&(page!=='favorites'||s.fav)&&(!onlyOpen||s.open));
+let addBtn=`<div class="toolbar" style="margin-bottom:10px"><button class="btn" onclick="openAdd()">＋ 新增一家喜歡的店</button></div>`;
+let groups=[...new Set(arr.map(s=>s.name))].map(name=>({name,items:arr.filter(s=>s.name===name)}));list.innerHTML=addBtn+(groups.length?groups.map(g=>{let first=g.items[0];return `<article class="restaurant" style="align-items:flex-start"><div class="foodpic">${esc(first.emoji||'🍽️')}</div><div class="info"><h3>${esc(g.name)}</h3>${g.items.map(s=>`<div style="border-top:1px solid var(--line);padding-top:8px;margin-top:8px"><p><span class="badge">${s.open?'營業中':'目前休息'}</span><span class="badge gray">${esc(s.branch||s.area||'未設定分店')}</span></p><p>📍 ${esc(s.area||'')}</p><p>🕒 ${esc(hoursText(s))}</p><p class="tiny">${esc(daysText(s))}</p><div class="toolbar"><button class="heart" onclick="toggleFav('${s.id}')">${s.fav?'♥':'♡'}</button><button class="btn light" style="padding:7px 9px;font-size:12px" onclick="detail('${s.id}')">查看分店</button>${page==='favorites'?`<button class="btn light" style="padding:7px 9px;font-size:12px" onclick="removePocket('${s.id}')">移除</button>`:''}</div></div>`).join('')}</div></article>`}).join(''):'<div class="empty">這裡還沒有店家，新增一間喜歡的店吧 🌷</div>')}
+function removePocket(id){let s=stores.find(x=>x.id===id);if(!s)return;s.fav=false;persist();render();toast('已從口袋名單移除；店家資料保留')}
+function toggleFav(id){let s=stores.find(x=>x.id===id);if(!s)return;s.fav=!s.fav;persist();render();toast(s.fav?'已收進口袋名單 💗':'已移出口袋名單')}
+function openAdd(){document.getElementById('sheetContent').innerHTML=`<h2>新增一家喜歡的店</h2><p class="tiny">同品牌不同分店會整理在同一家店名下，不會把分店名稱當成另一個品牌。</p><form novalidate onsubmit="addStore(event)"><div class="field"><label>品牌／店家名稱</label><input id="nName" required placeholder="例如：小日子手作茶" oninput="showDuplicateHint()"></div><div id="dupHint" class="tiny"></div><div class="field"><label>分店名稱（選填）</label><input id="nBranch" placeholder="例如：台中公益店"></div><div class="field"><label>餐廳類型（可複選）</label><div id="nTypeTags" class="type-tags">${[{id:"food",label:"🍜 正餐"},{id:"drink",label:"🧋 飲料"},{id:"dessert",label:"🍰 甜點"},...customCategories.map(c=>({id:c.id,label:`${c.emoji} ${c.name}`}))].map(c=>`<button type="button" class="type-tag ${c.id==="food"?"active":""}" data-category-value="${esc(c.id)}" onclick="toggleTypeTag(this)">${esc(c.label)}</button>`).join('')}</div><p class="tiny">可以同時選擇多種類型，例如「飲料＋甜點」。</p><div id="nTypeHint" class="tiny"></div></div><div class="field"><label>縣市／店家範圍</label><select id="nRegion" required onchange="updateTownOptions('nRegion','nArea')"><option value="">請選擇縣市或全國性</option><option value="全國性">🌐 全國性（不限縣市）</option>${taiwanRegions.filter(r=>r!=='不限縣市').map(r=>`<option value="${r}">${r}</option>`).join('')}</select></div><div class="field"><label>鄉鎮市區</label><select id="nArea"><option value="">請先選擇縣市</option></select></div><div class="field"><label>營業星期（可複選）</label><div style="display:flex;flex-wrap:wrap;gap:8px">${['一','二','三','四','五','六','日'].map(d=>`<label><input type="checkbox" name="nDay" value="${d}" checked> 週${d}</label>`).join('')}<label><input type="checkbox" id="nClosed" onchange="document.querySelectorAll('[name=nDay]').forEach(x=>x.checked=!this.checked)"> 公休</label></div></div><div class="field"><label>營業時間（時鐘可微調，可新增多個時段）</label><div id="nShifts"><div class="shiftrow" style="display:flex;gap:8px;margin:7px 0"><input type="time" value="11:00" class="shiftStart"><input type="time" value="14:00" class="shiftEnd"></div><div class="shiftrow" style="display:flex;gap:8px;margin:7px 0"><input type="time" value="17:00" class="shiftStart"><input type="time" value="21:00" class="shiftEnd"></div></div><button type="button" class="btn light" onclick="addShift('nShifts')">＋ 新增營業時段</button></div><div class="field"><label>客製化選項</label><div id="nOptions"><p class="tiny">可在店家詳情中建立，之後同一家店沿用。</p></div></div><div class="field"><label>備註</label><textarea id="nDesc" placeholder="必點品項、想再訪的原因…"></textarea></div><p class="tiny">新增後會先放入口袋名單；新增飲食日記後，自動移入美食地圖。</p><button class="btn" type="button" style="width:100%" onclick="submitNewStoreManually()">確認新增店家</button></form>`;openModal();updateTownOptions('nRegion','nArea')}
+function showDuplicateHint(){let n=document.getElementById('nName')?.value.trim().toLocaleLowerCase();let d=document.getElementById('dupHint');if(d){let matches=stores.filter(s=>s.name.trim().toLocaleLowerCase()===n);d.textContent=matches.length?'⚠️ 已有同名品牌。送出後會先詢問你要新增分店、併入同品牌或取消。':''}}
+function addShift(id){let c=document.getElementById(id);let r=document.createElement('div');r.className='shiftrow';r.style='display:flex;gap:8px;margin:7px 0';r.innerHTML='<input type="time" value="17:00" class="shiftStart"><input type="time" value="21:00" class="shiftEnd"><button type="button" class="btn light" onclick="this.parentElement.remove()">移除</button>';c.appendChild(r)}
+function toggleDrinkOptions(typeId,optionsId){let t=document.getElementById(typeId)?.value,el=document.getElementById(optionsId);if(!el)return;if(t==='drink'){el.innerHTML='<label>甜度 <select id="optSweet"><option>無糖</option><option>微糖</option><option selected>半糖</option><option>少糖</option><option>正常糖</option></select></label><label style="margin-left:8px">冰塊 <select id="optIce"><option>去冰</option><option>微冰</option><option selected>少冰</option><option>正常冰</option><option>熱飲</option></select></label>'}else{el.innerHTML='<p class="tiny">可在店家詳情中建立客製化選項，之後同一家店沿用。</p>'}}
+function addStore(e){e.preventDefault();let name=document.getElementById('nName').value.trim(),branch=document.getElementById('nBranch').value.trim(),region=document.getElementById('nRegion').value,town=document.getElementById('nArea').value,typeVal=document.getElementById('nType').value;let matches=stores.filter(s=>s.name.trim().toLocaleLowerCase()===name.toLocaleLowerCase());if(branch&&matches.some(s=>(s.branch||'').trim().toLocaleLowerCase()===branch.toLocaleLowerCase())){toast('這個品牌的分店已存在，沒有重複新增');return}if(matches.length){document.getElementById('sheetContent').innerHTML=`<h2>⚠️ 發現同名店家</h2><p>「${esc(name)}」已經存在。你想怎麼處理？</p><div class="toolbar" style="display:grid"><button class="btn" onclick="saveDuplicateStore('branch')">新增為同品牌的另一家分店</button><button class="btn light" onclick="saveDuplicateStore('merge')">併入同一家品牌（補充分店資料）</button><button class="btn light" onclick="window.pendingStoreData=null;closeModal()">退出設定／取消</button></div>`;window.pendingStoreData={name,branch,region,town,typeVal,desc:document.getElementById('nDesc').value,days:[...document.querySelectorAll('[name=nDay]:checked')].map(x=>x.value),shifts:collectShifts('nShifts'),options:collectOptions(typeVal)};return}saveNewStore({name,branch,region,town,typeVal,desc:document.getElementById('nDesc').value,days:[...document.querySelectorAll('[name=nDay]:checked')].map(x=>x.value),shifts:collectShifts('nShifts'),options:collectOptions(typeVal)},'new')}
+function collectShifts(id){return [...document.querySelectorAll('#'+id+' .shiftrow')].map(r=>({start:r.querySelector('.shiftStart').value,end:r.querySelector('.shiftEnd').value})).filter(x=>x.start&&x.end)}
+function collectOptions(t){if(t==='drink')return {甜度:document.getElementById('optSweet')?.value||'半糖',冰塊:document.getElementById('optIce')?.value||'少冰'};return {}}
+function saveDuplicateStore(mode){let d=window.pendingStoreData;if(!d)return;if(mode==='merge'){let existing=stores.find(s=>s.name.trim().toLocaleLowerCase()===d.name.toLocaleLowerCase());if(existing){if(d.branch&&!stores.some(s=>s.name===d.name&&s.branch===d.branch)){let copy={...existing,id:'u'+Date.now(),branch:d.branch,area:d.region==='全國性'?'全國性':d.region+' · '+d.town,desc:d.desc||existing.desc,weekdays:d.days,shifts:d.shifts, hours:d.shifts.map(x=>x.start+'–'+x.end).join('、'),fav:false,options:{...existing.options,...d.options}};stores.push(copy)}else toast('已併入同品牌資料')}persist();closeModal();render();window.pendingStoreData=null;return}saveNewStore(d,'branch')}
+function saveNewStore(d,mode){let types=Array.isArray(d.typeVal)?d.typeVal:[d.typeVal],emoji=types.includes('drink')?'🧋':types.includes('dessert')?'🍰':'🍜';let area=d.region==='全國性'?'全國性':(d.region+' · '+d.town).trim();let s={id:'u'+Date.now(),name:d.name,branch:d.branch||'',type:d.typeVal,emoji,area,open:true,fav:false,desc:d.desc||'',note:'',weekdays:d.days||['一','二','三','四','五','六','日'],shifts:d.shifts||[],hours:(d.shifts||[]).map(x=>x.start+'–'+x.end).join('、'),options:d.options||{}};stores.push(s);persist();window.pendingStoreData=null;closeModal();type='all';document.querySelectorAll('[data-type]').forEach(b=>b.classList.toggle('active',b.dataset.type==='all'));page='home';render();toast(mode==='branch'?'已加入同品牌分店 ✨':'新店家加入成功 ✨')}
+function detail(id){let s=stores.find(x=>x.id===id);if(!s)return;let opts=s.options||{};document.getElementById('sheetContent').innerHTML=`<div style="font-size:52px">${esc(s.emoji||'🍽️')}</div><h2>${esc(s.name)}</h2><p><span class="badge">${s.open?'營業中':'目前休息'}</span><span class="badge gray">${esc(s.branch||s.area||'未設定分店')}</span></p><p>${esc(s.desc||'')}</p><p>📍 ${esc(s.area||'')}</p><p>🕒 ${esc(hoursText(s))}</p><p class="tiny">${esc(daysText(s))}</p><div class="field"><label>今天吃／喝的品項</label><input id="visitItems" placeholder="例如：珍珠奶茶、牛肉麵"></div><div class="field"><label>客製化選項（此品牌預設）</label><div id="detailOptions">${Object.entries(opts).map(([k,v],i)=>`<label style="display:inline-block;margin:4px 8px 4px 0">${esc(k)} <input data-option-key="${esc(k)}" value="${esc(v)}" style="width:95px;padding:7px;border:1px solid var(--line);border-radius:9px"></label>`).join('')}</div><div class="field"><label>新增客製化選項</label><div style="display:flex;gap:8px"><input id="newOptKey" placeholder="選項名稱，如辣度"><input id="newOptVal" placeholder="預設，如小辣"></div><button class="btn light" style="margin-top:8px" onclick="addCustomOption('${s.id}')">＋ 新增選項</button></div><div class="field"><label>備註</label><textarea id="visitNote" placeholder="今天的心得、價格、份量…"></textarea></div><div class="toolbar"><button class="btn" onclick="record('${s.id}')">＋ 存入美食日記</button><button class="btn light" onclick="toggleFav('${s.id}');detail('${s.id}')">${s.fav?'♥ 已在口袋名單':'♡ 加入口袋名單'}</button><button class="btn light" onclick="editStore('${s.id}')">編輯店家</button></div>`;openModal()}
+function addCustomOption(id){let s=stores.find(x=>x.id===id);let k=document.getElementById('newOptKey').value.trim(),v=document.getElementById('newOptVal').value.trim();if(!k||!v){toast('請輸入選項名稱與預設值');return}stores.filter(x=>x.name===s.name).forEach(x=>{x.options=x.options||{};x.options[k]=v});persist();detail(id);toast('已將客製化選項套用到同品牌店家')}
+function record(id){let s=stores.find(x=>x.id===id);if(!s)return;let item=document.getElementById('visitItems')?.value.trim()||'',note=document.getElementById('visitNote')?.value.trim()||'',options=[...(document.querySelectorAll('#detailOptions [data-option-key]'))].map(x=>x.dataset.optionKey+'：'+x.value);records.push({id:Date.now(),storeId:s.id,name:s.name,branch:s.branch||'',emoji:s.emoji,date:new Date().toLocaleDateString('zh-TW'),items:item,optionsText:options.join('、'),note});[...document.querySelectorAll('#detailOptions [data-option-key]')].forEach(x=>{s.options=s.options||{};s.options[x.dataset.optionKey]=x.value});stores.filter(x=>x.name===s.name).forEach(x=>{x.options={...(x.options||{}),...(s.options||{})}});s.fav=false;persist();closeModal();if(page==='records')render();toast('已加入美食日記，並從口袋名單移除 📝')}
+function deleteRecord(id){records=records.filter(r=>r.id!==id);persist();render();toast('已刪除這筆美食日記')}
+function editStore(id){
+ let s=stores.find(x=>x.id===id);if(!s)return;
+ const raw=String(s.area||'');
+ let region='不限縣市',town='';
+ if(raw==='全國性'){region='全國性';}
+ else {
+   const parts=raw.split(/\s*[·・]\s*/);
+   const cityPart=(parts[0]||'').replace(/臺/g,'台').trim();
+   town=(parts[1]||'').trim();
+   const match=taiwanRegions.find(r=>r!=='不限縣市'&&r.replace(/臺/g,'台').replace(/[市縣]$/,'')===cityPart.replace(/[市縣]$/,''));
+   if(match)region=match;
+   else if(cityPart){
+     const alias=taiwanRegions.find(r=>r!=='不限縣市'&&cityPart.includes(r.replace(/臺/g,'台').replace(/[市縣]$/,'')));
+     if(alias)region=alias;
+   }
+   if(!town&&parts.length===1){
+     const townMatch=raw.match(/(?:台中|臺中|台北|臺北|台南|臺南|新北|桃園|高雄|基隆|新竹|嘉義|彰化|南投|雲林|苗栗|屏東|宜蘭|花蓮|台東|臺東|澎湖|金門|連江)(?:市|縣)?\s*[·・]\s*(.+)$/);
+     if(townMatch)town=townMatch[1].trim();
+   }
+ }
+ document.getElementById('sheetContent').innerHTML=`<h2>編輯店家</h2>
+ <form onsubmit="updateStore(event,'${s.id}')">
+ <div class="field"><label>品牌／店家名稱</label><input id="eName" required value="${esc(s.name)}"></div>
+ <div class="field"><label>分店名稱</label><input id="eBranch" value="${esc(s.branch||'')}"></div>
+ <div class="field"><label>餐廳類型（可複選）</label><div id="eTypeTags" class="type-tags">${[{id:"food",label:"🍜 正餐"},{id:"drink",label:"🧋 飲料"},{id:"dessert",label:"🍰 甜點"},...customCategories.map(c=>({id:c.id,label:`${c.emoji} ${c.name}`}))].map(c=>`<button type="button" class="type-tag ${(Array.isArray(s.types||s.type)?(s.types||s.type):[s.types||s.type||'food']).includes(c.id)?'active':''}" data-category-value="${esc(c.id)}" onclick="this.classList.toggle('active')">${esc(c.label)}</button>`).join('')}</div><p class="tiny">類型選項沿用設定中的分類；可複選。</p></div>
+ <div class="field"><label>縣市／店家範圍</label><select id="eRegion" required onchange="updateTownOptions('eRegion','eTown')"><option value="全國性">🌐 全國性（不限縣市）</option>${taiwanRegions.filter(r=>r!=='不限縣市').map(r=>`<option value="${r}">${r}</option>`).join('')}</select></div>
+ <div class="field"><label>鄉鎮市區</label><select id="eTown"><option value="">不限鄉鎮市區</option></select></div>
+ <div class="field"><label>營業星期（可複選）</label>${['一','二','三','四','五','六','日'].map(d=>`<label style="display:inline-block;margin:4px"><input type="checkbox" name="eDay" value="${d}" ${(s.weekdays||[]).includes(d)?'checked':''}>週${d}</label>`).join('')}<label><input type="checkbox" id="eClosed" ${(s.weekdays||[]).length===0?'checked':''}> 公休</label></div>
+ <div class="field"><label>營業時間（時鐘可微調）</label><div id="eShifts">${(s.shifts||[]).map(x=>`<div class="shiftrow" style="display:flex;gap:8px;margin:7px 0"><input type="time" class="shiftStart" value="${x.start}"><span style="align-self:center">~</span><input type="time" class="shiftEnd" value="${x.end}"><button type="button" class="btn light" onclick="this.parentElement.remove()">移除</button></div>`).join('')}</div><button type="button" class="btn light" onclick="addShift('eShifts')">＋ 新增營業時段</button></div>
+ <div class="field"><label>備註</label><textarea id="eDesc">${esc(s.desc||'')}</textarea></div>
+ <button class="btn" style="width:100%">儲存修改</button></form>`;
+ document.getElementById('eRegion').value=region;
+ updateTownOptions('eRegion','eTown');
+ const townSelect=document.getElementById('eTown');
+ if(town){const normalized=town.replace(/臺/g,'台');const option=[...townSelect.options].find(o=>o.value.replace(/臺/g,'台')===normalized);if(option)townSelect.value=option.value;}
+}
+function updateStore(e,id){
+ e.preventDefault();let s=stores.find(x=>x.id===id);if(!s)return;
+ s.name=document.getElementById('eName').value.trim();
+ s.branch=document.getElementById('eBranch').value.trim();
+ const region=document.getElementById('eRegion').value;
+ const town=document.getElementById('eTown').value;
+ s.area=region==='全國性'?'全國性':(town?region+' · '+town:region+' · 不限鄉鎮市區');
+ s.weekdays=document.getElementById('eClosed').checked?[]:[...document.querySelectorAll('[name=eDay]:checked')].map(x=>x.value);
+ s.shifts=collectShifts('eShifts');s.hours=hoursText(s);s.desc=document.getElementById('eDesc').value;const selectedTypes=[...document.querySelectorAll('#eTypeTags .type-tag.active')].map(x=>x.dataset.categoryValue);if(selectedTypes.length){s.type=selectedTypes;s.types=selectedTypes;s.emoji=selectedTypes.includes('drink')?'🧋':selectedTypes.includes('dessert')?'🍰':'🍜';}
+ persist();closeModal();render();toast('店家資料已更新');
+}
+
+/* v9 interaction refinements: preserve the established visual template */
+function render(){
+ const list=document.getElementById('list');
+ document.getElementById('listTitle').textContent=page==='favorites'?'📌 我的口袋名單':page==='records'?'📖 最近的美食日記':page==='landmines'?'💣 地雷美食':page==='settings'?'⚙️ 個人化設定':onlyOpen?'🟢 目前營業中':'✨ 你可能會想吃';
+ if(page==='records'){
+  list.innerHTML='<div class="toolbar" style="margin-bottom:10px"><button class="btn" onclick="openAdd()">＋ 新增一家喜歡的店</button></div>'+(records.length?records.slice().reverse().map(r=>`<article class="restaurant diary-card"><div class="foodpic">${esc(r.emoji||'🍽️')}</div><div class="diary-main"><div class="diary-date">📅 ${esc(r.date||'尚未設定日期')}</div><h3>${esc(r.name||'未命名店家')}</h3>${r.branch?`<div class="tiny">📍 ${esc(r.branch)}</div>`:''}<div class="diary-meal">🍴 ${esc(r.items||'尚未填寫餐點名稱')}</div>${r.optionsText?`<div class="diary-meta">🧋 客製化：${esc(r.optionsText)}</div>`:''}${r.note?`<div class="diary-meta">💭 ${esc(r.note)}</div>`:''}</div><div class="diary-actions"><button class="btn light" onclick="editRecord(${r.id})">編輯</button><button class="btn light" onclick="deleteRecord(${r.id})">刪除</button></div></article>`).join(''):'<div class="empty">還沒有美食日記<br>吃完一餐，就來記錄今天的好味道吧 🍑</div>');return;
+ }
+ if(page==='settings'){list.innerHTML=`<div class="restaurant" style="display:block"><h3>🎨 我的專屬首頁</h3><div class="field"><label>首頁標題</label><input id="customTitle" value="${esc(localStorage.getItem('foodmood_title')||'今天吃什麼？')}"></div><div class="field"><label>主題色</label><input id="themeColor" type="color" value="${esc(localStorage.getItem('foodmood_color')||'#f58a69')}" style="width:62px;height:45px;padding:4px"></div><div class="field"><label>頁面背景色</label><input id="backgroundColor" type="color" value="${esc(localStorage.getItem('foodmood_bg')||'#fff8f1')}" style="width:62px;height:45px;padding:4px"></div><div class="field"><label>背景裝飾 Emoji</label><input id="backgroundEmoji" value="${esc(localStorage.getItem('foodmood_emoji')||'🍑')}"></div><div class="field"><label>圖案濃淡</label><input id="emojiOpacity" type="range" min="3" max="22" value="${esc(localStorage.getItem('foodmood_opacity')||'10')}"></div><button class="btn" onclick="saveSettings()">儲存設定</button><button class="btn light" onclick="resetAppearance()">恢復預設</button><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>資料管理</h3><p class="tiny">資料保存在目前瀏覽器。</p><button class="btn light" onclick="exportData()">匯出資料備份</button></div>`;return;}
+ let arr=stores.filter(s=>(type==='all'||(Array.isArray(s.type)?s.type.includes(type):s.type===type))&&(page!=='favorites'||(s.fav&&!records.some(r=>r.name===s.name)))&&(page!=='landmines'||s.landmine)&&(!onlyOpen||(s.open&&(s.fav||records.some(r=>r.storeId===s.id||r.name===s.name)))));
+ const addBtn=`<div class="toolbar" style="margin-bottom:10px"><button class="btn" onclick="openAdd()">＋ 新增一家喜歡的店</button></div>`;
+ const groups=[...new Set(arr.map(s=>s.name))].map(name=>({name,items:arr.filter(s=>s.name===name)}));
+ list.innerHTML=addBtn+(groups.length?groups.map(g=>{let first=g.items[0];return `<article class="restaurant" style="align-items:flex-start;cursor:pointer" onclick="detail('${first.id}')"><div class="foodpic">${esc(first.emoji||'🍽️')}</div><div class="info"><h3>${esc(g.name)}</h3>${g.items.map(s=>`<div style="border-top:1px solid var(--line);padding-top:8px;margin-top:8px"><p><span class="badge">${s.open?'營業中':'目前休息'}</span><span class="badge gray">${esc(s.branch||s.area||'未設定分店')}</span>${s.landmine?'<span class="badge gray">地雷美食</span>':''}</p><p>📍 ${esc(s.area||'')}</p><p>🕒 ${esc(hoursText(s)).replace(/–/g,' ~ ')}</p><p class="tiny">${esc(daysText(s))}</p><div class="toolbar"><button class="heart" onclick="event.stopPropagation();toggleFav('${s.id}')">${s.fav?'♥':'♡'}</button><button class="btn light" style="padding:7px 9px;font-size:12px" onclick="event.stopPropagation();detail('${s.id}')">查看／編輯</button>${page==='favorites'?`<button class="btn light" style="padding:7px 9px;font-size:12px" onclick="event.stopPropagation();removePocket('${s.id}')">移除</button>`:''}</div></div>`).join('')}</div></article>`}).join(''):(page==='favorites'?'<div class="empty">目前沒有尚未吃過的口袋名單店家 🌷<br>新增想吃的店，吃過並記錄後就會自動從這裡移除。</div>':'<div class="empty">這裡還沒有店家，新增一間喜歡的店吧 🌷</div>'));
+}
+function filterLandmines(){page='landmines';onlyOpen=false;render();document.getElementById('list').scrollIntoView({behavior:'smooth',block:'start'})}
+function openAdd(){document.getElementById('sheetContent').innerHTML=`<h2>新增一家喜歡的店</h2><p class="tiny">同品牌不同分店會整理在同一家店名下。輸入相同品牌時會先確認是否新增或合併。</p><form novalidate onsubmit="addStore(event)"><div class="field"><label>品牌／店家名稱</label><input id="nName" required placeholder="例如：小日子手作茶" oninput="showDuplicateHint()"></div><div id="dupHint" class="tiny"></div><div class="field"><label>分店（可按＋新增；可留空）</label><div id="branchFields"><div class="branchrow" style="display:flex;gap:8px"><input class="nBranch" placeholder="例如：台中公益店"><button class="btn light" type="button" onclick="addBranchField()">＋</button></div></div></div><div class="field"><label>餐廳類型（可複選）</label><div id="nTypeTags" class="type-tags">${[{id:"food",label:"🍜 正餐"},{id:"drink",label:"🧋 飲料"},{id:"dessert",label:"🍰 甜點"},...customCategories.map(c=>({id:c.id,label:`${c.emoji} ${c.name}`}))].map(c=>`<button type="button" class="type-tag ${c.id==="food"?"active":""}" data-category-value="${esc(c.id)}" onclick="toggleTypeTag(this)">${esc(c.label)}</button>`).join('')}</div><p class="tiny">可以同時選擇多種類型，例如「飲料＋甜點」。</p><div id="nTypeHint" class="tiny"></div></div><div class="field"><label>縣市／店家範圍</label><select id="nRegion" required onchange="updateTownOptions('nRegion','nArea')"><option value="">請選擇縣市或全國性</option><option value="全國性">🌐 全國性（不限縣市）</option>${taiwanRegions.filter(r=>r!=='不限縣市').map(r=>`<option value="${r}">${r}</option>`).join('')}</select></div><div class="field"><label>鄉鎮市區</label><select id="nArea"><option value="">請先選擇縣市</option></select></div><div class="field"><label>營業星期（可複選）</label><div style="display:flex;flex-wrap:wrap;gap:8px">${['一','二','三','四','五','六','日'].map(d=>`<label><input type="checkbox" name="nDay" value="${d}" checked> 週${d}</label>`).join('')}<label><input type="checkbox" id="nClosed" onchange="document.querySelectorAll('[name=nDay]').forEach(x=>x.checked=!this.checked)"> 公休</label></div></div><div class="field"><label>營業時間（時鐘可微調，可新增多個時段）</label><div id="nShifts"><div class="shiftrow" style="display:flex;gap:8px;margin:7px 0"><input type="time" value="11:00" class="shiftStart"><span style="align-self:center">~</span><input type="time" value="20:00" class="shiftEnd"></div></div><button type="button" class="btn light" onclick="addShift('nShifts')">＋ 新增營業時段</button></div><div class="field"><label>客製化選項</label><div id="nOptions"><p class="tiny">可在店家詳情中建立，之後同一家店沿用。</p></div></div><div class="field"><label>備註</label><textarea id="nDesc" placeholder="必點品項、想再訪的原因…"></textarea></div><p class="tiny">新增後會先放入口袋名單；新增飲食日記後，自動移入美食地圖。</p><button class="btn" type="button" style="width:100%" onclick="submitNewStoreManually()">確認新增店家</button></form>`;openModal();updateTownOptions('nRegion','nArea')}
+function addBranchField(){let wrap=document.getElementById('branchFields');let row=document.createElement('div');row.className='branchrow';row.style='display:flex;gap:8px;margin-top:8px';row.innerHTML='<input class="nBranch" placeholder="分店名稱"><button class="btn light" type="button" onclick="this.parentElement.remove()">−</button>';wrap.appendChild(row)}
+function toggleTypeTag(btn){btn.classList.toggle('active');let vals=[...document.querySelectorAll('#nTypeTags .type-tag.active')].map(x=>x.dataset.categoryValue);let wrap=document.getElementById('nTypeHint');if(wrap)wrap.textContent=vals.includes('drink')?'🧋 已選飲料類型；新增後可沿用甜度、冰塊等客製化設定。':''}
+function addStore(e){e.preventDefault();let name=document.getElementById('nName').value.trim(),branches=[...document.querySelectorAll('.nBranch')].map(x=>x.value.trim()).filter(Boolean),region=document.getElementById('nRegion').value,town=document.getElementById('nArea').value,typeVal=[...document.querySelectorAll('#nTypeTags .type-tag.active')].map(x=>x.dataset.categoryValue);if(!typeVal.length){toast('請至少選擇一種類型');return}let unique=[...new Set(branches)];let matches=stores.filter(s=>s.name.trim().toLocaleLowerCase()===name.toLocaleLowerCase());if(unique.some(b=>matches.some(s=>(s.branch||'').trim().toLocaleLowerCase()===b.toLocaleLowerCase()))){toast('這個品牌已有相同分店，請確認分店名稱');return}let data={name,branches:unique,branch:unique[0]||'',region,town,typeVal,target:document.querySelector('input[name="newStoreTarget"]:checked')?.value||'pocket',desc:document.getElementById('nDesc').value,days:[...document.querySelectorAll('[name=nDay]:checked')].map(x=>x.value),shifts:collectShifts('nShifts'),options:collectOptions(typeVal.includes('drink')?'drink':typeVal[0])};if(matches.length){window.pendingStoreData=data;document.getElementById('sheetContent').innerHTML=`<h2>⚠️ 發現同名店家</h2><p>「${esc(name)}」已經存在。你想怎麼處理？</p><div class="toolbar" style="display:grid"><button class="btn" onclick="saveDuplicateStore('branch')">新增為同品牌的另一家分店</button><button class="btn light" onclick="saveDuplicateStore('merge')">併入同一家品牌（補充分店資料）</button><button class="btn light" onclick="window.pendingStoreData=null;closeModal()">退出設定／取消</button></div>`;return}saveNewStore(data,'new')}
+function saveNewStore(d,mode){let types=Array.isArray(d.typeVal)?d.typeVal:[d.typeVal],emoji=types.includes('drink')?'🧋':types.includes('dessert')?'🍰':'🍜',area=d.region==='全國性'?'全國性':(d.region+' · '+d.town).trim(),branches=d.branches||[d.branch||''];if(!branches.length)branches=[''];branches.forEach((branch,i)=>{stores.push({id:'u'+Date.now()+i+Math.random().toString(16).slice(2,5),name:d.name,branch,type:types,types,emoji,area,open:true,fav:false,landmine:false,desc:d.desc||'',note:'',weekdays:d.days||['一','二','三','四','五','六','日'],shifts:d.shifts||[],hours:(d.shifts||[]).map(x=>x.start+' ~ '+x.end).join('、'),options:d.options||{}})});persist();window.pendingStoreData=null;closeModal();type='all';document.querySelectorAll('[data-type]').forEach(b=>b.classList.toggle('active',b.dataset.type==='all'));page='home';render();toast(mode==='branch'?'已加入同品牌分店 ✨':'新店家加入成功 ✨')}
+function saveDuplicateStore(mode){let d=window.pendingStoreData;if(!d)return;if(mode==='merge'){let existing=stores.find(s=>s.name.trim().toLocaleLowerCase()===d.name.toLocaleLowerCase());if(existing){existing.desc=d.desc||existing.desc;existing.options={...(existing.options||{}),...(d.options||{})};existing.type=[...new Set([...(Array.isArray(existing.type)?existing.type:[existing.type]),...(Array.isArray(d.typeVal)?d.typeVal:[d.typeVal])])];existing.types=existing.type;let known=stores.filter(s=>s.name===d.name).map(s=>(s.branch||'').toLocaleLowerCase());let newBranches=(d.branches||[]).filter(b=>!known.includes(b.toLocaleLowerCase()));newBranches.forEach((branch,i)=>stores.push({...existing,id:'u'+Date.now()+i+Math.random().toString(16).slice(2,5),type:Array.isArray(d.typeVal)?d.typeVal:[d.typeVal],types:Array.isArray(d.typeVal)?d.typeVal:[d.typeVal],branch,area:d.region==='全國性'?'全國性':(d.region+' · '+d.town).trim(),weekdays:d.days,shifts:d.shifts,hours:(d.shifts||[]).map(x=>x.start+' ~ '+x.end).join('、'),fav:false,landmine:false,options:{...(existing.options||{}),...(d.options||{})}}));if(!newBranches.length)toast('已併入同品牌資料')}persist();closeModal();render();window.pendingStoreData=null;return}saveNewStore(d,'branch')}
+function detail(id){let s=stores.find(x=>x.id===id);if(!s)return;let opts=s.options||{};document.getElementById('sheetContent').innerHTML=`<div style="font-size:52px">${esc(s.emoji||'🍽️')}</div><h2>${esc(s.name)}</h2><p><span class="badge">${s.open?'營業中':'目前休息'}</span><span class="badge gray">${esc(s.branch||s.area||'未設定分店')}</span></p><p>${esc(s.desc||'')}</p><p>📍 ${esc(s.area||'')}</p><p>🕒 ${esc(hoursText(s)).replace(/–/g,' ~ ')}</p><p class="tiny">${esc(daysText(s))}</p><div class="field"><label>今天的餐點名稱</label><input id="visitItems" placeholder="例如：珍珠奶茶、牛肉麵"></div><div class="field"><label>客製化選項（此品牌預設）</label><div id="detailOptions">${Object.entries(opts).map(([k,v])=>`<label style="display:inline-block;margin:4px 8px 4px 0">${esc(k)} <input data-option-key="${esc(k)}" value="${esc(v)}" style="width:95px;padding:7px;border:1px solid var(--line);border-radius:9px"></label>`).join('')}</div></div><div class="field"><label>新增客製化選項</label><div style="display:flex;gap:8px"><input id="newOptKey" placeholder="選項名稱，如辣度"><input id="newOptVal" placeholder="預設，如小辣"></div><button class="btn light" style="margin-top:8px" onclick="addCustomOption('${s.id}')">＋ 新增選項</button></div><div class="field"><label>備註</label><textarea id="visitNote" placeholder="今天的心得、份量…"></textarea></div><label style="display:flex;gap:8px;align-items:center;margin:10px 0"><input id="landmineToggle" type="checkbox" ${s.landmine?'checked':''}> 💣 列入地雷美食（不參加抽籤）</label><div class="toolbar"><button class="btn" onclick="record('${s.id}')">＋ 存入美食日記</button><button class="btn light" onclick="toggleFav('${s.id}');detail('${s.id}')">${s.fav?'♥ 已在口袋名單':'♡ 加入口袋名單'}</button><button class="btn light" onclick="saveLandmine('${s.id}')">儲存地雷設定</button><button class="btn light" onclick="editStore('${s.id}')">編輯店家</button></div>`;openModal()}
+function saveLandmine(id){let s=stores.find(x=>x.id===id);if(!s)return;s.landmine=!!document.getElementById('landmineToggle')?.checked;persist();closeModal();render();toast(s.landmine?'已列入地雷美食，不會參加抽籤':'已從地雷美食移除')}
+function record(id){let s=stores.find(x=>x.id===id);if(!s)return;let item=document.getElementById('visitItems')?.value.trim()||'',note=document.getElementById('visitNote')?.value.trim()||'',options=[...(document.querySelectorAll('#detailOptions [data-option-key]'))].map(x=>x.dataset.optionKey+'：'+x.value);let rec={id:Date.now(),storeId:s.id,name:s.name,branch:s.branch||'',emoji:s.emoji,date:new Date().toLocaleDateString('zh-TW'),items:item,optionsText:options.join('、'),note};records.push(rec);[...document.querySelectorAll('#detailOptions [data-option-key]')].forEach(x=>{s.options=s.options||{};s.options[x.dataset.optionKey]=x.value});stores.filter(x=>x.name===s.name).forEach(x=>{x.options={...(x.options||{}),...(s.options||{})};x.fav=false});s.fav=false;persist();closeModal();render();toast('已加入美食日記，並從口袋名單移除 📝')}
+function editRecord(id){let r=records.find(x=>x.id===id);if(!r)return;let opts=String(r.optionsText||'').split('、').filter(Boolean).map(x=>{let i=x.indexOf('：');return i<0?{k:x,v:''}:{k:x.slice(0,i),v:x.slice(i+1)}});document.getElementById('sheetContent').innerHTML=`<h2>編輯美食日記</h2><form onsubmit="updateRecord(event,${r.id})"><div class="field"><label>店家名稱</label><input id="rName" required value="${esc(r.name||'')}"></div><div class="field"><label>分店</label><input id="rBranch" value="${esc(r.branch||'')}"></div><div class="field"><label>日期</label><input id="rDate" value="${esc(r.date||'')}"></div><div class="field"><label>今天的餐點名稱</label><input id="rItems" value="${esc(r.items||'')}" placeholder="例如：牛肉麵、珍珠奶茶"></div><div class="field"><label>客製化選項（可修改）</label><div id="recordOptions">${opts.map(o=>`<div class="recordOpt" style="display:flex;gap:8px;margin:6px 0"><input class="rOptKey" value="${esc(o.k)}" placeholder="選項"><input class="rOptVal" value="${esc(o.v)}" placeholder="內容"><button class="btn light" type="button" onclick="this.parentElement.remove()">−</button></div>`).join('')}</div><button type="button" class="btn light" onclick="addRecordOption()">＋ 新增客製化選項</button></div><div class="field"><label>備註</label><textarea id="rNote">${esc(r.note||'')}</textarea></div><button class="btn" style="width:100%">儲存日記修改</button></form>`;openModal()}
+function addRecordOption(){let w=document.getElementById('recordOptions'),d=document.createElement('div');d.className='recordOpt';d.style='display:flex;gap:8px;margin:6px 0';d.innerHTML='<input class="rOptKey" placeholder="選項"><input class="rOptVal" placeholder="內容"><button class="btn light" type="button" onclick="this.parentElement.remove()">−</button>';w.appendChild(d)}
+function updateRecord(e,id){e.preventDefault();let r=records.find(x=>x.id===id);if(!r)return;r.name=document.getElementById('rName').value.trim();r.branch=document.getElementById('rBranch').value.trim();r.date=document.getElementById('rDate').value.trim();r.items=document.getElementById('rItems').value.trim();r.optionsText=[...document.querySelectorAll('#recordOptions .recordOpt')].map(x=>{let k=x.querySelector('.rOptKey').value.trim(),v=x.querySelector('.rOptVal').value.trim();return k?(k+'：'+v):''}).filter(Boolean).join('、');r.note=document.getElementById('rNote').value;persist();closeModal();page='records';render();toast('美食日記已更新')}
+function pick(){document.getElementById('sheetContent').innerHTML=`<h2>🎲 幫我挑一家店</h2><div class="field"><label>縣市</label><select id="pickRegion" onchange="updateTownOptions('pickRegion','pickTown')">${taiwanRegions.map(r=>`<option value="${r}">${r}</option>`).join('')}</select></div><div class="field"><label>鄉鎮市區（可選）</label><select id="pickTown"><option value="">不限鄉鎮市區</option></select></div><button class="btn" style="width:100%" onclick="runRegionalPick()">🎲 抽一家符合條件的店</button>`;openModal()}
+function runRegionalPick(){let region=document.getElementById('pickRegion').value,town=document.getElementById('pickTown').value;let norm=x=>String(x||'').replace(/臺/g,'台').replace(/市|縣/g,'');let arr=stores.filter(s=>{if(!(type==='all'||(Array.isArray(s.type)?s.type.includes(type):s.type===type)))return false;let area=norm(s.area);if(s.area==='全國性')return region==='不限縣市';if(region!=='不限縣市'&&!area.includes(norm(region)))return false;if(town&&!area.includes(norm(town)))return false;return true});if(!arr.length){toast('這個地區還沒有符合條件的店家');return}let s=arr[Math.floor(Math.random()*arr.length)];closeModal();detail(s.id)}
+function addShift(id){let c=document.getElementById(id);let r=document.createElement('div');r.className='shiftrow';r.style='display:flex;gap:8px;margin:7px 0';r.innerHTML='<input type="time" value="17:00" class="shiftStart"><span style="align-self:center">~</span><input type="time" value="21:00" class="shiftEnd"><button type="button" class="btn light" onclick="this.parentElement.remove()">移除</button>';c.appendChild(r)}
+
+/* v11: 店家清單與飲食記錄整合，保持既有視覺模板 */
+function recordsForStore(s){
+ return records.filter(r=>r.storeId===s.id || (r.name===s.name && String(r.branch||'')===String(s.branch||''))).slice().sort((a,b)=>String(b.id).localeCompare(String(a.id)));
+}
+function render(){
+ const list=document.getElementById('list');
+ document.getElementById('listTitle').textContent=page==='favorites'?'📌 我的口袋名單':page==='records'?'📖 飲食記錄｜依店家查看':page==='landmines'?'💣 地雷美食':page==='settings'?'⚙️ 個人化設定':onlyOpen?'🟢 目前營業中':'✨ 你可能會想吃';
+ if(page==='records'){
+  const eligible=stores.filter(s=>records.some(r=>r.storeId===s.id || (r.name===s.name && String(r.branch||'')===String(s.branch||''))));
+  const groups=[...new Set(eligible.map(s=>s.name))].map(name=>({name,items:eligible.filter(s=>s.name===name)}));
+  list.innerHTML='<div class="toolbar" style="margin-bottom:10px"><button class="btn" onclick="openAdd()">＋ 新增一家喜歡的店</button></div>'+(groups.length?groups.map(g=>`<section style="margin-bottom:18px"><h3 style="margin:12px 2px;color:var(--ink)">${esc(g.name)}</h3>${g.items.map(s=>{const rs=recordsForStore(s);return `<article class="restaurant" style="align-items:flex-start"><div class="foodpic" onclick="detail('${s.id}')" style="cursor:pointer">${esc(s.emoji||'🍽️')}</div><div class="diary-main"><h3 style="cursor:pointer" onclick="detail('${s.id}')">${esc(s.name)}${s.branch?' · '+esc(s.branch):''}</h3><div class="tiny">📍 ${esc(s.area||'')}</div>${rs.map(r=>`<div style="border-top:1px solid var(--line);margin-top:9px;padding-top:9px"><div class="diary-date">📅 ${esc(r.date||'尚未設定日期')}</div><div class="diary-meal">🍴 ${esc(r.items||'尚未填寫餐點名稱')}</div>${r.optionsText?`<div class="diary-meta">🧋 客製化：${esc(r.optionsText)}</div>`:''}${r.note?`<div class="diary-meta">💭 ${esc(r.note)}</div>`:''}<div class="toolbar" style="margin-top:7px"><button class="btn light" onclick="editRecord(${r.id})">編輯紀錄</button><button class="btn light" onclick="deleteRecord(${r.id})">刪除紀錄</button></div></div>`).join('')}<button class="btn" style="margin-top:10px" onclick="detail('${s.id}')">＋ 新增飲食記錄</button></div></article>`}).join('')}</section>`).join(''):'<div class="empty">還沒有飲食記錄。可以先從店家清單點「＋ 新增飲食記錄」開始 🍑</div>');return;
+ }
+ if(page==='settings'){list.innerHTML=`<div class="restaurant" style="display:block"><h3>🎨 我的專屬首頁</h3><div class="field"><label>首頁標題</label><input id="customTitle" value="${esc(localStorage.getItem('foodmood_title')||'今天吃什麼？')}"></div><div class="field"><label>主題色</label><input id="themeColor" type="color" value="${esc(localStorage.getItem('foodmood_color')||'#f58a69')}" style="width:62px;height:45px;padding:4px"></div><div class="field"><label>頁面背景色</label><input id="backgroundColor" type="color" value="${esc(localStorage.getItem('foodmood_bg')||'#fff8f1')}" style="width:62px;height:45px;padding:4px"></div><div class="field"><label>背景裝飾 Emoji</label><input id="backgroundEmoji" value="${esc(localStorage.getItem('foodmood_emoji')||'🍑')}"></div><div class="field"><label>圖案濃淡</label><input id="emojiOpacity" type="range" min="3" max="22" value="${esc(localStorage.getItem('foodmood_opacity')||'10')}"></div><button class="btn" onclick="saveSettings()">儲存設定</button><button class="btn light" onclick="resetAppearance()">恢復預設</button><hr style="border:0;border-top:1px solid var(--line);margin:18px 0"><h3>資料管理</h3><p class="tiny">資料保存在目前瀏覽器。</p><button class="btn light" onclick="exportData()">匯出資料備份</button></div>`;return;}
+ let arr=stores.filter(s=>(type==='all'||(Array.isArray(s.type)?s.type.includes(type):s.type===type))&&(page!=='favorites'||(s.fav&&!records.some(r=>r.storeId===s.id||(r.name===s.name&&String(r.branch||'')===String(s.branch||'')))))&&(page!=='landmines'||s.landmine)&&(!onlyOpen||(s.open&&(s.fav||records.some(r=>r.storeId===s.id||r.name===s.name)))));
+ const addBtn=`<div class="toolbar" style="margin-bottom:10px"><button class="btn" onclick="openAdd()">＋ 新增一家喜歡的店</button></div>`;
+ const groups=[...new Set(arr.map(s=>s.name))].map(name=>({name,items:arr.filter(s=>s.name===name)}));
+ list.innerHTML=addBtn+(groups.length?groups.map(g=>{let first=g.items[0];return `<article class="restaurant" style="align-items:flex-start;cursor:pointer" onclick="detail('${first.id}')"><div class="foodpic">${esc(first.emoji||'🍽️')}</div><div class="info"><h3>${esc(g.name)}</h3>${g.items.map(s=>{const rs=recordsForStore(s);const latest=rs.slice(0,2);return `<div style="border-top:1px solid var(--line);padding-top:8px;margin-top:8px"><p><span class="badge">${s.open?'營業中':'目前休息'}</span><span class="badge gray">${esc(s.branch||s.area||'未設定分店')}</span>${s.landmine?'<span class="badge gray">地雷美食</span>':''}</p><p>📍 ${esc(s.area||'')}</p><p>🕒 ${esc(hoursText(s)).replace(/–/g,' ~ ')}</p><p class="tiny">${esc(daysText(s))}</p>${latest.length?`<div style="background:#fff5ef;border-radius:12px;padding:9px 10px;margin:8px 0"><div class="tiny" style="margin-bottom:4px">🍴 之前吃過</div>${latest.map(r=>`<div style="font-size:13px;margin:4px 0"><b>${esc(r.items||'未填餐點')}</b> <span class="tiny">· ${esc(r.date||'')}</span></div>`).join('')}${rs.length>2?`<div class="tiny">另有 ${rs.length-2} 筆記錄</div>`:''}</div>`:`<p class="tiny" style="margin:7px 0">尚無飲食記錄</p>`}<div class="toolbar"><button class="heart" onclick="event.stopPropagation();toggleFav('${s.id}')">${s.fav?'♥':'♡'}</button><button class="btn light" style="padding:7px 9px;font-size:12px" onclick="event.stopPropagation();detail('${s.id}')">查看／編輯</button><button class="btn" style="padding:7px 9px;font-size:12px" onclick="event.stopPropagation();detail('${s.id}')">＋ 飲食記錄</button>${page==='favorites'?`<button class="btn light" style="padding:7px 9px;font-size:12px" onclick="event.stopPropagation();removePocket('${s.id}')">移除</button>`:''}</div></div>`}).join('')}</div></article>`}).join(''):'<div class="empty">這裡還沒有店家，新增一間喜歡的店吧 🌷</div>');
+}
+function detail(id){
+ const s=stores.find(x=>x.id===id);if(!s)return;const opts=s.options||{},history=recordsForStore(s);
+ document.getElementById('sheetContent').innerHTML=`<div style="font-size:52px">${esc(s.emoji||'🍽️')}</div><h2>${esc(s.name)}</h2><p><span class="badge">${s.open?'營業中':'目前休息'}</span><span class="badge gray">${esc(s.branch||s.area||'未設定分店')}</span></p><p>${esc(s.desc||'')}</p><p>📍 ${esc(s.area||'')}</p><p>🕒 ${esc(hoursText(s)).replace(/–/g,' ~ ')}</p><p class="tiny">${esc(daysText(s))}</p><div style="margin:16px 0;padding:13px;background:#fff3ec;border-radius:16px"><h3 style="margin:0 0 9px">📚 這家店的飲食記錄（${history.length}）</h3>${history.length?history.map(r=>`<div style="border-top:1px solid #f2dfd5;padding:9px 0"><div class="diary-date">📅 ${esc(r.date||'尚未設定日期')}</div><div style="font-weight:750">🍴 ${esc(r.items||'尚未填寫餐點名稱')}</div>${r.mealTypes?.length?`<div class="diary-meta">類型：${r.mealTypes.map(esc).join('、')}</div>`:''}${r.optionsText?`<div class="diary-meta">🧋 客製化：${esc(r.optionsText)}</div>`:''}${r.note?`<div class="diary-meta">💭 ${esc(r.note)}</div>`:''}<div class="toolbar" style="margin-top:6px"><button class="btn light" onclick="editRecord(${r.id})">編輯</button><button class="btn light" onclick="deleteRecord(${r.id});detail('${s.id}')">刪除</button></div></div>`).join(''):'<p class="tiny">還沒在這家店留下記錄。今天吃完可以直接新增在這裡。</p>'}</div><h3 style="margin:16px 0 8px">✍️ 新增今天的飲食記錄</h3><div class="field"><label>今天的餐點名稱</label><input id="visitItems" placeholder="例如：珍珠奶茶、牛肉麵"></div><div class="field"><label>客製化選項（此品牌預設）</label><div id="detailOptions">${Object.entries(opts).map(([k,v])=>`<label style="display:inline-block;margin:4px 8px 4px 0">${esc(k)} <input data-option-key="${esc(k)}" value="${esc(v)}" style="width:95px;padding:7px;border:1px solid var(--line);border-radius:9px"></label>`).join('')}</div></div><div class="field"><label>新增客製化選項</label><div style="display:flex;gap:8px"><input id="newOptKey" placeholder="選項名稱，如辣度"><input id="newOptVal" placeholder="預設，如小辣"></div><button class="btn light" style="margin-top:8px" onclick="addCustomOption('${s.id}')">＋ 新增選項</button></div><div class="field"><label>備註</label><textarea id="visitNote" placeholder="今天的心得、份量…"></textarea></div><label style="display:flex;gap:8px;align-items:center;margin:10px 0"><input id="landmineToggle" type="checkbox" ${s.landmine?'checked':''}> 💣 列入地雷美食（不參加抽籤）</label><div class="toolbar"><button class="btn" onclick="record('${s.id}')">＋ 存入飲食記錄</button><button class="btn light" onclick="toggleFav('${s.id}');detail('${s.id}')">${s.fav?'♥ 已在口袋名單':'♡ 加入口袋名單'}</button><button class="btn light" onclick="saveLandmine('${s.id}')">儲存地雷設定</button><button class="btn light" onclick="editStore('${s.id}')">編輯店家</button></div>`;openModal();
+}
+
+
+/* v12 refinements: brand-level pocket list + proper selectable customization controls */
+const SWEETNESS_CHOICES = ['無糖','一分糖','微糖','半糖','少糖','正常甜','多糖'];
+const ICE_CHOICES = ['熱/溫','去冰','微冰','少冰','正常冰','多冰'];
+const SPICE_CHOICES = ['不辣','微辣','小辣','中辣','大辣','特辣'];
+const COMMON_CUSTOM_CHOICES = {
+  '甜度': SWEETNESS_CHOICES,
+  '冰塊': ICE_CHOICES,
+  '辣度': SPICE_CHOICES
+};
+function ensureDrinkOptions(s){
+  if(Array.isArray(s.type) ? s.type.includes('drink') : s.type==='drink'){
+    s.options = s.options || {};
+    if(!SWEETNESS_CHOICES.includes(s.options['甜度'])) s.options['甜度'] = '半糖';
+    if(!ICE_CHOICES.includes(s.options['冰塊'])) s.options['冰塊'] = '少冰';
+  }
+}
+stores.forEach(ensureDrinkOptions);
+function detail(id){
+ const s=stores.find(x=>x.id===id); if(!s)return;
+ ensureDrinkOptions(s);
+ const history=recordsForStore(s), opts=s.options||{};
+ const optionRows=Object.entries(opts).map(([k,v])=>{
+   let choices = COMMON_CUSTOM_CHOICES[k] || (s.optionChoices&&s.optionChoices[k]) || [v];
+   if(!choices.includes(v)) choices=[v,...choices];
+   return `<label style="display:block;margin:10px 0;font-weight:650">${esc(k)}
+     <select data-option-key="${esc(k)}" style="display:block;width:100%;margin-top:6px;padding:12px;border:1px solid var(--line);border-radius:12px;background:white;font:inherit;font-weight:400">
+       ${choices.map(c=>`<option value="${esc(c)}" ${c===v?'selected':''}>${esc(c)}</option>`).join('')}
+     </select></label>`;
+ }).join('');
+ const historyHtml=v61GroupDiaryByDate(history,s.id);
+ document.getElementById('sheetContent').innerHTML=`<div style="font-size:52px">${esc(s.emoji||'🍽️')}</div><h2>${esc(s.name)}</h2><p><span class="badge">${s.open?'營業中':'目前休息'}</span> <span class="badge gray">${esc(s.branch||s.area||'未設定分店')}</span></p><p>${esc(s.desc||'')}</p><p>📍 ${esc(s.area||'')}</p><p>🕒 ${esc(hoursText(s)).replace(/–/g,' ~ ')}</p><p class="tiny">${esc(daysText(s))}</p><div style="margin:16px 0;padding:13px;background:#fff3ec;border-radius:16px"><h3>📚 這家店吃過什麼（${history.length}）</h3>${historyHtml}</div>${v16MenuHtml(s)}<h3>✍️ 新增飲食記錄</h3><div class="field"><label>今天吃／喝的品項</label><select id="visitDishSelect" onchange="v16UpdateVisit('${s.id}')"><option value="__manual">手動輸入</option>${menu.map(d=>`<option value="${d.id}">${esc(d.name)}</option>`).join('')}</select><input id="visitItems" placeholder="例如：珍珠奶茶、牛肉麵" style="margin-top:7px"></div><div class="field"><label>這道餐點的客製化選項</label><div id="detailOptions"><p class="tiny">請先選擇餐點。</p></div></div><div class="field"><label>備註</label><textarea id="visitNote" placeholder="今天的心得、份量…"></textarea></div><label style="display:flex;gap:8px;align-items:center;margin:10px 0"><input id="landmineToggle" type="checkbox" ${s.landmine?'checked':''}> 💣 列入地雷美食（不參加抽籤）</label><div class="toolbar"><button class="btn" onclick="record('${s.id}')">＋ 存入飲食記錄</button><button class="btn light" onclick="toggleFav('${s.id}');detail('${s.id}')">${s.fav?'♥ 已在口袋名單':'♡ 加入口袋名單'}</button><button class="btn light" onclick="saveLandmine('${s.id}')">儲存地雷設定</button><button class="btn light" onclick="editStore('${s.id}')">編輯店家</button></div>`;
+ openModal();v16UpdateVisit(id);
+}
+function v16UpdateVisit(sid){const s=stores.find(x=>x.id===sid);if(!s)return;const select=document.getElementById('visitDishSelect'),manual=document.getElementById('visitItems'),wrap=document.getElementById('detailOptions');if(!select||!wrap)return;const d=v16Dish(s,select.value);if(manual)manual.style.display=select.value==='__manual'?'block':'none';if(!d){wrap.innerHTML='<p class="tiny">手動輸入餐點不會套用特定客製化設定。</p>';return}if(manual)manual.value=d.name;const rows=[];Object.entries(d.options||{}).forEach(([k,v])=>{const choices=v16Choices(k)||[v];rows.push(`<label style="display:block;margin:10px 0">${esc(k)}<select data-option-key="${esc(k)}" style="display:block;width:100%;padding:10px;border:1px solid var(--line);border-radius:10px">${choices.map(c=>`<option ${c===v?'selected':''}>${esc(c)}</option>`).join('')}</select></label>`)});Object.entries(d.customOptions||{}).forEach(([k,o])=>{const choices=o.choices||[],v=o.default||choices[0];rows.push(`<label style="display:block;margin:10px 0">${esc(k)}<select data-option-key="${esc(k)}" style="display:block;width:100%;padding:10px;border:1px solid var(--line);border-radius:10px">${choices.map(c=>`<option ${c===v?'selected':''}>${esc(c)}</option>`).join('')}</select></label>`)});wrap.innerHTML=rows.join('')||'<p class="tiny">這道餐點尚未設定客製化選項。</p>'}
+function record(id){
+ const s=stores.find(x=>x.id===id);if(!s)return;const select=document.getElementById('visitDishSelect'),d=select&&select.value!=='__manual'?v16Dish(s,select.value):null,item=(d?.name||document.getElementById('visitItems')?.value||'').trim();if(!item){toast('請先選擇或輸入今天的餐點名稱');return}const note=document.getElementById('visitNote')?.value.trim()||'',opts=[...document.querySelectorAll('#detailOptions [data-option-key]')].map(x=>x.dataset.optionKey+'：'+x.value);records.push({id:Date.now(),storeId:s.id,dishId:d?.id||'',name:s.name,branch:s.branch||'',emoji:s.emoji||'🍽️',date:new Date().toLocaleDateString('zh-TW'),items:item,optionsText:opts.join('、'),note});stores.filter(x=>x.name===s.name).forEach(x=>x.fav=false);s.fav=false;persist();closeModal();render();toast('已加入飲食記錄，並從口袋名單移除 📝');
+}
+
+type='all';document.querySelectorAll('[data-type]').forEach(b=>b.classList.toggle('active',b.dataset.type==='all'));applyAppearance();if(localStorage.getItem('foodmood_title'))document.querySelector('.top h1').innerHTML=esc(localStorage.getItem('foodmood_title')).replace('？','？<br>讓美味替你做決定。');render();
+
+/* v17 整合增補：未分類美食、消費金額、歷史餐點優先、餐點類型標籤、分店地區推測 */
+const V17_ORIGINAL_SHOWPAGE=showPage;
+function v17HasDiary(s){return records.some(r=>String(r.storeId)===String(s.id)||((r.name||'').trim()===(s.name||'').trim()&&(r.branch||'')===(s.branch||'')))}
+function v17Status(s){
+ /* 以實際日記優先判斷：已有用餐日記的店家不能再留在口袋名單。 */
+ if(s.landmine===true)return 'landmine';
+ if(v17HasDiary(s)){
+   s.fav=false;
+   s.visited=true;
+   s.status='visited';
+   return 'diary';
+ }
+ if(s.fav===true)return 'pocket';
+ if(s.visited===true)return 'visited';
+ return 'unclassified';
+}
+function v17SetStatus(s,status){s.status=status;if(status==='pocket'){s.fav=true;s.landmine=false}else if(status==='landmine'){s.fav=false;s.landmine=true}else{s.fav=false;if(status!=='landmine')s.landmine=false}}
+function v17StoreArea(s){return [s.region,s.town].filter(Boolean).join(' · ')||s.area||''}
+function v45bDeletePocketStore(id){
+ const s=stores.find(x=>String(x.id)===String(id));
+ if(!s)return;
+ const hasDiary=v17HasDiary(s);
+ const message=hasDiary
+   ? `「${s.name}${s.branch?' · '+s.branch:''}」已有美食日記。確定要完全刪除店家及相關日記嗎？此操作無法復原。`
+   : `確定要完全刪除「${s.name}${s.branch?' · '+s.branch:''}」及其店家資料嗎？此操作無法復原。`;
+ if(!confirm(message))return;
+ records=records.filter(r=>!(String(r.storeId)===String(s.id)||((r.name||'').trim()===(s.name||'').trim()&&(r.branch||'')===(s.branch||''))));
+ stores=stores.filter(x=>String(x.id)!==String(id));
+ persist();render();toast('店家及相關資料已刪除');
+}
+function v17Classify(id,status){const s=stores.find(x=>String(x.id)===String(id));if(!s)return;if(status==='diary'&&!v17HasDiary(s)){detail(s.id);toast('請新增至少一筆飲食記錄後，才會歸入美食日記');return}if(status==='map'){s.visited=true;s.fav=false;s.landmine=false;s.status='visited'}else if(status==='unclassified'){s.fav=false;s.landmine=false;s.visited=false;s.status='unclassified'}else{v17SetStatus(s,status);if(status==='pocket')s.visited=false}persist();closeModal();page='home';onlyOpen=false;render();toast(status==='pocket'?'已加入口袋名單':status==='diary'?'已歸入美食日記':status==='map'?'已加入美食地圖':'已移至未分類美食')}
+function v17RemoveUnclassified(id){const s=stores.find(x=>String(x.id)===String(id));if(!s)return;if(!confirm('確定要移除這家店？移除後將從店家資料中刪除。'))return;stores=stores.filter(x=>String(x.id)!==String(id));persist();render();toast('已移除店家')}
+function v17UnclassifiedHtml(s){return `<article class="restaurant" style="align-items:flex-start"><div class="foodpic" onclick="detail('${s.id}')" style="cursor:pointer">${esc(s.emoji||'🍽️')}</div><div class="diary-main"><h3 style="cursor:pointer" onclick="detail('${s.id}')">${esc(s.name)}${s.branch?' · '+esc(s.branch):''}</h3><div class="tiny">📍 ${esc(v17StoreArea(s)||'尚未設定地區')}</div><p class="tiny">尚未分類，請選擇要放入哪份清單。</p><div class="toolbar"><button class="btn" onclick="v17Classify('${s.id}','pocket')">♡ 口袋名單</button><button class="btn light" onclick="v17Classify('${s.id}','map')">📍 加入美食地圖</button><button class="btn light" onclick="v17RemoveUnclassified('${s.id}')">移除</button></div></div></article>`}
+function render(){
+ const list=document.getElementById('list');
+ const allTypes=(type==='all');
+ if(page==='unclassified'){
+  document.getElementById('listTitle').textContent='🗂️ 未分類美食';
+  const pending=stores.filter(s=>v17Status(s)==='unclassified');
+  list.innerHTML='<p class="tiny">在這裡統一整理店家：加入口袋名單、建立飲食記錄，或確認移除。</p>'+(pending.map(v17UnclassifiedHtml).join('')||'<div class="empty">目前沒有待整理的店家 🌷</div>');return;
+ }
+ document.getElementById('listTitle').textContent=page==='favorites'?'📌 我的口袋名單':page==='records'?'📖 飲食記錄｜依店家查看':page==='landmines'?'💣 地雷美食':page==='settings'?'⚙️ 個人化設定':onlyOpen?'🟢 目前營業中':'✨ 你可能會想吃';
+ if(page==='records'){
+  const grouped={};records.slice().reverse().forEach(r=>{const k=String(r.storeId||r.name);(grouped[k]||(grouped[k]=[])).push(r)});
+  list.innerHTML='<div class="toolbar" style="margin-bottom:10px"><button class="btn" onclick="openAdd()">＋ 新增一家喜歡的店</button></div>'+(records.length?Object.values(grouped).map(rs=>rs.map(r=>`<article class="restaurant diary-card"><div class="foodpic">${esc(r.emoji||'🍽️')}</div><div class="diary-main"><div class="diary-date">📅 ${esc(r.date||'尚未設定日期')}</div><h3>${esc(r.name||'未命名店家')}${r.branch?' · '+esc(r.branch):''}</h3><div class="diary-meal">🍴 ${esc(r.items||'尚未填寫餐點名稱')}</div>${r.optionsText?`<div class="diary-meta">客製化：${esc(r.optionsText)}</div>`:''}<div class="diary-meta">💰 本次消費：NT$${Number(r.price||r.total||0).toLocaleString('zh-TW')}</div>${r.note?`<div class="diary-meta">💭 ${esc(r.note)}</div>`:''}<div class="diary-actions"><button class="btn light" onclick="editRecord(${r.id})">編輯</button><button class="btn light" onclick="deleteRecord(${r.id})">刪除</button></div></div></article>`).join('')).join(''):'<div class="empty">還沒有美食日記 🍑</div>');return;
+ }
+ let arr=stores.filter(s=>{
+  const st=v17Status(s);
+  if(st==='unclassified')return false;
+  if(page==='favorites'&&st!=='pocket')return false;
+  if(page==='landmines'&&st!=='landmine')return false;
+  if(page==='home'&&(st==='landmine'||st==='unclassified'||st==='visited'))return false;
+  if(page==='home'&&st==='pocket'&&s.fav!==true)return false;
+  if(page==='home'&&st==='diary'&&!v17HasDiary(s))return false;
+  const types=Array.isArray(s.type)?s.type:(Array.isArray(s.typeVal)?s.typeVal:[s.type].filter(Boolean));
+  if(type!=='all'&&!types.includes(type))return false;
+  if(onlyOpen&&!s.open)return false;
+  return true;
+ });
+ const groups=[];arr.forEach(s=>{let g=groups.find(x=>x.name===s.name);if(!g){g={name:s.name,items:[]};groups.push(g)}g.items.push(s)});
+ const addBtn='<div class="toolbar" style="margin-bottom:10px"><button class="btn" onclick="openAdd()">＋ 新增一家喜歡的店</button></div>';
+ list.innerHTML=addBtn+(groups.length?groups.map(g=>`<article class="restaurant" style="align-items:flex-start;cursor:pointer" onclick="detail('${g.items[0].id}')"><div class="foodpic">${esc(g.items[0].emoji||'🍽️')}</div><div class="info"><h3>${esc(g.name)}</h3>${g.items.map(s=>`<div style="border-top:1px solid var(--line);padding-top:8px;margin-top:8px"><p><span class="badge">${s.open?'營業中':'目前休息'}</span><span class="badge gray">${esc(s.branch||v17StoreArea(s)||'未設定分店')}</span></p><p>📍 ${esc(v17StoreArea(s))}</p><p>🍽️ 餐廳類型：${esc((Array.isArray(s.types||s.type)?(s.types||s.type):[s.types||s.type||'']).filter(Boolean).map(v=>{const c=[{id:'food',label:'正餐'},{id:'drink',label:'飲料'},{id:'dessert',label:'甜點'},...customCategories].find(x=>x.id===v);return c?(c.label||c.name):v}).join('、')||'尚未設定')}</p><p>🕒 ${esc((typeof hoursText==='function'?hoursText(s):s.hours||'尚未設定')).replace(/–/g,' ~ ')}</p><div class="toolbar"><button class="btn light" onclick="event.stopPropagation();detail('${s.id}')">查看日記／店家</button>${page==='favorites'?`<button class="btn light" onclick="event.stopPropagation();v45bDeletePocketStore('${s.id}')">移除口袋名單</button>`:''}</div></div>`).join('')}</div></article>`).join(''):'<div class="empty">這裡還沒有符合條件的店家 🌷</div>');
+}
+function showPage(p,el){page=p;onlyOpen=false;document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));if(el)el.classList.add('active');else document.querySelectorAll('.nav button')[p==='favorites'?1:p==='records'?2:p==='settings'?3:0].classList.add('active');render()}
+/* V45b: homepage unclassified-food card removed by request */
+/* 餐點管理：餐點類型改為標籤式多選，價格可記錄 */
+const V17_ORIGINAL_MENUHTML=v16MenuHtml;
+function v16MenuHtml(s){const menu=v16Menu(s);return `<details open style="margin:14px 0;padding:12px;border:1px solid var(--line);border-radius:14px;background:#fffaf7"><summary style="font-weight:750;cursor:pointer">🍽️ 菜單與餐點管理（${menu.length} 道）</summary>${menu.map(d=>`<div style="display:flex;gap:8px;align-items:center;border-top:1px solid var(--line);padding:8px 0"><div style="flex:1"><b>${esc(d.name)}</b><div class="tiny">${esc((Array.isArray(d.categories)?d.categories:[d.category||'未分類']).join('、'))}${d.price!=null?' · 參考價 NT$'+Number(d.price).toLocaleString('zh-TW'):''}</div></div><button class="btn light" type="button" onclick="v16EditDish('${s.id}','${d.id}')">編輯</button><button class="btn light" type="button" onclick="v16DeleteDish('${s.id}','${d.id}')">刪除</button></div>`).join('')}<div class="field"><label>餐點名稱</label><input id="v16DishName" placeholder="例如：珍珠奶茶、牛肉麵"></div><div class="field"><label>餐點類型（可複選）</label><div id="v17DishTags" class="type-tags">${[['food','正餐'],['hotpot','火鍋'],['rice','飯'],['drink','飲料'],['dessert','甜點']].map(([v,l])=>`<button type="button" class="type-tag" data-v17cat="${v}" onclick="this.classList.toggle('active')">${l}</button>`).join('')}</div><input id="v16DishCategory" type="hidden" value="food"><p class="tiny">可以同時選擇多個類型。</p></div><div class="field"><label>菜單參考價格（NT$，可留空）</label><input id="v17DishPrice" type="number" min="0" step="1" placeholder="例如：150"></div><input id="v16DishId" type="hidden"><button class="btn" type="button" onclick="v17SaveDish('${s.id}')">儲存餐點</button><hr style="border:0;border-top:1px solid var(--line);margin:14px 0"><h4>設定餐點客製化</h4><div class="field"><label>餐點</label><select id="v16CustomDish">${menu.map(d=>`<option value="${d.id}">${esc(d.name)}</option>`).join('')}</select></div><div class="field"><label>客製化項目</label><input id="v16CustomKey" placeholder="例如：加料、飯量、甜度、冰塊、辣度"></div><div class="field"><label>可選內容（逗號分隔；甜度／冰塊／辣度可留空）</label><input id="v16CustomValues" placeholder="例如：珍珠、椰果、仙草"></div><button class="btn light" type="button" onclick="v16SaveCustom('${s.id}')">儲存客製化選項</button><p class="tiny">同品牌相同餐點同步設定；每道餐點各自保存。</p></details>`}
+function v17SaveDish(sid){const s=stores.find(x=>x.id===sid);if(!s)return;const name=document.getElementById('v16DishName')?.value.trim(),tags=[...document.querySelectorAll('#v17DishTags .type-tag.active')].map(x=>x.dataset.v17cat),id=document.getElementById('v16DishId')?.value,price=document.getElementById('v17DishPrice')?.value;if(!name){toast('請先輸入餐點名稱');return}if(!tags.length){toast('請至少選一種餐點類型');return}let d=id?v16Dish(s,id):null;if(!d){if(v16Menu(s).some(x=>x.name.toLowerCase()===name.toLowerCase())){toast('這道餐點已存在');return}d={id:'dish_'+Date.now(),name,category:tags[0],categories:tags,options:tags.includes('drink')?{甜度:'半糖',冰塊:'少冰'}:{},customOptions:{}};v16Menu(s).push(d)}else{d.name=name;d.categories=tags;d.category=tags[0]}if(price!=='')d.price=Number(price);else delete d.price;persist();detail(sid);toast('餐點已儲存')}
+const V17_OLD_EDIT_DISH=v16EditDish;
+function v16EditDish(sid,did){const s=stores.find(x=>x.id===sid),d=s&&v16Dish(s,did);if(!d)return;detail(sid);document.getElementById('v16DishName').value=d.name;document.getElementById('v16DishId').value=d.id;document.getElementById('v17DishPrice').value=d.price??'';const cats=Array.isArray(d.categories)?d.categories:[d.category||'food'];document.querySelectorAll('#v17DishTags .type-tag').forEach(b=>b.classList.toggle('active',cats.includes(b.dataset.v17cat)))}
+/* 飲食記錄：顯示曾記錄品項，加入本次消費金額 */
+const V17_OLD_DETAIL=detail;
+function detail(id){const s=stores.find(x=>String(x.id)===String(id));if(!s)return;const history=recordsForStore(s),menu=v16Menu(s);const oldDishNames=[...new Set(history.map(r=>r.items).filter(Boolean))];const menuNames=menu.map(d=>d.name);const known=[...new Set([...oldDishNames,...menuNames])];const historyHtml=v61GroupDiaryByDate(history,s.id);
+document.getElementById('sheetContent').innerHTML=`<div style="font-size:52px">${esc(s.emoji||'🍽️')}</div><h2>${esc(s.name)}</h2><p><span class="badge">${s.open?'營業中':'目前休息'}</span> <span class="badge gray">${esc(s.branch||v17StoreArea(s)||'未設定分店')}</span></p><p>📍 ${esc(v17StoreArea(s))}</p><p>🍽️ 餐廳類型：${esc((Array.isArray(s.types||s.type)?(s.types||s.type):[s.types||s.type||'']).filter(Boolean).map(v=>{const c=[{id:'food',label:'正餐'},{id:'drink',label:'飲料'},{id:'dessert',label:'甜點'},...customCategories].find(x=>x.id===v);return c?(c.label||c.name):v}).join('、')||'尚未設定')}</p><p>🕒 ${esc((typeof hoursText==='function'?hoursText(s):s.hours||'尚未設定')).replace(/–/g,' ~ ')}</p><div style="margin:16px 0;padding:13px;background:#fff3ec;border-radius:16px"><h3>📚 這家店吃過什麼（${history.length}）</h3>${historyHtml}</div>${v16MenuHtml(s)}<h3 style="margin:16px 0 8px">✍️ 新增飲食記錄</h3><div class="field"><label>今天的餐點名稱</label><select id="v17VisitKnown" onchange="v17KnownChanged()"><option value="">選擇曾吃過或已建立的餐點</option>${known.map(n=>`<option value="${esc(n)}">${esc(n)}</option>`).join('')}<option value="__manual">＋ 手動輸入新餐點</option></select><input id="visitItems" placeholder="輸入新餐點名稱" style="display:none;margin-top:7px"></div><div class="field"><label>這次的客製化選擇</label><div id="detailOptions"><p class="tiny">選擇餐點後顯示對應選項。</p></div></div><div class="field"><label>本次消費金額（NT$）</label><input id="v17VisitPrice" type="number" min="0" step="1" placeholder="輸入本次實際支付金額"></div><div class="field"><label>備註</label><textarea id="visitNote" placeholder="今天的心得、份量…"></textarea></div><label style="display:flex;gap:8px;align-items:center;margin:10px 0"><input id="landmineToggle" type="checkbox" ${s.landmine?'checked':''}> 💣 列入地雷美食（不參加抽籤）</label><div class="toolbar"><button class="btn" onclick="record('${s.id}')">＋ 存入飲食記錄</button><button class="btn light" onclick="saveLandmine('${s.id}')">儲存地雷設定</button><button class="btn light" onclick="editStore('${s.id}')">編輯店家</button></div>`;openModal()}
+function v17KnownChanged(){const sel=document.getElementById('v17VisitKnown'),manual=document.getElementById('visitItems'),wrap=document.getElementById('detailOptions');if(!sel||!wrap)return;const val=sel.value;manual.style.display=val==='__manual'?'block':'none';if(val!=='__manual')manual.value=val||'';const s=stores.find(x=>document.getElementById('sheetContent').querySelector('h2')?.textContent===x.name);if(!s)return;const d=v16Menu(s).find(x=>x.name===val);if(!d){wrap.innerHTML='<p class="tiny">新餐點可先手動輸入；建立到菜單後，下次就能直接選取。</p>';return}const rows=[];Object.entries(d.options||{}).forEach(([k,v])=>{const choices=v16Choices(k)||[v];rows.push(`<label style="display:block;margin:10px 0">${esc(k)}<select data-option-key="${esc(k)}" style="display:block;width:100%;padding:10px;border:1px solid var(--line);border-radius:10px">${choices.map(c=>`<option ${c===v?'selected':''}>${esc(c)}</option>`).join('')}</select></label>`)});Object.entries(d.customOptions||{}).forEach(([k,o])=>{const choices=o.choices||[],v=o.default||choices[0];rows.push(`<label style="display:block;margin:10px 0">${esc(k)}<select data-option-key="${esc(k)}" style="display:block;width:100%;padding:10px;border:1px solid var(--line);border-radius:10px">${choices.map(c=>`<option ${c===v?'selected':''}>${esc(c)}</option>`).join('')}</select></label>`)});wrap.innerHTML=rows.join('')||'<p class="tiny">這道餐點尚未設定客製化選項。</p>'}
+function record(id){const s=stores.find(x=>String(x.id)===String(id));if(!s)return;const sel=document.getElementById('v17VisitKnown'),manual=document.getElementById('visitItems'),chosen=sel?.value||'',item=(chosen&&chosen!=='__manual'?chosen:manual?.value||'').trim();if(!item){toast('請先選擇或輸入餐點名稱');return}const priceRaw=document.getElementById('v17VisitPrice')?.value;const price=priceRaw===''||priceRaw==null?0:Number(priceRaw);if(!Number.isFinite(price)||price<0){toast('請輸入正確的消費金額');return}const note=document.getElementById('visitNote')?.value.trim()||'',opts=[...document.querySelectorAll('#detailOptions [data-option-key]')].map(x=>x.dataset.optionKey+'：'+x.value);if(chosen==='__manual'&&!v16Menu(s).some(d=>d.name.toLowerCase()===item.toLowerCase())){v16Menu(s).push({id:'dish_'+Date.now(),name:item,category:'food',categories:['food'],price:undefined,options:{},customOptions:{}})}records.push({id:Date.now(),storeId:s.id,dishId:'',name:s.name,branch:s.branch||'',emoji:s.emoji||'🍽️',date:new Date().toLocaleDateString('zh-TW'),items:item,price,optionsText:opts.join('、'),note});v17SetStatus(s,'diary');stores.filter(x=>x.name===s.name).forEach(x=>{x.status='diary';x.fav=false});persist();closeModal();render();toast('已記錄本次餐點與消費金額 📝')}
+/* 編輯飲食記錄時保留、可修改金額 */
+const V17_OLD_EDIT_RECORD=editRecord;
+function editRecord(id){const r=records.find(x=>String(x.id)===String(id));if(!r)return;const opts=String(r.optionsText||'').split('、').filter(Boolean).map(x=>{const i=x.indexOf('：');return i<0?{k:x,v:''}:{k:x.slice(0,i),v:x.slice(i+1)}});document.getElementById('sheetContent').innerHTML=`<h2>編輯美食日記</h2><form onsubmit="updateRecord(event,${r.id})"><div class="field"><label>店家名稱</label><input id="rName" required value="${esc(r.name||'')}"></div><div class="field"><label>分店</label><input id="rBranch" value="${esc(r.branch||'')}"></div><div class="field"><label>日期</label><input id="rDate" value="${esc(r.date||'')}"></div><div class="field"><label>今天的餐點名稱</label><input id="rItems" required value="${esc(r.items||'')}"></div><div class="field"><label>本次消費金額（NT$）</label><input id="rPrice" type="number" min="0" step="1" value="${Number(r.price||0)}"></div><div class="field"><label>客製化選項</label>${opts.map(o=>`<div class="recordOpt" style="display:flex;gap:8px;margin:6px 0"><input class="rOptKey" value="${esc(o.k)}"><input class="rOptVal" value="${esc(o.v)}"></div>`).join('')}</div><div class="field"><label>備註</label><textarea id="rNote">${esc(r.note||'')}</textarea></div><button class="btn" style="width:100%">儲存日記修改</button></form>`;openModal()}
+function updateRecord(e,id){e.preventDefault();const r=records.find(x=>String(x.id)===String(id));if(!r)return;r.name=document.getElementById('rName').value.trim();r.branch=document.getElementById('rBranch').value.trim();r.date=document.getElementById('rDate').value.trim();r.items=document.getElementById('rItems').value.trim();r.price=Number(document.getElementById('rPrice').value||0);r.optionsText=[...document.querySelectorAll('#sheetContent .recordOpt')].map(x=>{const k=x.querySelector('.rOptKey').value.trim(),v=x.querySelector('.rOptVal').value.trim();return k?k+'：'+v:''}).filter(Boolean).join('、');r.note=document.getElementById('rNote').value;persist();closeModal();page='records';render();toast('美食日記已更新')}
+function v61GroupDiaryByDate(history,storeId){
+ if(!history.length)return '<p class="tiny">還沒有飲食記錄。</p>';
+ const grouped={};
+ history.forEach(r=>{const date=String(r.date||'尚未設定日期');(grouped[date]||(grouped[date]=[])).push(r)});
+ const sorted=Object.entries(grouped).sort((a,b)=>{
+   const parseDate=x=>{const m=x.match(/(\d{4})[\/.-](\d{1,2})[\/.-](\d{1,2})/);return m?new Date(+m[1],+m[2]-1,+m[3]).getTime():NaN};
+   const da=parseDate(a[0]),db=parseDate(b[0]);
+   if(Number.isFinite(da)&&Number.isFinite(db))return db-da;
+   return b[0].localeCompare(a[0],'zh-Hant');
+ });
+ return sorted.map(([date,rs])=>`<details style="border-top:1px solid #f2dfd5;padding:10px 0"><summary style="cursor:pointer;display:flex;justify-content:space-between;gap:10px;align-items:center;font-weight:750;list-style:none;padding:6px 0"><span>📅 ${esc(date)}</span><span class="badge gray">${rs.length} 筆餐點　⌄</span></summary><div style="padding-left:4px">${rs.map(r=>`<div style="border-top:1px dashed #ead8ce;padding:10px 0"><div style="font-weight:750">🍴 ${esc(r.items||'尚未填寫餐點名稱')}</div>${r.optionsText?`<div class="diary-meta">🧋 客製化：${esc(r.optionsText)}</div>`:''}<div class="diary-meta">💰 本次消費：NT$${Number(r.price||0).toLocaleString('zh-TW')}</div>${r.note?`<div class="diary-meta">💭 ${esc(r.note)}</div>`:''}<div class="toolbar"><button class="btn light" onclick="editRecord(${r.id})">編輯</button><button class="btn light" onclick="deleteRecord(${r.id});detail('${storeId}')">刪除</button></div></div>`).join('')}</div></details>`).join('');
+}
+
+/* v35 修復：直接完成儲存，不呼叫舊 saveNewStore，避免舊函式回呼本函式造成 Maximum call stack size exceeded */
+function saveNewStore(data,mode){
+  const target='pocket';
+  const types=Array.isArray(data.typeVal)?data.typeVal:[data.typeVal].filter(Boolean);
+  const emoji=types.includes('drink')?'🧋':types.includes('dessert')?'🍰':'🍜';
+  const area=data.region==='全國性'?'全國性':([data.region,data.town].filter(Boolean).join(' · '));
+  let branches=Array.isArray(data.branches)?data.branches:[data.branch||''];
+  branches=[...new Set(branches.map(x=>String(x||'').trim()))];
+  if(!branches.length) branches=[''];
+  const added=[];
+  branches.forEach((branch,i)=>{
+    const s={id:'u'+Date.now()+i+Math.random().toString(16).slice(2,7),name:String(data.name||'').trim(),branch,type:types,types,emoji,area,open:true,fav:false,landmine:false,desc:data.desc||'',note:'',weekdays:data.days||['一','二','三','四','五','六','日'],shifts:data.shifts||[],hours:(data.shifts||[]).map(x=>x.start+' ~ '+x.end).join('、'),options:data.options||{},visited:false,status:'unclassified'};
+    s.visited=false;s.status='pocket';s.fav=true;s.landmine=false;
+    stores.push(s);added.push(s);
+  });
+  persist();window.pendingStoreData=null;
+  if(typeof closeModal==='function') closeModal();
+  type='all';document.querySelectorAll('[data-type]').forEach(b=>b.classList.toggle('active',b.dataset.type==='all'));
+  page='home';render();toast(mode==='branch'?'已加入同品牌分店 ✨':'新店家加入成功 ✨');
+}
+/* 首次載入時舊資料依現有收藏、日記、地雷推導狀態；其餘歸未分類 */
+stores.forEach(s=>{if(!s.status)s.status=s.landmine?'landmine':s.fav?'pocket':v17HasDiary(s)?'diary':'unclassified'});
+persist();render();
+
+
+/* v18 bug fixes: strict eligibility + resilient category switching */
+const V18_BASE_STATUS=v17Status;
+v17Status=function(s){
+  if(s.landmine||s.status==='landmine') return 'landmine';
+  const hasDiary=v17HasDiary(s);
+  if(hasDiary) return 'diary';
+  if(s.fav===true||s.status==='pocket') return 'pocket';
+  // A stale "diary" status without any matching record is not eligible; return it to triage.
+  return 'unclassified';
+};
+// Category buttons all use one delegated handler, including user-created categories.
+document.getElementById('categoryChips')?.addEventListener('click',function(e){
+  const b=e.target.closest('button');
+  if(!b||b.hasAttribute('onclick')||b.dataset.type===undefined&&!b.dataset.custom)return;
+  const next=b.dataset.type||[...customCategories].find(c=>b.textContent.includes(c.name))?.id;
+  if(!next)return;
+  type=next;onlyOpen=false;page='home';
+  this.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===b));
+  render();
+});
+// Replace the custom-category inline handler so repeated taps cannot leave stale active states.
+function renderCustomCategories(){
+  const wrap=document.getElementById('categoryChips');if(!wrap)return;
+  wrap.querySelectorAll('[data-custom="true"]').forEach(n=>n.remove());
+  const addBtn=wrap.querySelector('button[onclick="openCategoryForm()"]');
+  customCategories.forEach(c=>{
+    const b=document.createElement('button');b.className='chip'+(type===c.id?' active':'');
+    b.dataset.custom='true';b.dataset.categoryId=c.id;b.textContent=(c.emoji||'🍽️')+' '+c.name;
+    b.onclick=()=>{type=c.id;onlyOpen=false;page='home';wrap.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===b));render()};
+    wrap.insertBefore(b,addBtn);
+  });
+}
+// Ensure the active chip always matches the selected filter, and re-render on each selection.
+function v18SyncCategoryChips(){
+ const wrap=document.getElementById('categoryChips');if(!wrap)return;
+ wrap.querySelectorAll('.chip').forEach(b=>{
+  const key=b.dataset.type||b.dataset.categoryId||'';
+  b.classList.toggle('active',key===type);
+ });
+}
+const V18_RENDER=render;
+render=function(){
+  V18_RENDER();
+  v18SyncCategoryChips();
+};
+// Reclassify any stale records-less diary statuses as unclassified and persist the correction.
+let v18Corrected=false;
+stores.forEach(s=>{if(!s.landmine&&!s.fav&&!v17HasDiary(s)&&s.status==='diary'){s.status='unclassified';v18Corrected=true;}});
+if(v18Corrected)persist();
+render();
+
+/* v21: bottom navigation, personalized settings, and collapsible/sortable home shortcuts */
+const v21BaseRender=render;
+const v21DefaultFeatures=['幫我決定！','我的口袋名單','美食地圖'];
+function v21FeatureCards(){return [...document.querySelectorAll('.feature .featurecard')].filter(c=>c.id!=='v21Noop')}
+function v21FeatureName(card){return card.querySelector('h3')?.textContent.trim()||''}
+function v21ApplyFeatureOrder(){const wrap=document.querySelector('.feature');if(!wrap)return;const order=['我的口袋名單','美食地圖','幫我決定！','設定'];try{localStorage.setItem('foodmood_feature_order',JSON.stringify(order))}catch(e){}const cards=[...wrap.querySelectorAll('.featurecard')];cards.sort((a,b)=>{let ai=order.indexOf(v21FeatureName(a)),bi=order.indexOf(v21FeatureName(b));if(ai<0)ai=999;if(bi<0)bi=999;return ai-bi});cards.forEach(c=>wrap.appendChild(c));}
+function toggleFeatureCards(){const wrap=document.querySelector('.feature');if(!wrap)return;const collapsed=wrap.classList.toggle('collapsed');const b=document.getElementById('expandFeaturesBtn');if(b)b.textContent=collapsed?'展開其他功能 ↓':'收起其他功能 ↑';localStorage.setItem('foodmood_features_collapsed',collapsed?'1':'0')}
+function v21SettingsHtml(){const sweet=['無糖','一分糖','微糖','半糖','少糖','正常甜','多糖'],ice=['熱／溫','去冰','微冰','少冰','正常冰','多冰'],spice=['不辣','微辣','小辣','中辣','大辣','特辣'];const season=JSON.parse(localStorage.getItem('foodmood_seasonings')||'["胡椒","梅粉","咖哩粉","海苔粉"]');const toppings=JSON.parse(localStorage.getItem('foodmood_toppings')||'["珍珠","椰果","仙草","布丁"]');const order=JSON.parse(localStorage.getItem('foodmood_feature_order')||'null')||v21DefaultFeatures;const title=localStorage.getItem('foodmood_title')||'今天吃什麼？';const subtitle=localStorage.getItem('foodmood_subtitle')||'讓美味替你做決定。';const color=localStorage.getItem('foodmood_color')||'#f58a69';const bg=localStorage.getItem('foodmood_bg')||'#fff8f1';
+ const fixed=(label,items)=>`<div class="settings-card"><h3>${label}</h3><div class="bubble-list">${items.map(x=>`<button class="bubble" type="button" onclick="this.classList.toggle('selected')">${x}</button>`).join('')}</div><p class="tiny">固定選項；點選可預覽選取狀態。</p></div>`;
+ const custom=(label,key,items,placeholder)=>`<div class="settings-card"><h3>${label}</h3><div class="bubble-list" id="${key}List">${items.map((x,i)=>`<button class="bubble" type="button" onclick="this.classList.toggle('selected')" oncontextmenu="event.preventDefault();v21DeleteOption('${key}',${i})" title="長按／右鍵可刪除">${x}　×</button>`).join('')}</div><div class="setting-add"><input id="${key}Input" placeholder="${placeholder}"><button class="btn" type="button" onclick="v21AddOption('${key}')">＋新增</button></div><p class="tiny">可新增；右鍵／長按氣泡可刪除。</p></div>`;
+ return `<div class="settings-grid"><div class="settings-card"><h3>🎨 全站外觀與專屬主題</h3><p class="tiny">調整會套用到整個網站，不更動資料與版面。</p><div class="field"><label>首頁標題</label><input id="v21Title" value="${esc(title)}"></div><div class="field"><label>首頁副標題</label><input id="v65Subtitle" value="${esc(subtitle)}" placeholder="輸入你喜歡的副標題"></div><div class="field"><label>主題色</label><input id="v21Color" type="color" value="${color}" style="width:70px;height:44px;padding:4px"></div><div class="field"><label>全站背景色</label><input id="v21Bg" type="color" value="${bg}" style="width:70px;height:44px;padding:4px"></div><div class="field"><label>背景裝飾 Emoji</label><input id="v21Emoji" value="${esc(localStorage.getItem('foodmood_emoji')||'🍑')}" placeholder="🍑 🌸 🍜"></div><div class="field"><label>背景圖案濃淡</label><input id="v21Opacity" type="range" min="3" max="22" value="${localStorage.getItem('foodmood_opacity')||'10'}"></div><button class="btn" onclick="v21SaveAppearance()">儲存全站外觀</button><button class="btn light" onclick="resetAppearance();render()">恢復預設</button></div>
+ ${fixed('1. 常用甜度',sweet)}${fixed('2. 常用冰量',ice)}${fixed('3. 常用辣度',spice)}${custom('4. 常用調味料','seasonings',season,'例如：孜然粉、起司粉')}${custom('5. 新增加料','toppings',toppings,'例如：芋圓、奶蓋、布丁')}
+ <div class="settings-card"><h3>🍽️「今天想吃哪一種？」分類管理</h3><p class="tiny">新增或刪除分類，會同步更新各功能頁的分類篩選與店家類型選項。內建的正餐、飲料、甜點不能刪除。</p><div class="bubble-list">${[{id:'food',name:'正餐',emoji:'🍜'},{id:'drink',name:'飲料',emoji:'🧋'},{id:'dessert',name:'甜點',emoji:'🍰'},...customCategories].map(c=>`<span class="bubble">${esc(c.emoji||'🍽️')} ${esc(c.name||c.label)}${String(c.id).startsWith('custom_')?` <button type="button" class="btn light" style="padding:2px 7px;margin-left:4px" onclick="v45DeleteMealCategory('${esc(c.id)}')">刪除</button>`:''}</span>`).join('')}</div><div class="setting-add"><input id="v45MealCategoryName" maxlength="12" placeholder="新增類型，例如：火鍋、早餐、宵夜"><input id="v45MealCategoryEmoji" maxlength="8" value="🍲" aria-label="分類圖示" style="max-width:76px"><button class="btn" type="button" onclick="v45AddMealCategory()">＋新增</button></div></div>
+ <div class="settings-card"><h3>💾 資料管理與備份</h3><p class="tiny">測試資料保存在目前瀏覽器。</p><button class="btn light" onclick="exportData()">匯出資料備份</button></div></div>`}
+function v21AddOption(key){const input=document.getElementById(key+'Input');const value=input?.value.trim();if(!value)return;const storeKey=key==='seasonings'?'foodmood_seasonings':'foodmood_toppings';const arr=JSON.parse(localStorage.getItem(storeKey)|| (key==='seasonings'?'["胡椒","梅粉","咖哩粉","海苔粉"]':'["珍珠","椰果","仙草","布丁"]'));if(arr.includes(value)){toast('這個選項已經存在');return}arr.push(value);localStorage.setItem(storeKey,JSON.stringify(arr));render();toast('已新增選項')}
+function v45AddMealCategory(){const input=document.getElementById('v45MealCategoryName'),emojiInput=document.getElementById('v45MealCategoryEmoji');const name=(input?.value||'').trim(),emoji=(emojiInput?.value||'').trim()||'🍽️';if(!name){toast('請先輸入分類名稱');return}if(['全部','正餐','飲料','甜點'].includes(name)||customCategories.some(c=>c.name===name)){toast('這個分類已經存在');return}customCategories.push({id:'custom_'+Date.now(),name,emoji});localStorage.setItem('foodmood_categories',JSON.stringify(customCategories));type='all';render();toast('已新增「'+name+'」分類')}
+function v45DeleteMealCategory(id){const c=customCategories.find(x=>x.id===id);if(!c)return;if(!confirm('確定刪除分類「'+c.name+'」？既有店家資料不會刪除，但此分類將不再出現在可選清單。'))return;customCategories=customCategories.filter(x=>x.id!==id);localStorage.setItem('foodmood_categories',JSON.stringify(customCategories));if(type===id)type='all';render();toast('已刪除分類')}
+function v21DeleteOption(key,index){const storeKey=key==='seasonings'?'foodmood_seasonings':'foodmood_toppings';const arr=JSON.parse(localStorage.getItem(storeKey)||'[]');if(index<0||index>=arr.length)return;if(!confirm('確定刪除「'+arr[index]+'」？'))return;arr.splice(index,1);localStorage.setItem(storeKey,JSON.stringify(arr));render()}
+function v65ApplyHomeHeading(){const title=localStorage.getItem('foodmood_title')||'今天吃什麼？';const subtitle=localStorage.getItem('foodmood_subtitle')||'讓美味替你做決定。';const h=document.querySelector('.top h1');if(h)h.innerHTML=esc(title)+'<br>'+esc(subtitle)}
+function v21SaveAppearance(){localStorage.setItem('foodmood_title',document.getElementById('v21Title').value.trim()||'今天吃什麼？');localStorage.setItem('foodmood_subtitle',document.getElementById('v65Subtitle').value.trim()||'');localStorage.setItem('foodmood_color',document.getElementById('v21Color').value);localStorage.setItem('foodmood_bg',document.getElementById('v21Bg').value);localStorage.setItem('foodmood_emoji',document.getElementById('v21Emoji').value||'🍑');localStorage.setItem('foodmood_opacity',document.getElementById('v21Opacity').value);applyAppearance();v65ApplyHomeHeading();render();toast('已儲存全站外觀 ✨')}
+function v21MoveCard(index,delta){const rows=JSON.parse(localStorage.getItem('foodmood_feature_order')||'null')||v21DefaultFeatures.slice();const next=index+delta;if(next<0||next>=rows.length)return;[rows[index],rows[next]]=[rows[next],rows[index]];localStorage.setItem('foodmood_feature_order',JSON.stringify(rows));render()}
+function v21SaveFeatureOrder(){v21ApplyFeatureOrder();toast('已儲存首頁卡片順序')}
+const v21ShowPage=showPage;showPage=function(p,el){v21ShowPage(p,el);document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.getAttribute('onclick')?.includes("'"+p+"'")));};
+render=function(){if(page==='settings'){document.getElementById('listTitle').textContent='⚙️ 個人化設定';document.getElementById('list').innerHTML=v21SettingsHtml();document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.getAttribute('onclick')?.includes("'settings'")));return}v21BaseRender();if(page==='landmines'){const list=document.getElementById('list');const land=stores.filter(s=>v17Status(s)==='landmine');list.innerHTML='<div class="toolbar" style="margin-bottom:10px"><button class="btn" onclick="openAdd()">＋ 新增店家</button></div>'+(land.length?land.map(s=>`<article class="restaurant"><div class="foodpic">${esc(s.emoji||'💣')}</div><div class="info"><h3>${esc(s.name)}</h3><p>${esc(v17StoreArea(s)||'尚未設定地區')}</p><button class="btn light" onclick="detail('${s.id}')">查看／編輯</button><button class="btn light" onclick="v17Classify('${s.id}','unclassified')">移出地雷</button></div></article>`).join(''):'<div class="empty">目前沒有地雷美食。</div>')}if(page==='home'){v21ApplyFeatureOrder();const wrap=document.querySelector('.feature');const collapsed=localStorage.getItem('foodmood_features_collapsed')!=='0';if(wrap)wrap.classList.toggle('collapsed',collapsed);const b=document.getElementById('expandFeaturesBtn');if(b)b.textContent=collapsed?'展開其他功能 ↓':'收起其他功能 ↑';const title=localStorage.getItem('foodmood_title');if(title||localStorage.getItem('foodmood_subtitle'))v65ApplyHomeHeading()}};
+// Add the unclassified card to the sortable collection and make it visible in the settings list.
+const v21FeatureWrap=document.querySelector('.feature');if(v21FeatureWrap){const btn=document.getElementById('expandFeaturesBtn');if(localStorage.getItem('foodmood_features_collapsed')!=='0')v21FeatureWrap.classList.add('collapsed');}
+
+
+/* v22 美食地圖：簡單的「依地區找吃過的店」清單，不使用真實地圖 */
+const v22MapState={regions:[],towns:[],types:[],frequentOnly:false,sort:'recent'};
+function v22Area(s){return String(v17StoreArea(s)||s.area||'').replace(/\s+/g,' ').trim()}
+function v22Parts(s){const a=v22Area(s).split(/\s*[·・,，]\s*/);return {region:s.region||a[0]||'',town:s.town||a.slice(1).join(' ')||''}}
+function v22HasVisit(s){return v17HasDiary(s)||s.visited===true}
+function v22Visits(s){return records.filter(r=>String(r.storeId||'')===String(s.id)||((r.name||'').trim()===(s.name||'').trim()&&(r.branch||'')===(s.branch||'')))}
+function v22Latest(s){const rs=v22Visits(s);if(!rs.length)return '';return rs.map(r=>String(r.date||'')).sort((a,b)=>{const da=Date.parse(a),db=Date.parse(b);return (Number.isNaN(db)?0:db)-(Number.isNaN(da)?0:da)}).find(Boolean)||rs[rs.length-1].date||''}
+function v22Spend(s){const rs=v22Visits(s);let has=rs.some(r=>r.price!==undefined&&r.price!==null&&String(r.price)!==''||r.total!==undefined&&r.total!==null&&String(r.total)!=='');return has?rs.reduce((n,r)=>n+Number(r.price??r.total??0),0):null}
+function v22AreaOptions(){const regions=[...new Set(stores.filter(v22HasVisit).map(s=>v22Parts(s).region).filter(Boolean))].sort();const towns=[...new Set(stores.filter(v22HasVisit).map(s=>v22Parts(s).town).filter(Boolean))].sort();return {regions,towns}}
+function v22Toggle(arr,val){const i=arr.indexOf(val);if(i>=0)arr.splice(i,1);else arr.push(val);render()}
+function v22MapHtml(){
+ const all=stores.filter(v22HasVisit);
+ const v22NormArea=v=>String(v||'').replace(/臺/g,'台').replace(/\s+/g,'').trim();
+ const filtered=all.filter(s=>{const ts=Array.isArray(s.type)?s.type:(Array.isArray(s.types)?s.types:[s.type].filter(Boolean));if(v22MapState.types.some(t=>!ts.includes(t)))return false;if(v22MapState.frequentOnly&&!s.frequent)return false;return true});
+ const regionGroups={};
+ filtered.forEach(s=>{const a=v22Parts(s);const region=a.region||'地區未設定';const town=a.town||'鄉鎮市區未設定';if(!regionGroups[region])regionGroups[region]={};if(!regionGroups[region][town])regionGroups[region][town]=[];regionGroups[region][town].push(s)});
+ const v48CountyOrder=['臺北市','新北市','基隆市','桃園市','新竹市','新竹縣','苗栗縣','臺中市','彰化縣','南投縣','雲林縣','嘉義市','嘉義縣','臺南市','高雄市','屏東縣','宜蘭縣','花蓮縣','臺東縣','澎湖縣','金門縣','連江縣'];
+ const regionKeys=Object.keys(regionGroups).sort((a,b)=>{const ia=v48CountyOrder.indexOf(a),ib=v48CountyOrder.indexOf(b);if(ia>=0||ib>=0)return (ia<0?999:ia)-(ib<0?999:ib);return a.localeCompare(b,'zh-Hant')});
+ const townId=(r,t)=>'v48town-'+(r+'-'+t).replace(/[^\w\u4e00-\u9fff]/g,'_');
+ const regionId=r=>'v48region-'+r.replace(/[^\w\u4e00-\u9fff]/g,'_');
+ const renderBrands=items=>[...new Set(items.map(s=>s.name))].map(name=>{const brandItems=items.filter(s=>s.name===name),first=brandItems[0];return `<article class="restaurant diary-card" style="align-items:flex-start"><div class="foodpic">${esc(first.emoji||'🍽️')}</div><div class="diary-main"><h3 style="margin:0 0 8px">${esc(name)}</h3>${brandItems.map(s=>{const rs=v22Visits(s),spend=v22Spend(s),latest=v22Latest(s),a=v22Parts(s);return `<div style="border-top:1px solid var(--line);padding-top:8px;margin-top:8px"><div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap"><b>${esc(s.branch||'分店未命名')}</b>${s.frequent?'<span style="color:#d49a27;font-weight:800">★ 常去</span>':''}</div><div class="tiny">${a.town?esc(a.town):''}</div><div class="diary-meta">${latest?'最近吃過：'+esc(latest):'已加入吃過清單，尚無用餐日期'}</div><div class="diary-meta">吃過 ${rs.length} 次　·　${spend===null?`尚無金額｜${rs.length} 筆用餐紀錄`:'累計 NT$'+spend.toLocaleString('zh-TW')}</div><div class="toolbar" style="margin-top:8px"><button class="btn light" onclick="v22ToggleFrequent('${String(s.id).replace(/'/g,"\\'")}')">${s.frequent?'★ 取消常去':'☆ 標記常去'}</button><button class="btn light" onclick="detail('${String(s.id).replace(/'/g,"\\'")}')">查看日記／店家</button></div></div>`}).join('')}</div></article>`}).join('');
+ return `<div class="map-intro" style="background:#fff1e9;border:1px solid var(--line);border-radius:20px;padding:15px;margin-bottom:14px"><h3 style="margin:0 0 5px">📍 找找以前吃過的店</h3><p style="margin:0;color:var(--muted);font-size:13px">依縣市與鄉鎮市區分組，展開區域即可查看店家。</p></div>
+ <div class="sectionhead"><h2>吃過的店家</h2><span class="tiny">共 ${[...new Set(filtered.map(s=>s.name))].length} 個品牌</span></div>
+ ${!all.length?'<div class="empty">目前還沒有已記錄的店家。<br>從店家詳細資料新增一筆美食日記後，就會出現在這裡。</div>':!filtered.length?'<div class="empty">目前沒有符合條件的店家。</div>':regionKeys.map(region=>{const towns=regionGroups[region],regionCount=[...new Set(Object.values(towns).flat().map(s=>s.name))].length;return `<section style="margin:14px 0"><button class="btn light" style="width:100%;display:flex;justify-content:space-between;align-items:center" onclick="v48ToggleGroup('${regionId(region)}')"><b>📍 ${esc(region)}</b><span>${regionCount} 個品牌　⌄</span></button><div id="${regionId(region)}" class="v48-group-list hide">${Object.keys(towns).sort((a,b)=>a.localeCompare(b,'zh-Hant')).map(town=>`<section style="margin:8px 0 8px 12px"><button class="btn light" style="width:100%;display:flex;justify-content:space-between;align-items:center;background:#fff9f4" onclick="v48ToggleGroup('${townId(region,town)}')"><b>📌 ${esc(town)}</b><span>${[...new Set(towns[town].map(s=>s.name))].length} 個品牌　⌄</span></button><div id="${townId(region,town)}" class="v48-group-list hide">${renderBrands(towns[town])}</div></section>`).join('')}</div></section>`}).join('')}`;
+}
+function v48ToggleGroup(id){const el=document.getElementById(id);if(el)el.classList.toggle('hide')}
+
+function v22ToggleMapTools(){const el=document.getElementById('v22MapTools'),b=document.getElementById('v22MapToolsBtn');if(!el||!b)return;const open=el.style.display==='none';el.style.display=open?'block':'none';b.textContent=open?'收起地區搜尋與快速篩選 ↑':'展開地區搜尋與快速篩選 ↓';localStorage.setItem('v22_map_tools_open',open?'1':'0')}
+function v22ToggleFrequent(id){const s=stores.find(x=>String(x.id)===String(id));if(!s)return;s.frequent=!s.frequent;persist();render();toast(s.frequent?'已標記為常去店家 ⭐':'已取消常去標記')}
+function v22ToggleRegion(region){const id='v22Region-'+region.replace(/[^\w\u4e00-\u9fff]/g,'_');const el=document.getElementById(id);if(el)el.classList.toggle('hide')}
+const v22PreviousShowPage=showPage;
+showPage=function(p,el){v22PreviousShowPage(p,el);document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.getAttribute('onclick')?.includes("'"+p+"'")));};
+const v22PreviousRender=render;
+render=function(){if(page==='map'){document.getElementById('listTitle').textContent='📍 美食地圖';document.getElementById('list').innerHTML=v22MapHtml();document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.getAttribute('onclick')?.includes("'map'")));return;}v22PreviousRender();};
+
+render();
+</script>
+<script>
+/* v29：新增店家可選擇加入口袋名單、美食地圖或地雷美食 */
+(function(){
+  function enforceStoreEntryRule(){
+    const chips=document.getElementById('categoryChips');
+    if(typeof page!=='undefined' && page!=='home'){
+      const entry=document.getElementById('addStoreFromCategories');
+      if(entry) entry.remove();
+    }
+    if((typeof page==='undefined' || page==='home') && chips && !document.getElementById('addStoreFromCategories')){
+      const b=document.createElement('button');
+      b.type='button'; b.id='addStoreFromCategories'; b.className='chip';
+      b.textContent='＋ 新增店家'; b.addEventListener('click',()=>openAdd());
+      chips.appendChild(b);
+    }
+    // 移除原本列表標題旁的全域新增入口，避免重複。
+    document.querySelectorAll('.sectionhead button[onclick*="openAdd"]')
+      .forEach(b=>b.remove());
+    // 非首頁頁面（口袋名單、美食地圖、地雷美食、美食日記、未分類美食、設定）不顯示新增店家入口。
+    if(typeof page!=='undefined' && page!=='home'){
+      document.querySelectorAll('button[onclick*="openAdd"]')
+        .forEach(b=>b.remove());
+    }
+  }
+  const originalRender=window.render;
+  if(typeof originalRender==='function'){
+    window.render=function(){ originalRender.apply(this,arguments); enforceStoreEntryRule(); };
+  }
+  const originalShowPage=window.showPage;
+  if(typeof originalShowPage==='function'){
+    window.showPage=function(){ const r=originalShowPage.apply(this,arguments); enforceStoreEntryRule(); return r; };
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',enforceStoreEntryRule);
+  else enforceStoreEntryRule();
+})();
+</script>
+
+
+<script>
+/* v32 修正新增店家提交：明確驗證必填欄位，避免瀏覽器原生驗證讓按鈕看似無反應 */
+(function(){
+  const previousAddStore = window.addStore;
+  window.addStore = function(e){
+    if(e && e.preventDefault) e.preventDefault();
+    const nameEl=document.getElementById('nName');
+    const regionEl=document.getElementById('nRegion');
+    const typeTags=document.querySelectorAll('#nTypeTags .type-tag.active');
+    if(!nameEl || !nameEl.value.trim()){ if(nameEl){nameEl.focus();nameEl.setCustomValidity('請先填寫品牌／店家名稱');nameEl.reportValidity();nameEl.setCustomValidity('');} else toast('請先填寫品牌／店家名稱'); return false; }
+    if(!regionEl || !regionEl.value){ if(regionEl){regionEl.focus();regionEl.setCustomValidity('請先選擇縣市或全國性');regionEl.reportValidity();regionEl.setCustomValidity('');} else toast('請先選擇縣市或全國性'); return false; }
+    if(document.getElementById('nTypeTags') && !typeTags.length){toast('請至少選擇一種類型');return false;}
+    if(typeof previousAddStore==='function') return previousAddStore(e);
+    toast('新增功能發生錯誤，請重新開啟新增表單'); return false;
+  };
+})();
+</script>
+
+
+<script>
+/* v33: 手動觸發新增店家，避免手機瀏覽器表單提交事件未正常觸發；錯誤會顯示提示 */
+window.submitNewStoreManually = function(){
+  const form=document.querySelector('#sheetContent form');
+  if(!form){ if(typeof toast==='function') toast('找不到新增店家表單，請關閉後重新開啟'); return; }
+  const name=document.getElementById('nName');
+  const region=document.getElementById('nRegion');
+  if(!name || !name.value.trim()){ if(name){name.focus(); if(typeof toast==='function')toast('請先填寫品牌／店家名稱');} return; }
+  if(!region || !region.value){ if(region){region.focus(); if(typeof toast==='function')toast('請先選擇縣市或全國性');} return; }
+  try {
+    if(typeof window.addStore!=='function') throw new Error('新增函式不存在');
+    // Call the registered handler directly from the button click, bypassing mobile form-submit quirks.
+    const result = window.addStore({preventDefault:function(){}});
+    if(result === false) return;
+  } catch(err) {
+    console.error('新增店家失敗：',err);
+    if(typeof toast==='function') toast('新增失敗：'+(err && err.message ? err.message : '請重新開啟表單再試一次'));
+  }
+};
+</script>
+
+<script>
+/* v37：店家詳情只保留飲食記錄；客製化直接在每次記錄內填寫 */
+(function(){
+  window.detail = function(id){
+    const s=stores.find(x=>String(x.id)===String(id)); if(!s)return;
+    const history=recordsForStore(s);
+    const historyHtml=v61GroupDiaryByDate(history,s.id);
+    const fields=[['甜度','例如：無糖、微糖、半糖'],['冰量','例如：去冰、微冰、正常冰'],['辣度','例如：不辣、小辣、中辣'],['調味','例如：少鹽、醬料分開'],['加料','例如：珍珠、蛋、起司']];
+    document.getElementById('sheetContent').innerHTML=`<div style="font-size:52px">${esc(s.emoji||'🍽️')}</div><h2>${esc(s.name)}</h2><p><span class="badge">${s.open?'營業中':'目前休息'}</span> <span class="badge gray">${esc(s.branch||v17StoreArea(s)||'未設定分店')}</span></p><p>📍 ${esc(v17StoreArea(s))}</p><p>🍽️ 餐廳類型：${esc((Array.isArray(s.types||s.type)?(s.types||s.type):[s.types||s.type||'']).filter(Boolean).map(v=>{const c=[{id:'food',label:'正餐'},{id:'drink',label:'飲料'},{id:'dessert',label:'甜點'},...customCategories].find(x=>x.id===v);return c?(c.label||c.name):v}).join('、')||'尚未設定')}</p><p>🕒 ${esc((typeof hoursText==='function'?hoursText(s):s.hours||'尚未設定')).replace(/–/g,' ~ ')}</p><div style="margin:16px 0;padding:13px;background:#fff3ec;border-radius:16px"><h3>📚 這家店吃過什麼（${history.length}）</h3>${historyHtml}</div><h3 style="margin:16px 0 8px">✍️ 新增飲食記錄</h3><div class="field"><label>這次吃／喝的餐點名稱</label><input id="visitItems" placeholder="直接輸入，例如：珍珠奶茶、牛肉麵"></div><div class="field"><label>這次的客製化選擇（可留空）</label><p class="tiny">直接填寫這次的內容，不必先建立店家菜單。</p><div id="detailOptions">${fields.map(([k,ph])=>`<label style="display:block;margin:10px 0">${k}<input data-option-key="${k}" placeholder="${ph}" style="display:block;width:100%;padding:11px;border:1px solid var(--line);border-radius:10px;margin-top:5px"></label>`).join('')}</div></div><div class="field"><label>本次消費金額（NT$）</label><input id="v17VisitPrice" type="number" min="0" step="1" placeholder="輸入本次實際支付金額"></div><div class="field"><label>備註</label><textarea id="visitNote" placeholder="今天的心得、份量…"></textarea></div><label style="display:flex;gap:8px;align-items:center;margin:10px 0"><input id="landmineToggle" type="checkbox" ${s.landmine?'checked':''}> 💣 列入地雷美食（不參加抽籤）</label><div class="toolbar"><button class="btn" onclick="record('${s.id}')">＋ 存入飲食記錄</button><button class="btn light" onclick="saveLandmine('${s.id}')">儲存地雷設定</button><button class="btn light" onclick="editStore('${s.id}')">編輯店家</button></div>`;
+    openModal();
+  };
+  window.v17KnownChanged=function(){};
+})();
+</script>
+
+
+<script>
+/* v39: 用餐紀錄五大客製化分類改用氣泡選取；甜度/冰量/辣度單選，調味/加料複選 */
+(function(){
+ const fixedChoices={
+  '甜度':['無糖','一分糖','微糖','半糖','少糖','正常甜','多糖'],
+  '冰量':['熱／溫','去冰','微冰','少冰','正常冰','多冰'],
+  '辣度':['不辣','微辣','小辣','中辣','大辣','特辣']
+ };
+ function saved(key,defaults){try{const a=JSON.parse(localStorage.getItem(key)||'null');return Array.isArray(a)?a:defaults}catch(e){return defaults}}
+ function bubbleGroup(label,key,items,multi){const customKey=key==='調味料'?'seasonings':key==='加料'?'toppings':null;return `<div class="field"><label>${label}</label><div class="bubble-list v39-bubbles" data-group="${key}" data-multi="${multi?'1':'0'}" id="v39Group_${customKey||key}">${items.map(x=>`<button type="button" class="bubble" data-choice="${esc(x)}" onclick="v39Pick(this)">${esc(x)}</button>`).join('')}</div>${customKey?`<div class="setting-add" style="display:flex;gap:8px;margin-top:8px"><input id="v39Quick_${customKey}" placeholder="立即新增${customKey==='seasonings'?'調味料':'加料'}" style="min-width:0;flex:1"><button type="button" class="btn light" onclick="v39AddCustomOption('${customKey}')">＋新增</button></div>`:''}</div>`}
+ window.v39Pick=function(btn){const group=btn.closest('[data-group]');if(!group)return;if(group.dataset.multi!=='1')group.querySelectorAll('.bubble').forEach(b=>b.classList.remove('selected'));btn.classList.toggle('selected');};
+ window.v39AddCustomOption=function(key){const input=document.getElementById('v39Quick_'+key);const value=(input?.value||'').trim();if(!value){toast('請先輸入名稱');return}const storeKey=key==='seasonings'?'foodmood_seasonings':'foodmood_toppings';const defaults=key==='seasonings'?['胡椒','梅粉','咖哩粉','海苔粉']:['珍珠','椰果','仙草','布丁'];let arr;try{arr=JSON.parse(localStorage.getItem(storeKey)||'null');if(!Array.isArray(arr))arr=defaults}catch(e){arr=defaults}if(arr.some(x=>String(x).trim()===value)){toast('這個選項已經存在');return}arr.push(value);localStorage.setItem(storeKey,JSON.stringify(arr));const group=document.getElementById('v39Group_'+key);if(group){const b=document.createElement('button');b.type='button';b.className='bubble selected';b.dataset.choice=value;b.textContent=value;b.onclick=function(){v39Pick(this)};group.appendChild(b)}if(input)input.value='';toast('已新增並同步到設定');};
+ window.detail=function(id){
+  const s=stores.find(x=>String(x.id)===String(id));if(!s)return;
+  const history=recordsForStore(s);
+  const historyHtml=v61GroupDiaryByDate(history,s.id);
+  const season=saved('foodmood_seasonings',['胡椒','梅粉','咖哩粉','海苔粉']);const toppings=saved('foodmood_toppings',['珍珠','椰果','仙草','布丁']);
+  const body=document.getElementById('sheetContent');
+  body.innerHTML=`<style>.v39-bubbles{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.v39-bubbles .bubble{cursor:pointer;border:1px solid var(--line);border-radius:999px;padding:8px 13px;background:#fff;color:var(--ink);font:inherit}.v39-bubbles .bubble.selected{background:var(--accent,#f58a69);border-color:var(--accent,#f58a69);color:#fff;box-shadow:0 0 0 1px var(--accent,#f58a69) inset}</style><div style="font-size:52px">${esc(s.emoji||'🍽️')}</div><h2>${esc(s.name)}</h2><p><span class="badge">${s.open?'營業中':'目前休息'}</span> <span class="badge gray">${esc(s.branch||v17StoreArea(s)||'未設定分店')}</span></p><p>📍 ${esc(v17StoreArea(s))}</p><p>🍽️ 餐廳類型：${esc((Array.isArray(s.types||s.type)?(s.types||s.type):[s.types||s.type||'']).filter(Boolean).map(v=>{const c=[{id:'food',label:'正餐'},{id:'drink',label:'飲料'},{id:'dessert',label:'甜點'},...customCategories].find(x=>x.id===v);return c?(c.label||c.name):v}).join('、')||'尚未設定')}</p><p>🕒 ${esc((typeof hoursText==='function'?hoursText(s):s.hours||'尚未設定')).replace(/–/g,' ~ ')}</p><div style="margin:16px 0;padding:13px;background:#fff3ec;border-radius:16px"><h3>📚 這家店吃過什麼（${history.length}）</h3>${historyHtml}</div><h3 style="margin:16px 0 8px">✍️ 新增飲食記錄</h3><div class="field"><label>餐點類型（可複選）</label><div class="bubble-list v39-bubbles" id="visitTypeBubbles" data-group="餐點類型" data-multi="1">${[['food','🍜 正餐'],['drink','🧋 飲料'],['dessert','🍰 甜點'],...customCategories.map(c=>[c.id,`${c.emoji} ${c.name}`])].map(([v,l])=>`<button type="button" class="bubble" data-choice="${esc(l)}" data-type-value="${esc(v)}" onclick="v39Pick(this)">${esc(l)}</button>`).join('')}</div><p class="tiny">例如牛肉麵選「正餐」，珍珠奶茶選「飲料」。</p></div><div class="field"><label>這次吃／喝的餐點名稱</label><input id="visitItems" placeholder="直接輸入，例如：珍珠奶茶、牛肉麵"></div><h4 style="margin:14px 0 4px">這次的客製化選擇（可不選）</h4><p class="tiny">點選氣泡即可，不需要重新輸入；調味料與加料選項來自設定。</p>${bubbleGroup('1. 甜度','甜度',fixedChoices['甜度'],false)}${bubbleGroup('2. 冰量','冰量',fixedChoices['冰量'],false)}${bubbleGroup('3. 辣度','辣度',fixedChoices['辣度'],false)}${bubbleGroup('4. 調味料（可複選）','調味料',season,true)}${bubbleGroup('5. 加料（可複選）','加料',toppings,true)}<div class="field"><label>本次消費金額（NT$）</label><input id="v17VisitPrice" type="number" min="0" step="1" placeholder="輸入本次實際支付金額"></div><div class="field"><label>備註</label><textarea id="visitNote" placeholder="今天的心得、份量…"></textarea></div><label style="display:flex;gap:8px;align-items:center;margin:10px 0"><input id="landmineToggle" type="checkbox" ${s.landmine?'checked':''}> 💣 列入地雷美食（不參加抽籤）</label><div class="toolbar"><button type="button" class="btn" onclick="record('${s.id}')">＋ 存入飲食記錄</button><button type="button" class="btn light" onclick="saveLandmine('${s.id}')">儲存地雷設定</button><button type="button" class="btn light" onclick="editStore('${s.id}')">編輯店家</button></div>`;
+  openModal();
+ };
+ /* Read selected bubble values through the existing record() handler's expected input nodes. */
+ const oldRecord=window.record;
+ window.record=function(id){
+  const groups=[...document.querySelectorAll('#sheetContent [data-group]')];
+  const vals=groups.flatMap(g=>[...g.querySelectorAll('.bubble.selected')].map(b=>({key:g.dataset.group,value:b.dataset.choice})));
+  const detail=document.getElementById('detailOptions');
+  let created=false;
+  if(detail){detail.remove();created=true}
+  const hidden=document.createElement('div');hidden.id='detailOptions';hidden.style.display='none';
+  vals.forEach((x,i)=>{const input=document.createElement('input');input.setAttribute('data-option-key',x.key);input.value=x.value;hidden.appendChild(input)});
+  document.getElementById('sheetContent')?.appendChild(hidden);
+  const before=records.length;try{oldRecord.call(this,id);if(records.length>before){const chosen=[...document.querySelectorAll('#visitTypeBubbles .bubble.selected')].map(b=>b.dataset.choice);records[records.length-1].mealTypes=chosen;persist()}}finally{document.getElementById('detailOptions')?.remove()}
+ };
+})();
+</script>
+
+<script>/* v41 legacy enhancer omitted in this layout test to prevent its recursive render hook */</script>
+
+<script>
+/* v44 首頁與功能頁分流：首頁只做快捷入口，清單功能由底部導覽列進入 */
+(function(){
+ const st=document.createElement('style');
+ st.textContent=`body.v44-home #categoryChips,body.v44-home #listTitle,body.v44-home #list,body.v44-home #expandFeaturesBtn{display:none!important}body.v44-home .feature{display:grid!important}body.v44-home .featurecard{display:block!important}body:not(.v44-home) .feature{display:none!important}.v44-home-note{font-size:12px;color:var(--muted);margin:-4px 2px 12px}.v44-page-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;margin:10px 0}.v44-page-card h3{margin:0 0 6px}.v44-page-card p{margin:0 0 10px;color:var(--muted);font-size:13px}`;
+ document.head.appendChild(st);
+ const feature=document.querySelector('.feature');
+ if(feature){
+   const head=feature.previousElementSibling;
+   if(head&&head.classList.contains('sectionhead')) head.querySelector('h2').textContent='快速入口';
+   const expand=document.getElementById('expandFeaturesBtn'); if(expand)expand.parentElement.style.display='none';
+   /* 使用者選擇 A：首頁不顯示「好心情提案」快捷卡片。 */
+
+ }
+ window.v44OpenPage=function(which){
+   document.body.classList.remove('v44-home');
+   page=which;onlyOpen=false;
+   document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+   document.querySelector('.nav button')?.classList.add('active');
+   render();
+   const title=document.getElementById('listTitle'),list=document.getElementById('list');
+   if(title)title.textContent='🌤️ 今天的好心情提案';
+   if(list)list.innerHTML='<div class="v44-page-card"><h3>🎲 幫我決定</h3><p>從符合條件的店家中抽一間，交給今天的好運氣。</p><button class="btn" onclick="pick()">抽一間店</button></div><div class="v44-page-card"><h3>📌 我的口袋名單</h3><p>依地區尋找想吃、還沒吃的店家。</p><button class="btn light" onclick="showPage(\'favorites\')">查看口袋名單</button></div>';
+   window.scrollTo(0,0);
+ };
+ const originalShow=window.showPage;
+ window.showPage=function(p,el){document.body.classList.remove('v44-home');const r=originalShow.apply(this,arguments);return r};
+ const originalRender=window.render;
+ window.render=function(){const r=originalRender.apply(this,arguments);if(page==='home'){document.body.classList.add('v44-home');const title=document.getElementById('listTitle');if(title)title.textContent='';}else document.body.classList.remove('v44-home');return r};
+ document.addEventListener('DOMContentLoaded',()=>{if(page==='home')document.body.classList.add('v44-home')});
+ setTimeout(()=>{if(page==='home')document.body.classList.add('v44-home')},30);
+})();
+</script>
+
+<!-- V45a: hide quick-entry cards on non-home pages; add editable restaurant type -->
+<script>
+/* V45b: shared restaurant-type filter on every non-home, non-settings page */
+(function(){
+  function options(){
+    const base=[{id:'all',label:'全部'},{id:'food',label:'🍜 正餐'},{id:'drink',label:'🧋 飲料'},{id:'dessert',label:'🍰 甜點'}];
+    (Array.isArray(customCategories)?customCategories:[]).forEach(c=>{if(!base.some(x=>x.id===c.id))base.push({id:c.id,label:(c.emoji||'🍽️')+' '+(c.name||c.label||c.id)});});
+    return base;
+  }
+  window.v45SetRestaurantType=function(value){
+    type=value;
+    if(page==='map' && typeof v22MapState==='object') v22MapState.types=value==='all'?[]:[value];
+    render();
+  };
+  function paint(){
+    const box=document.getElementById('v45CategoryFilter'),chips=document.getElementById('v45CategoryChips');
+    if(!box||!chips)return;
+    const visible=page!=='home'&&page!=='settings';
+    box.style.display=visible?'block':'none';
+    if(!visible)return;
+    chips.innerHTML=options().map(o=>'<button type="button" class="chip '+((page==='map'&&typeof v22MapState==='object'?(o.id==='all'?!v22MapState.types.length:v22MapState.types.includes(o.id)):type===o.id)?'active':'')+'" data-v45-type="'+String(o.id).replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'">'+String(o.label).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')+'</button>').join('');
+  }
+  document.addEventListener('click',function(e){const b=e.target.closest('[data-v45-type]');if(!b)return;e.preventDefault();window.v45SetRestaurantType(b.getAttribute('data-v45-type'));});
+  const previousRender=window.render;
+  window.render=function(){const result=previousRender.apply(this,arguments);paint();return result;};
+  // Unclassified page uses an early-return renderer, so apply the same category filter there too.
+  const previousUnclassifiedHtml=window.v17UnclassifiedHtml;
+  if(typeof previousUnclassifiedHtml==='function'){
+    window.v17UnclassifiedHtml=function(s){const ts=Array.isArray(s.types||s.type)?(s.types||s.type):[s.types||s.type||''];if(type!=='all'&&!ts.includes(type))return '';return previousUnclassifiedHtml(s);};
+  }
+  paint();
+})();
+</script>
+<script>
+/* V45b：新增類型以小型彈出視窗呈現，平時不佔用新增店家表單空間 */
+(function(){
+  const originalOpenAdd = window.openAdd;
+  window.openAdd = function(){
+    originalOpenAdd.apply(this, arguments);
+    const tagBox = document.getElementById('nTypeTags');
+    if (!tagBox || document.getElementById('v45bShowAddCategory')) return;
+
+    tagBox.style.display = 'flex';
+    tagBox.style.flexWrap = 'wrap';
+    tagBox.style.alignItems = 'center';
+    tagBox.style.gap = '8px';
+
+    const addBubble = document.createElement('button');
+    addBubble.type = 'button';
+    addBubble.id = 'v45bShowAddCategory';
+    addBubble.className = 'type-tag v45b-add-category';
+    addBubble.textContent = '＋ 新增類型';
+    addBubble.style.cssText = 'display:inline-flex;align-items:center;justify-content:center;border:1px dashed var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:8px 13px;min-height:36px;white-space:nowrap;';
+    tagBox.appendChild(addBubble);
+
+    addBubble.addEventListener('click', function(){
+      if (document.getElementById('v45bCategoryModal')) return;
+      const modal = document.createElement('div');
+      modal.id = 'v45bCategoryModal';
+      modal.className = 'v45b-category-modal';
+      modal.innerHTML = '<div class="v45b-category-dialog" role="dialog" aria-modal="true" aria-labelledby="v45bCategoryTitle"><button type="button" class="v45b-category-close" id="v45bCloseCategory" aria-label="關閉">×</button><div class="v45b-category-kicker">MAKE IT YOURS</div><h3 id="v45bCategoryTitle">新增一個分類</h3><p class="v45b-category-desc">幫這個類型取個名字，再挑一個可愛的圖示吧。</p><label class="v45b-category-label" for="v45bNewCategoryName">分類名稱</label><input id="v45bNewCategoryName" maxlength="12" placeholder="例如：早餐、宵夜"><label class="v45b-category-label" for="v45bNewCategoryEmoji">代表 Emoji（可選填）</label><input id="v45bNewCategoryEmoji" maxlength="16" placeholder="可用手機鍵盤選擇 Emoji，例如 🍳"><div class="v45b-category-actions"><button type="button" id="v45bSaveCategory" class="v45b-category-save">新增並選取</button><button type="button" id="v45bCancelCategory" class="v45b-category-cancel">取消</button></div></div>';
+      document.body.appendChild(modal);
+      const emojiInput = document.getElementById('v45bNewCategoryEmoji');
+      function closeModal(){ modal.remove(); }
+      document.getElementById('v45bCloseCategory').onclick = closeModal;
+      document.getElementById('v45bCancelCategory').onclick = closeModal;
+      modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+      document.getElementById('v45bSaveCategory').onclick = function(){
+        const input = document.getElementById('v45bNewCategoryName');
+        const name = (input.value || '').trim();
+        if (!name) { input.focus(); input.setCustomValidity('請輸入分類名稱'); input.reportValidity(); input.setCustomValidity(''); return; }
+        const cats = Array.isArray(window.customCategories) ? window.customCategories : (typeof customCategories !== 'undefined' ? customCategories : []);
+        if (['全部','正餐','飲料','甜點'].includes(name) || cats.some(c => (c.name || c.label) === name)) {
+          input.setCustomValidity('這個分類已存在'); input.reportValidity(); input.setCustomValidity(''); return;
+        }
+        const chosenEmoji = (emojiInput.value || '').trim();
+        const category = {id:'custom_' + Date.now(), name:name, emoji:chosenEmoji};
+        cats.push(category);
+        window.customCategories = cats;
+        localStorage.setItem('foodmood_categories', JSON.stringify(cats));
+        const btn = document.createElement('button');
+        btn.type = 'button'; btn.className = 'type-tag active';
+        btn.dataset.categoryValue = category.id;
+        btn.textContent = (chosenEmoji ? chosenEmoji + ' ' : '') + name;
+        btn.addEventListener('click', function(){
+          this.classList.toggle('active');
+        });
+        tagBox.insertBefore(btn, addBubble);
+        tagBox.querySelectorAll('.type-tag[data-category-value]').forEach(b => {
+          if (b !== btn) b.classList.remove('active');
+        });
+        closeModal();
+        if (typeof render === 'function') render();
+        if (typeof toast === 'function') toast('已新增並選取「' + name + '」');
+      };
+      document.getElementById('v45bNewCategoryName').focus();
+    });
+  };
+})();
+</script>
+
+<script>
+/* V45b 修正：確保首頁永遠保留「新增一家喜歡的店」入口 */
+(function(){
+  function ensureHomeAddButton(){
+    if(typeof page!=='undefined' && page!=='home') return;
+    const head=document.querySelector('.sectionhead');
+    if(!head) return;
+    if(document.getElementById('v45bHomeAddStore')) return;
+    const b=document.createElement('button');
+    b.id='v45bHomeAddStore'; b.type='button'; b.className='btn light';
+    b.textContent='＋ 新增一家喜歡的店';
+    b.addEventListener('click',function(){ if(typeof openAdd==='function') openAdd(); });
+    head.appendChild(b);
+  }
+  const oldRender=window.render;
+  if(typeof oldRender==='function') window.render=function(){const r=oldRender.apply(this,arguments);ensureHomeAddButton();return r;};
+  const oldShowPage=window.showPage;
+  if(typeof oldShowPage==='function') window.showPage=function(){const r=oldShowPage.apply(this,arguments);ensureHomeAddButton();return r;};
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',ensureHomeAddButton); else ensureHomeAddButton();
+})();
+</script>
+
+<script>
+/* V45b patch: hide the quick-entry heading on all five non-home pages; keep homepage unchanged */
+(function(){
+  const targetPages = new Set(['favorites','map','landmines','unclassified','settings','records']);
+  function cleanQuickEntryHeading(){
+    const shouldHide = targetPages.has(window.page);
+    document.querySelectorAll('.sectionhead').forEach(head=>{
+      const h=head.querySelector('h2');
+      const sub=head.querySelector('.tiny');
+      const isQuickEntry = h && h.textContent.trim()==='快速入口' && (!sub || sub.textContent.trim()==='為你準備的小捷徑');
+      if(isQuickEntry) head.style.display = shouldHide ? 'none' : '';
+    });
+  }
+  const oldRender=window.render;
+  if(typeof oldRender==='function') window.render=function(){const result=oldRender.apply(this,arguments);cleanQuickEntryHeading();return result;};
+  const oldShowPage=window.showPage;
+  if(typeof oldShowPage==='function') window.showPage=function(){const result=oldShowPage.apply(this,arguments);cleanQuickEntryHeading();return result;};
+  document.addEventListener('DOMContentLoaded',cleanQuickEntryHeading);
+  cleanQuickEntryHeading();
+})();
+</script>
+
+<style id="v45b-hide-quick-entry-heading">
+/* Hide only the "快速入口／為你準備的小捷徑" heading row outside the homepage. */
+body.v45b-hide-quick-entry-heading .v45b-quick-entry-heading {
+  display: none !important;
+}
+</style>
+<script id="v45b-hide-quick-entry-heading-script">
+(function () {
+  const targetPages = new Set(['favorites', 'map', 'landmines', 'settings', 'unclassified']);
+  function applyHeadingVisibility() {
+    const currentPage = (typeof page !== 'undefined') ? page : window.page;
+    document.body.classList.toggle('v45b-hide-quick-entry-heading', targetPages.has(currentPage));
+    document.querySelectorAll('.v45b-quick-entry-heading').forEach(el => {
+      el.style.display = targetPages.has(currentPage) ? 'none' : '';
+    });
+  }
+  function tagHeading() {
+    const candidates = Array.from(document.querySelectorAll('.sectionhead, .section-head, .section-title, h2, h3'));
+    candidates.forEach(el => {
+      const t = (el.innerText || el.textContent || '').replace(/\s+/g, ' ').trim();
+      if (t.includes('快速入口') && t.includes('為你準備的小捷徑')) {
+        el.classList.add('v45b-quick-entry-heading');
+      }
+    });
+    applyHeadingVisibility();
+  }
+  const oldRender = window.render;
+  if (typeof oldRender === 'function') {
+    window.render = function () {
+      const result = oldRender.apply(this, arguments);
+      tagHeading();
+      return result;
+    };
+  }
+  const oldShowPage = window.showPage;
+  if (typeof oldShowPage === 'function') {
+    window.showPage = function () {
+      const result = oldShowPage.apply(this, arguments);
+      tagHeading();
+      return result;
+    };
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tagHeading);
+  } else {
+    tagHeading();
+  }
+})();
+</script>
+
+
+<style id="v45b-category-bubble-fixed-style">
+#nTypeTags { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+#nTypeTags .v45b-add-category {
+  display:inline-flex; align-items:center; justify-content:center;
+  border:1px dashed var(--line); border-radius:999px;
+  background:transparent; padding:8px 13px; min-height:36px;
+  color:var(--muted); box-shadow:none; white-space:nowrap;
+}
+#v45bInlineCategory { box-sizing:border-box; }
+</style>
+
+
+<style id="v45b-category-popup-style">
+#nTypeTags { display:flex; flex-wrap:wrap; align-items:center; gap:8px; }
+#nTypeTags .v45b-add-category { display:inline-flex; align-items:center; justify-content:center; border:1px dashed var(--line); border-radius:999px; background:transparent; padding:8px 13px; min-height:36px; color:var(--muted); white-space:nowrap; }
+.v45b-category-modal { position:fixed; inset:0; z-index:10050; display:flex; align-items:center; justify-content:center; padding:20px; background:rgba(53,39,34,.38); backdrop-filter:blur(3px); }
+.v45b-category-dialog { position:relative; box-sizing:border-box; width:min(100%,380px); padding:26px 22px 20px; border-radius:24px; background:#FFF9F3; color:#59453F; box-shadow:0 18px 55px rgba(54,38,31,.2); }
+.v45b-category-close { position:absolute; right:14px; top:12px; width:34px; height:34px; border:0; border-radius:50%; background:#F4E7DE; color:#59453F; font-size:24px; line-height:1; }
+.v45b-category-kicker { color:#9B887D; font-size:11px; letter-spacing:1.2px; margin-bottom:8px; }
+.v45b-category-dialog h3 { margin:0 36px 8px 0; font-size:21px; }
+.v45b-category-desc { margin:0 0 18px; color:#8C7A72; font-size:13px; line-height:1.5; }
+.v45b-category-label { display:block; margin:13px 0 7px; font-size:13px; font-weight:600; color:#806B62; }
+#v45bNewCategoryName { width:100%; box-sizing:border-box; border:1px solid #E8DCD4; border-radius:13px; padding:12px 13px; background:#fff; color:#59453F; font:inherit; outline:none; }
+#v45bNewCategoryName:focus { border-color:#C6A89A; }
+#v45bNewCategoryEmoji { width:100%; box-sizing:border-box; border:1px solid #E8DCD4; border-radius:13px; padding:12px 13px; background:#fff; color:#59453F; font:inherit; outline:none; }
+#v45bNewCategoryEmoji:focus { border-color:#C6A89A; }
+.v45b-category-actions { display:flex; gap:9px; margin-top:22px; }
+.v45b-category-actions button { border:0; border-radius:14px; padding:11px 16px; font:inherit; font-weight:600; }
+.v45b-category-save { background:#6B91C9; color:#fff; }
+.v45b-category-cancel { background:#F3EAE3; color:#806B62; }
+</style>
+
+
+<script id="v45b-remove-unclassified-home-card">
+(function(){
+  function removeUnclassifiedCard(){
+    const card = document.getElementById('v17UnclassifiedCard');
+    if (card) card.remove();
+    document.querySelectorAll('.feature .featurecard').forEach(el => {
+      if (el.querySelector('h3')?.textContent.trim() === '未分類美食') el.remove();
+    });
+    try {
+      const key = 'foodmood_feature_order';
+      const order = JSON.parse(localStorage.getItem(key) || 'null');
+      if (Array.isArray(order)) localStorage.setItem(key, JSON.stringify(order.filter(x => x !== '未分類美食')));
+    } catch(e) {}
+  }
+  const oldRender = window.render;
+  if (typeof oldRender === 'function') {
+    window.render = function(){
+      const result = oldRender.apply(this, arguments);
+      removeUnclassifiedCard();
+      return result;
+    };
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', removeUnclassifiedCard);
+  else removeUnclassifiedCard();
+})();
+</script>
+
+
+<script id="v45b-pocket-map-consistency-fix">
+(function(){
+  try {
+    let changed = false;
+    stores.forEach(s => {
+      if (typeof v17HasDiary === 'function' && v17HasDiary(s)) {
+        if (s.fav !== false) { s.fav = false; changed = true; }
+        if (s.visited !== true) { s.visited = true; changed = true; }
+        if (s.status !== 'visited') { s.status = 'visited'; changed = true; }
+      }
+    });
+    if (changed && typeof persist === 'function') persist();
+  } catch (e) { /* keep existing data intact if legacy storage is malformed */ }
+  if (typeof render === 'function') render();
+})();
+</script>
+
+
+<style id="v45d-pocket-region-search-style">
+.v45d-region-search{background:#fff9f4;border:1px solid var(--line);border-radius:18px;padding:12px;margin:0 0 12px}
+.v45d-region-search summary{cursor:pointer;list-style:none;font-weight:700;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.v45d-region-search summary::-webkit-details-marker{display:none}
+.v45d-region-search .v45d-search-hint{font-size:12px;color:var(--muted);margin:7px 0 10px}
+.v45d-region-search .field{margin:10px 0}
+.v45d-region-search select{width:100%;box-sizing:border-box}
+.v45d-region-search .v45d-actions{display:flex;gap:8px;margin-top:10px}
+.v45d-region-search .v45d-actions button{flex:1}
+</style>
+<style id="v45e-region-search-layout">
+.v45d-region-search{background:transparent;border:0;border-radius:0;padding:0;margin:0 0 12px;}
+.v45d-region-search summary{background:#fff9f4;border:1px solid var(--line);border-radius:16px;padding:11px 13px;font-size:14px;color:var(--ink);}
+.v45d-region-search[open] summary{border-radius:16px 16px 0 0;}
+.v45d-region-search .v45d-search-hint{padding:0 3px;}
+.v45d-region-search .v45d-search-fields{background:#fff9f4;border:1px solid var(--line);border-top:0;border-radius:0 0 16px 16px;padding:0 12px 12px;}
+.v45e-search-count{font-size:12px;color:var(--muted);margin:6px 2px 10px;}
+</style>
+<style id="v46-region-search-layout-fix">
+/* V46：搜尋列獨立放在頁面標題下方；美食地圖中介紹卡片與搜尋列交換位置 */
+#v45dPocketRegionSearch,#v45eMapSearch{display:block;width:100%;max-width:100%;min-width:0;clear:both;float:none;flex:none;box-sizing:border-box;margin:0 0 14px!important;}
+#v45dPocketRegionSearch summary,#v45eMapSearch summary{display:flex;width:100%;box-sizing:border-box;align-items:center;justify-content:space-between;gap:10px;min-height:44px;white-space:normal;line-height:1.45;}
+#v45dPocketRegionSearch summary span:first-child,#v45eMapSearch summary span:first-child{flex:1;min-width:0;}
+#v45dPocketRegionSearch .v45d-search-fields,#v45eMapSearch .v45d-search-fields{width:100%;box-sizing:border-box;}
+#v45dPocketRegionSearch .v45d-actions,#v45eMapSearch .v45d-actions{display:flex;gap:8px;width:100%;}
+#v45dPocketRegionSearch .v45d-actions button,#v45eMapSearch .v45d-actions button{flex:1;min-width:0;}
+#v45dFilterCount{display:none!important;}
+@media(max-width:460px){#v45dPocketRegionSearch,#v45eMapSearch{padding:0!important;}#v45dPocketRegionSearch summary,#v45eMapSearch summary{font-size:14px;padding:11px 13px;}}
+</style>
+<script id="v46-region-search-layout-fix">
+(function(){
+  function placeBox(id){
+    const box=document.getElementById(id); if(!box) return;
+    const title=document.getElementById('listTitle');
+    const heading=title && title.closest('.sectionhead');
+    const list=document.getElementById('list');
+    // V46 position correction: on the map page, show the intro card first,
+    // then the collapsible region search. On the pocket page keep search below title.
+    if(id==='v45eMapSearch' && page==='map' && list){
+      const intro=list.querySelector('.map-intro');
+      if(intro){ if(intro.nextElementSibling!==box) intro.insertAdjacentElement('afterend',box); }
+      else if(heading && heading.parentNode && heading.nextElementSibling!==box){ heading.insertAdjacentElement('afterend',box); }
+    } else if(heading && heading.parentNode){
+      if(heading.nextElementSibling!==box) heading.insertAdjacentElement('afterend',box);
+    } else if(list && list.parentNode && box.parentNode!==list.parentNode){
+      list.parentNode.insertBefore(box,list);
+    }
+  }
+  function cleanup(){
+    const pocket=document.getElementById('v45dPocketRegionSearch');
+    const map=document.getElementById('v45eMapSearch');
+    // Remove stale duplicate search blocks from previous experimental injections.
+    const seen=new Set();
+    document.querySelectorAll('details.v45d-region-search').forEach(el=>{
+      const key=el.id==='v45eMapSearch'?'map':(el.id==='v45dPocketRegionSearch'?'pocket':'other');
+      if(key!=='other'&&seen.has(key))el.remove(); else seen.add(key);
+    });
+    if(page==='favorites'){
+      document.getElementById('v45eMapSearch')?.remove();
+      placeBox('v45dPocketRegionSearch');
+      document.getElementById('v45dFilterCount')?.remove();
+    } else if(page==='map'){
+      document.getElementById('v45dPocketRegionSearch')?.remove();
+      placeBox('v45eMapSearch');
+    } else {
+      document.getElementById('v45dPocketRegionSearch')?.remove();
+      document.getElementById('v45eMapSearch')?.remove();
+    }
+  }
+  const oldRender=window.render;
+  if(typeof oldRender==='function') window.render=function(){const r=oldRender.apply(this,arguments);cleanup();return r;};
+  document.addEventListener('DOMContentLoaded',cleanup);
+  // A short sequence of synchronous layout passes handles the existing render wrappers.
+  const originalShowPage=window.showPage;
+  if(typeof originalShowPage==='function')window.showPage=function(){const r=originalShowPage.apply(this,arguments);cleanup();return r;};
+})();
+</script>
+
+
+<style id="v47-region-filter-fix"></style>
+<script id="v47-region-filter-fix">
+(function(){
+  const norm=v=>String(v||'').replace(/臺/g,'台').replace(/\s+/g,'').trim();
+  const prevRender=window.render;
+  if(typeof prevRender==='function') window.render=function(){return prevRender.apply(this,arguments)};
+  document.addEventListener('click',function(e){
+    const btn=e.target.closest('#v45eMapSearch [data-apply]');
+    if(!btn)return;
+    const box=document.getElementById('v45eMapSearch');
+    const rs=box&&box.querySelector('select[id$="Region"]');
+    const ts=box&&box.querySelector('select[id$="Town"]');
+    if(!rs||!window.v22MapState)return;
+    v22MapState.regions=rs.value?[rs.value]:[];
+    v22MapState.towns=ts&&ts.value?[ts.value]:[];
+    setTimeout(()=>{if(typeof render==='function')render()},0);
+  },true);
+})();
+</script>
+\n
+<style id="v48-region-group-style">
+.v48-group-list{display:block;padding-top:8px}.v48-group-list.hide{display:none}.v48-group-list>section>.btn{min-height:44px}.v48-group-list .restaurant{margin-top:8px}
+</style>
+<script id="v48-region-group-cleanup">
+(function(){const css='.v22-region-list{display:block}';})();
+</script>
+\n
+
+<style id="v54-pocket-region-layout">
+.v54-pocket-region{margin:12px 0;border:1px solid var(--line);border-radius:17px;background:#fffaf6;overflow:hidden}
+.v54-pocket-region>summary,.v54-pocket-town>summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 15px;cursor:pointer;font-weight:750}
+.v54-pocket-region>summary::-webkit-details-marker,.v54-pocket-town>summary::-webkit-details-marker{display:none}
+.v54-pocket-region>summary{background:#fff9f4}
+.v54-pocket-town{margin:8px 10px;border:1px solid var(--line);border-radius:15px;background:#fffdfb;overflow:hidden}
+.v54-pocket-town>summary{font-weight:650}
+.v54-pocket-region[open]>.v54-pocket-town{margin-top:8px}
+.v54-pocket-town>.restaurant{margin:8px;border-radius:14px}
+.v54-pocket-region:not([open])>.v54-pocket-town,.v54-pocket-town:not([open])>.restaurant{display:none}
+</style>
+<script id="v54-pocket-region-layout">
+(function(){
+ const countyOrder=['臺北市','新北市','基隆市','桃園市','新竹市','新竹縣','苗栗縣','臺中市','彰化縣','南投縣','雲林縣','嘉義市','嘉義縣','臺南市','高雄市','屏東縣','宜蘭縣','花蓮縣','臺東縣','澎湖縣','金門縣','連江縣'];
+ const townMap={
+ '臺中市':'中區、東區、南區、西區、北區、西屯區、南屯區、北屯區、豐原區、大里區、太平區、清水區、沙鹿區、梧棲區、后里區、神岡區、潭子區、大雅區、新社區、石岡區、外埔區、大安區、烏日區、大肚區、龍井區、霧峰區、和平區'.split('、'),
+ '彰化縣':'彰化市、員林市、鹿港鎮、和美鎮、北斗鎮、田中鎮、溪湖鎮、二林鎮、永靖鄉、秀水鄉、花壇鄉、芬園鄉、埔心鄉、埔鹽鄉、田尾鄉、埤頭鄉、溪州鄉、竹塘鄉、大城鄉、芳苑鄉、二水鄉、社頭鄉、線西鄉、伸港鄉、福興鄉、秀水鄉'.split('、')
+ };
+ const norm=v=>String(v||'').replace(/臺/g,'台').replace(/\s/g,'').trim();
+ function parts(st){
+   const raw=String(st.area||st.address||'').trim();
+   let county=String(st.county||st.region||st.city||'').trim();
+   let town=String(st.town||st.township||st.district||'').trim();
+   const counties=[...countyOrder].sort((a,b)=>b.length-a.length);
+   if(!county)county=counties.find(c=>norm(raw).includes(norm(c)))||'';
+   if(!town){
+     const candidates=Object.values(townMap).flat().concat(['豐原區','神岡區','南屯區','北屯區','西屯區','大雅區','潭子區','太平區','大里區','沙鹿區','清水區']);
+     town=candidates.sort((a,b)=>b.length-a.length).find(t=>norm(raw).includes(norm(t)))||raw;
+   }
+   if(!county){
+     const tn=norm(town);
+     for(const [c,ts] of Object.entries(townMap)){if(ts.some(t=>norm(t)===tn)){county=c;break}}
+   }
+   return {county:county||'縣市未設定',town:town||'鄉鎮市區未設定'};
+ }
+ function groupPocket(){
+   if(typeof page==='undefined'||page!=='favorites')return;
+   const list=document.getElementById('list');if(!list)return;
+   // Remove the old pocket-list map-search UI; grouping replaces it.
+   ['v45dPocketRegionSearch','v45eMapSearch'].forEach(id=>document.getElementById(id)?.remove());
+   if(list.querySelector('.v54-pocket-region'))return;
+   const cards=[...list.querySelectorAll(':scope > article.restaurant')];
+   if(!cards.length)return;
+   const buckets={};
+   cards.forEach(card=>{
+     const btn=card.querySelector('button[onclick*="detail("]');
+     const match=btn&&btn.getAttribute('onclick').match(/detail\(['"]([^'"]+)['"]\)/);
+     const st=match&&stores.find(x=>String(x.id)===String(match[1]));
+     if(!st)return;
+     const p=parts(st);
+     (buckets[p.county]||(buckets[p.county]={}))[p.town]??=[];
+     buckets[p.county][p.town].push(card);
+   });
+   if(!Object.keys(buckets).length)return;
+   cards.forEach(c=>c.remove());
+   const keys=Object.keys(buckets).sort((a,b)=>{const ia=countyOrder.indexOf(a),ib=countyOrder.indexOf(b);if(ia>=0||ib>=0)return(ia<0?999:ia)-(ib<0?999:ib);return a.localeCompare(b,'zh-Hant')});
+   keys.forEach(county=>{
+     const cd=document.createElement('details');cd.className='v54-pocket-region';
+     const cs=document.createElement('summary');
+     const townGroups=buckets[county];
+     const total=Object.values(townGroups).reduce((n,arr)=>n+arr.length,0);
+     cs.innerHTML='<span>📍 '+county.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span><span>'+total+' 家　＋</span>';
+     cd.appendChild(cs);
+     Object.keys(townGroups).sort((a,b)=>a.localeCompare(b,'zh-Hant')).forEach(town=>{
+       const td=document.createElement('details');td.className='v54-pocket-town';
+       const ts=document.createElement('summary');
+       ts.innerHTML='<span>📌 '+town.replace(/&/g,'&amp;').replace(/</g,'&lt;')+'</span><span>'+townGroups[town].length+' 家　＋</span>';
+       td.appendChild(ts);
+       townGroups[town].forEach(card=>td.appendChild(card));
+       cd.appendChild(td);
+     });
+     list.appendChild(cd);
+   });
+ }
+ const originalRender=window.render;
+ if(typeof originalRender==='function'){
+   window.render=function(){
+     const result=originalRender.apply(this,arguments);
+     if(typeof page!=='undefined'&&page==='favorites')groupPocket();
+     return result;
+   };
+ }
+ document.addEventListener('DOMContentLoaded',()=>{if(typeof page!=='undefined'&&page==='favorites')groupPocket()});
+})();
+</script>
+
+
+<script id="v56-remove-landmine-category">
+/* V56：移除首頁「地雷美食」快捷卡與底部導覽分類；舊資料與日記內容保留。 */
+(function(){
+  function clean(){
+    document.querySelectorAll('.feature .featurecard').forEach(card=>{
+      const h=card.querySelector('h3'); if(h && h.textContent.trim()==='地雷美食') card.remove();
+    });
+    document.querySelectorAll('.nav button').forEach(btn=>{
+      const t=(btn.innerText||btn.textContent||'').replace(/\s+/g,' ').trim();
+      if(t.includes('地雷美食') || (btn.getAttribute('onclick')||'').includes("'landmines'")) btn.remove();
+    });
+    const old=JSON.parse(localStorage.getItem('foodmood_feature_order')||'null');
+    if(Array.isArray(old)){
+      const cleaned=old.filter(x=>x!=='地雷美食');
+      localStorage.setItem('foodmood_feature_order',JSON.stringify(cleaned));
+    }
+    const sortList=document.getElementById('v21SortList');
+    if(sortList) sortList.querySelectorAll('.sort-row').forEach(row=>{if((row.innerText||'').includes('地雷美食'))row.remove()});
+  }
+  const oldRender=window.render;
+  if(typeof oldRender==='function') window.render=function(){const r=oldRender.apply(this,arguments);clean();return r};
+  const oldShowPage=window.showPage;
+  if(typeof oldShowPage==='function') window.showPage=function(){const r=oldShowPage.apply(this,arguments);clean();return r};
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',clean); else clean();
+})();
+</script>
+
+
+<script id="v57-remove-all-landmine-settings">
+/* V57：全面移除地雷美食相關設定與介面，不刪除店家及飲食日記。 */
+(function(){
+  function cleanLandmineUI(){
+    document.querySelectorAll('label').forEach(el=>{
+      const t=(el.innerText||el.textContent||'').replace(/\s+/g,' ');
+      if(/列入地雷美食|地雷美食/.test(t) && (el.querySelector('#landmineToggle') || /列入地雷美食/.test(t))) el.remove();
+    });
+    document.querySelectorAll('button').forEach(el=>{
+      const t=(el.innerText||el.textContent||'').replace(/\s+/g,' ').trim();
+      const oc=el.getAttribute('onclick')||'';
+      if(/儲存地雷設定|移出地雷/.test(t) || /saveLandmine\(/.test(oc) || /v17Classify\([^)]*landmine/.test(oc)) el.remove();
+      if(t==='地雷美食' || oc.includes("'landmines'")) el.remove();
+    });
+    document.querySelectorAll('.badge,.tag').forEach(el=>{if((el.textContent||'').trim()==='地雷美食')el.remove()});
+    document.querySelectorAll('.featurecard').forEach(el=>{if((el.innerText||'').includes('地雷美食'))el.remove()});
+    document.querySelectorAll('p,.tiny,.small,.notice').forEach(el=>{
+      if(/地雷美食不會參加抽籤|地雷美食不會抽到/.test(el.textContent||'')) el.remove();
+    });
+    const sort=document.getElementById('v21SortList');
+    if(sort) sort.querySelectorAll('.sort-row').forEach(el=>{if((el.textContent||'').includes('地雷美食'))el.remove()});
+  }
+  // Neutralize legacy flags without removing stores or diary records.
+  try {
+    if(Array.isArray(window.stores)) window.stores.forEach(s=>{if(s && s.landmine) s.landmine=false;});
+  } catch(e){}
+  const priorRender=window.render;
+  if(typeof priorRender==='function') window.render=function(){const r=priorRender.apply(this,arguments);cleanLandmineUI();return r};
+  const priorDetail=window.detail;
+  if(typeof priorDetail==='function') window.detail=function(){const r=priorDetail.apply(this,arguments);cleanLandmineUI();return r};
+  const priorOpenModal=window.openModal;
+  if(typeof priorOpenModal==='function') window.openModal=function(){const r=priorOpenModal.apply(this,arguments);cleanLandmineUI();return r};
+  const observer=new MutationObserver(cleanLandmineUI);
+  function start(){cleanLandmineUI();observer.observe(document.body,{childList:true,subtree:true});}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+  window.saveLandmine=function(){cleanLandmineUI();};
+})();
+</script>
+
+
+<script id="v59-remove-unclassified-category">
+(function(){
+  // 移除「未分類美食」分類；既有未分類店家安全地移入口袋名單，避免資料消失。
+  try {
+    if (Array.isArray(stores)) {
+      stores.forEach(function(s){
+        if (!s) return;
+        if (s.status === 'unclassified' || (!s.status && !s.fav && !s.landmine && !v17HasDiary(s))) {
+          s.status = 'pocket'; s.fav = true; s.landmine = false; s.visited = false;
+        }
+      });
+      if (typeof persist === 'function') persist();
+    }
+    if (typeof v17Status === 'function') {
+      const previousStatus = v17Status;
+      v17Status = function(s) {
+        const status = previousStatus(s);
+        if (status === 'unclassified') { s.status = 'pocket'; s.fav = true; s.landmine = false; s.visited = false; return 'pocket'; }
+        return status;
+      };
+    }
+    if (typeof render === 'function') {
+      const previousRender = render;
+      render = function() {
+        if (page === 'unclassified') page = 'favorites';
+        return previousRender.apply(this, arguments);
+      };
+    }
+    // 移除首頁／設定中可能存在的分類入口及排序項目。
+    function removeUnclassifiedUI(){
+      document.querySelectorAll('button,a,[role="button"],.feature-card,.feature-item,article,li,div').forEach(function(el){
+        if (!el || el.id === 'list' || el.id === 'app' || el.id === 'root') return;
+        const title = (el.querySelector('h3,h4,strong,.title')?.textContent || '').trim();
+        const own = (el.childElementCount === 0 ? el.textContent : '').trim();
+        if (title === '未分類美食' || own === '未分類美食') el.remove();
+      });
+      try {
+        Object.keys(localStorage).forEach(function(key){
+          if (!/order|feature|sort/i.test(key)) return;
+          const raw=localStorage.getItem(key); if(!raw) return;
+          try { const data=JSON.parse(raw); if(Array.isArray(data)) localStorage.setItem(key,JSON.stringify(data.filter(x=>x!=='未分類美食' && x!=='unclassified'))); } catch(e) {}
+        });
+      } catch(e) {}
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', removeUnclassifiedUI);
+    else removeUnclassifiedUI();
+    const observer = new MutationObserver(removeUnclassifiedUI);
+    observer.observe(document.body,{childList:true,subtree:true});
+    setTimeout(function(){observer.disconnect();},2500);
+  } catch(e) { console.warn('V59 未分類分類移除補丁',e); }
+})();
+</script>
+
+
+<script id="v64-remove-now-open-from-home-sort">
+(function(){
+  const KEY='foodmood_feature_order';
+  function cleanNowOpenSort(){
+    try {
+      const saved=JSON.parse(localStorage.getItem(KEY)||'null');
+      if(Array.isArray(saved)) localStorage.setItem(KEY,JSON.stringify(saved.filter(x=>!String(x).includes('現在營業中'))));
+    } catch(e) {}
+    const list=document.getElementById('v21SortList');
+    if(list) list.querySelectorAll('.sort-row').forEach(row=>{
+      if((row.innerText||row.textContent||'').includes('現在營業中')) row.remove();
+    });
+  }
+  const oldRender=window.render;
+  if(typeof oldRender==='function') window.render=function(){const result=oldRender.apply(this,arguments);cleanNowOpenSort();return result;};
+  const oldShowPage=window.showPage;
+  if(typeof oldShowPage==='function') window.showPage=function(){const result=oldShowPage.apply(this,arguments);cleanNowOpenSort();return result;};
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',cleanNowOpenSort); else cleanNowOpenSort();
+  setTimeout(cleanNowOpenSort,0);
+})();
+</script>
+
+
+<script id="v69-edit-diary-bubble-options">
+(function(){
+ const fixed={
+  '甜度':['無糖','一分糖','微糖','半糖','少糖','正常甜','多糖'],
+  '冰量':['熱／溫','去冰','微冰','少冰','正常冰','多冰'],
+  '辣度':['不辣','微辣','小辣','中辣','大辣','特辣']
+ };
+ const types=[['food','🍜 正餐'],['drink','🧋 飲料'],['dessert','🍰 甜點'],['hotpot','🍲 火鍋'],['late','⭐ 宵夜'],['breakfast','☀️ 早餐'],['dim_sum','🥢 點心']];
+ function getList(key,defaults){try{const a=JSON.parse(localStorage.getItem(key)||'null');return Array.isArray(a)?a:defaults}catch(e){return defaults}}
+ function parseOptions(text){return String(text||'').split('、').filter(Boolean).map(part=>{const i=part.indexOf('：');return i<0?{k:part,v:''}:{k:part.slice(0,i),v:part.slice(i+1)}})}
+ function bubbleGroup(title,key,items,multi,selected){
+  const chosen=selected||[];
+  return `<div class="field"><label>${title}</label><div class="v69-bubbles" data-v69-group="${esc(key)}" data-multi="${multi?'1':'0'}">${items.map(item=>{const val=typeof item==='string'?item:item[1];return `<button type="button" class="v69-bubble ${chosen.includes(val)?'selected':''}" data-value="${esc(val)}" onclick="v69ToggleBubble(this)">${esc(val)}</button>`}).join('')}</div></div>`;
+ }
+ window.v69ToggleBubble=function(btn){const g=btn.closest('[data-v69-group]');if(!g)return;if(g.dataset.multi!=='1')g.querySelectorAll('.v69-bubble').forEach(b=>b.classList.remove('selected'));btn.classList.toggle('selected')};
+ window.editRecord=function(id){
+  const r=records.find(x=>String(x.id)===String(id));if(!r)return;
+  const parsed=parseOptions(r.optionsText);const values=key=>parsed.filter(o=>o.k===key).map(o=>o.v).filter(Boolean);
+  const typeSelected=(Array.isArray(r.mealTypes)?r.mealTypes:[]).concat(values('餐點類型'));
+  const season=getList('foodmood_seasonings',['胡椒','梅粉','咖哩粉','海苔粉']);
+  const toppings=getList('foodmood_toppings',['珍珠','椰果','仙草','布丁']);
+  const catExtra=(typeof customCategories!=='undefined'?customCategories.map(c=>[c.id,`${c.emoji||'🍽️'} ${c.name}`]):[]);
+  const allTypes=types.concat(catExtra).filter((x,i,a)=>a.findIndex(y=>y[1]===x[1])===i);
+  const body=document.getElementById('sheetContent');
+  body.innerHTML=`<style>.v69-bubbles{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.v69-bubble{border:1px solid var(--line);border-radius:999px;padding:8px 13px;background:#fff;color:var(--ink);font:inherit}.v69-bubble.selected{background:var(--accent,#d7759c);border-color:var(--accent,#d7759c);color:#fff}</style><h2>編輯美食日記</h2><form id="v69EditForm" onsubmit="updateRecord(event,${JSON.stringify(String(r.id))})"><div class="field"><label>店家名稱</label><input id="rName" required value="${esc(r.name||'')}"></div><div class="field"><label>分店</label><input id="rBranch" value="${esc(r.branch||'')}"></div><div class="field"><label>日期</label><input id="rDate" value="${esc(r.date||'')}"></div><div class="field"><label>這次吃／喝的餐點名稱</label><input id="rItems" required value="${esc(r.items||'')}"></div><div class="field"><label>本次消費金額（NT$）</label><input id="rPrice" type="number" min="0" step="1" value="${Number(r.price||0)}"></div><h3 style="margin:16px 0 6px">客製化選項</h3><p class="tiny">保留原本的選取值；點擊氣泡即可修改。</p>${bubbleGroup('餐點類型（可複選）','餐點類型',allTypes,true,typeSelected)}${bubbleGroup('1. 甜度','甜度',fixed['甜度'],false,values('甜度'))}${bubbleGroup('2. 冰量','冰量',fixed['冰量'],false,values('冰量'))}${bubbleGroup('3. 辣度','辣度',fixed['辣度'],false,values('辣度'))}${bubbleGroup('4. 調味料（可複選）','調味料',season,true,values('調味料'))}${bubbleGroup('5. 加料（可複選）','加料',toppings,true,values('加料'))}<div class="field"><label>其他客製化項目（保留舊記錄）</label><div id="v69OtherOptions">${parsed.filter(o=>!['餐點類型','甜度','冰量','辣度','調味料','加料'].includes(o.k)).map(o=>`<div class="v69-other" style="display:flex;gap:8px;margin:6px 0"><input class="v69-other-key" value="${esc(o.k)}" placeholder="項目名稱"><input class="v69-other-val" value="${esc(o.v)}" placeholder="選取內容"><button type="button" class="btn light" onclick="this.parentElement.remove()">−</button></div>`).join('')}</div><button type="button" class="btn light" onclick="v69AddOtherOption()">＋ 新增其他項目</button></div><div class="field"><label>備註</label><textarea id="rNote">${esc(r.note||'')}</textarea></div><button class="btn" style="width:100%">儲存日記修改</button></form>`;
+  openModal();
+ };
+ window.v69AddOtherOption=function(){const box=document.getElementById('v69OtherOptions');if(!box)return;const row=document.createElement('div');row.className='v69-other';row.style.cssText='display:flex;gap:8px;margin:6px 0';row.innerHTML='<input class="v69-other-key" placeholder="項目名稱"><input class="v69-other-val" placeholder="選取內容"><button type="button" class="btn light" onclick="this.parentElement.remove()">−</button>';box.appendChild(row)};
+ window.updateRecord=function(e,id){
+  e.preventDefault();const r=records.find(x=>String(x.id)===String(id));if(!r)return;
+  r.name=document.getElementById('rName').value.trim();r.branch=document.getElementById('rBranch').value.trim();r.date=document.getElementById('rDate').value.trim();r.items=document.getElementById('rItems').value.trim();r.price=Number(document.getElementById('rPrice').value||0);r.note=document.getElementById('rNote').value;
+  const out=[];document.querySelectorAll('#sheetContent [data-v69-group]').forEach(g=>{[...g.querySelectorAll('.v69-bubble.selected')].forEach(b=>out.push({k:g.dataset.v69Group,v:b.dataset.value}))});
+  document.querySelectorAll('#v69OtherOptions .v69-other').forEach(row=>{const k=row.querySelector('.v69-other-key').value.trim(),v=row.querySelector('.v69-other-val').value.trim();if(k&&v)out.push({k,v})});
+  r.optionsText=out.map(o=>o.k+'：'+o.v).join('、');r.mealTypes=out.filter(o=>o.k==='餐點類型').map(o=>o.v);persist();closeModal();page='records';render();toast('美食日記已更新');
+ };
+})();
+</script>
+<script id="new-project-remove-landmine-final">
+(function(){
+  // 新專案以 V69 為基礎：停用地雷美食分類及相關設定；其餘功能保持原樣。
+  function normalizeStores(){
+    try {
+      if(Array.isArray(window.stores)) window.stores.forEach(function(s){
+        if(!s)return;
+        s.landmine=false;
+        if(s.status==='landmine'){
+          s.status=(typeof window.v17HasDiary==='function' && window.v17HasDiary(s))?'diary':'pocket';
+          if(s.status==='pocket')s.fav=true;
+        }
+      });
+    } catch(e){}
+  }
+  function cleanMarkup(){
+    normalizeStores();
+    try {
+      document.querySelectorAll('button,a,[role="button"],label,.badge,.tag,.featurecard,.feature-card,.sort-row,p,.tiny,.small,.notice').forEach(function(el){
+        if(!el || !el.isConnected)return;
+        var text=(el.innerText||el.textContent||'').replace(/\s+/g,' ').trim();
+        var oc=el.getAttribute('onclick')||'';
+        if((/地雷美食|地雷設定|儲存地雷|移出地雷|landmine/i.test(text) || /saveLandmine|filterLandmines|landmines/i.test(oc)) && el.id!=='listTitle'){
+          if(el.matches('button,a,[role="button"],label,.badge,.tag,.featurecard,.feature-card,.sort-row,p,.tiny,.small,.notice')) el.remove();
+        }
+      });
+      var title=document.getElementById('listTitle');
+      if(title && /地雷美食/.test(title.textContent)) title.textContent='✨ 你可能會想吃';
+      var content=document.getElementById('sheetContent');
+      if(content){
+        content.querySelectorAll('#landmineToggle').forEach(function(el){var label=el.closest('label');if(label)label.remove();else el.remove()});
+        content.querySelectorAll('button').forEach(function(el){if(/地雷|landmine/i.test((el.textContent||'')+' '+(el.getAttribute('onclick')||'')))el.remove()});
+        content.innerHTML=content.innerHTML.replace(/地雷美食[^<。！\n]*(?:[。！])?/g,'').replace(/💣\s*/g,'');
+      }
+    } catch(e){}
+  }
+  try {
+    normalizeStores();
+    if(typeof window.v17Status==='function'){
+      var prevStatus=window.v17Status;
+      window.v17Status=function(s){normalizeStores();var v=prevStatus(s);return v==='landmine'?'pocket':v};
+    }
+    window.saveLandmine=function(){cleanMarkup()};
+    window.filterLandmines=function(){if(typeof window.showPage==='function')window.showPage('home');cleanMarkup()};
+    var prevRender=window.render;
+    if(typeof prevRender==='function')window.render=function(){if(window.page==='landmines')window.page='home';normalizeStores();var r=prevRender.apply(this,arguments);cleanMarkup();return r};
+    var prevDetail=window.detail;
+    if(typeof prevDetail==='function')window.detail=function(){var r=prevDetail.apply(this,arguments);cleanMarkup();return r};
+    var prevOpen=window.openModal;
+    if(typeof prevOpen==='function')window.openModal=function(){var r=prevOpen.apply(this,arguments);cleanMarkup();return r};
+    if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanMarkup);else cleanMarkup();
+    var observer=new MutationObserver(cleanMarkup);
+    if(document.body)observer.observe(document.body,{childList:true,subtree:true});
+    window.addEventListener('pageshow',cleanMarkup);
+  } catch(e) { console.warn('新專案相容處理',e); }
+})();
+</script>
+
+</body></html>
