@@ -1241,7 +1241,8 @@ body.v45b-hide-quick-entry-heading .v45b-quick-entry-heading {
   if(typeof priorDetail==='function') window.detail=function(){const r=priorDetail.apply(this,arguments);cleanLandmineUI();return r};
   const priorOpenModal=window.openModal;
   if(typeof priorOpenModal==='function') window.openModal=function(){const r=priorOpenModal.apply(this,arguments);cleanLandmineUI();return r};
-  function start(){cleanLandmineUI();}
+  const observer=new MutationObserver(cleanLandmineUI);
+  function start(){cleanLandmineUI();observer.observe(document.body,{childList:true,subtree:true});}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
   window.saveLandmine=function(){cleanLandmineUI();};
 })();
@@ -1415,8 +1416,9 @@ body.v45b-hide-quick-entry-heading .v45b-quick-entry-heading {
     var prevOpen=window.openModal;
     if(typeof prevOpen==='function')window.openModal=function(){var r=prevOpen.apply(this,arguments);cleanMarkup();return r};
     if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanMarkup);else cleanMarkup();
-    window.addEventListener('DOMContentLoaded',cleanMarkup,{once:true});
-    window.addEventListener('pageshow',cleanMarkup,{once:true});
+    var observer=new MutationObserver(cleanMarkup);
+    if(document.body)observer.observe(document.body,{childList:true,subtree:true});
+    window.addEventListener('pageshow',cleanMarkup);
   } catch(e) { console.warn('新專案相容處理',e); }
 })();
 </script>
