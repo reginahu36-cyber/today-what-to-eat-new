@@ -1241,8 +1241,7 @@ body.v45b-hide-quick-entry-heading .v45b-quick-entry-heading {
   if(typeof priorDetail==='function') window.detail=function(){const r=priorDetail.apply(this,arguments);cleanLandmineUI();return r};
   const priorOpenModal=window.openModal;
   if(typeof priorOpenModal==='function') window.openModal=function(){const r=priorOpenModal.apply(this,arguments);cleanLandmineUI();return r};
-  const observer=new MutationObserver(cleanLandmineUI);
-  function start(){cleanLandmineUI();observer.observe(document.body,{childList:true,subtree:true});}
+  function start(){cleanLandmineUI();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
   window.saveLandmine=function(){cleanLandmineUI();};
 })();
@@ -1395,7 +1394,9 @@ body.v45b-hide-quick-entry-heading .v45b-quick-entry-heading {
       if(content){
         content.querySelectorAll('#landmineToggle').forEach(function(el){var label=el.closest('label');if(label)label.remove();else el.remove()});
         content.querySelectorAll('button').forEach(function(el){if(/地雷|landmine/i.test((el.textContent||'')+' '+(el.getAttribute('onclick')||'')))el.remove()});
-        content.innerHTML=content.innerHTML.replace(/地雷美食[^<。！\n]*(?:[。！])?/g,'').replace(/💣\s*/g,'');
+        var oldHtml=content.innerHTML;
+        var newHtml=oldHtml.replace(/地雷美食[^<。！\n]*(?:[。！])?/g,'').replace(/💣\s*/g,'');
+        if(newHtml!==oldHtml) content.innerHTML=newHtml;
       }
     } catch(e){}
   }
@@ -1414,9 +1415,8 @@ body.v45b-hide-quick-entry-heading .v45b-quick-entry-heading {
     var prevOpen=window.openModal;
     if(typeof prevOpen==='function')window.openModal=function(){var r=prevOpen.apply(this,arguments);cleanMarkup();return r};
     if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanMarkup);else cleanMarkup();
-    var observer=new MutationObserver(cleanMarkup);
-    if(document.body)observer.observe(document.body,{childList:true,subtree:true});
-    window.addEventListener('pageshow',cleanMarkup);
+    window.addEventListener('DOMContentLoaded',cleanMarkup,{once:true});
+    window.addEventListener('pageshow',cleanMarkup,{once:true});
   } catch(e) { console.warn('新專案相容處理',e); }
 })();
 </script>
